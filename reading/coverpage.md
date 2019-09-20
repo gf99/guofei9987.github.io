@@ -7,7 +7,7 @@
 * 人类必将化身为神
 
 
-[GitHub](https://github.com/guofei9987/reading/)
+[GitHub](https://github.com/guofei9987/guofei9987.github.io)
 [听课](http://www.guofei.site/course/#/homepage)
 [Matlab](http://www.guofei.site/matlab/#/homepage)
 [读书](/homepage)

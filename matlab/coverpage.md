@@ -8,7 +8,7 @@
 * 代码示例
 
 
-[GitHub](https://github.com/guofei9987/reading/)
+[GitHub](https://github.com/guofei9987/guofei9987.github.io)
 [读书](http://www.guofei.site/reading/#/homepage)
 [听课](http://www.guofei.site/course/#/homepage)
 [Matlab](/homepage)
