@@ -1,2 +1,2 @@
 
-* [读书](http://www.guofei.site/reading/#/_main)
+* [读书](http://www.guofei.site/reading/#/coverpage)
