@@ -1,4 +1,4 @@
-![logo](_media/pic.jpg)
+![logo](media/pic.jpg)
 
 # Matlab 学习笔记
 
@@ -7,7 +7,8 @@
 * 学习笔记
 * 代码示例
 
-[读书](http://www.guofei.site/reading/#/_main)
-[听课](http://www.guofei.site/reading/course/#/_main)
-[Matlab](http://www.guofei.site/reading/matlab/#/_main)
+
 [GitHub](https://github.com/guofei9987/reading/)
+[读书](http://www.guofei.site/reading/#/homepage)
+[听课](http://www.guofei.site/course/#/homepage)
+[Matlab](/homepage)
