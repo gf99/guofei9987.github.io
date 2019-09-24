@@ -69,11 +69,14 @@ order: 200
 
 </table>
 
-[大图](http://www.guofei.site/StatisticsBlog/sklearn%E6%A8%A1%E5%9E%8B%E6%80%BB%E7%BB%93.htm)
-<iframe src="http://www.guofei.site/StatisticsBlog/sklearn%E6%A8%A1%E5%9E%8B%E6%80%BB%E7%BB%93.htm" width="100%" height="3600em" marginwidth="10%"></iframe>
+[大图](http://www.guofei.site/StatisticsBlog/sklearn_有监督.htm)
+<iframe src="http://www.guofei.site/StatisticsBlog/sklearn_有监督.htm" width="100%" height="1000em" marginwidth="10%"></iframe>
 
+[大图](http://www.guofei.site/StatisticsBlog/sklearn_降维.htm)
+<iframe src="http://www.guofei.site/StatisticsBlog/sklearn_降维.htm" width="100%" height="1000em" marginwidth="10%"></iframe>
 
-*调整ANN输出层的输出个数，可以达到升维和降维*  
+[大图](http://www.guofei.site/StatisticsBlog/sklearn_聚类.htm)
+<iframe src="http://www.guofei.site/StatisticsBlog/sklearn_聚类.htm" width="100%" height="1000em" marginwidth="10%"></iframe>
 
 ### 按照问题分类
 
