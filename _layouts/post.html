@@ -7,7 +7,8 @@ layout: base
     <br>
     <h2 id="#identifier">{{ page.title }}</h2>
     {{ page.date | date:"%Y年%m月%d日" }}
-    <p>Author:{{site.author.name}}</p>
+    <p>Author:{{ site.author.name }}</p>
+    <p>文章归类: {{ page.tag }} {{ page.categories }}</p>
   </div>
   <div class="col-md-13 aside3-content">
     <hr>
@@ -17,11 +18,9 @@ layout: base
     </a>
     </i>
   <br>
-    <i>如有逻辑、算法或其它错误，请批评指正，在此提前感谢！
+    <i>
+      文章编号: {{ page.order }}
     </i>
-    <br>
-    <i>文章编号order: {{page.order}}</i>
-  <br>
   <br>
     <div id="content">
       {{ content }}
