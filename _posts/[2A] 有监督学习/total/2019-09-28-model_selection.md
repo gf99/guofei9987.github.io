@@ -10,7 +10,7 @@ order: 201
 
 两年前总结过模型选取和参数选择的理论+代码。[机器学习模型汇总](http://www.guofei.site/2017/05/22/modelpool.html), [【模型评价】理论与实现](http://www.guofei.site/2017/05/02/ModelEvaluation.html), [【交叉验证】介绍与实现](http://www.guofei.site/2017/10/03/crossvalidation.html)  
 两年过去了，理论没太大变化，但 sklearn 增加了很多好用的新功能（点赞）。  
-现在对这几篇博客，删掉代码，保留理论部分。在这篇博客里重新总结一遍代码。  
+现在对这几篇博客，删掉代码，保留理论部分。在这篇博客里重新总结一遍代码。（过段时间会把旧博客删掉）  
 
 ## 本文结构
 1. 先讲 `GridSearchCV`，这是一个网格搜索的方法，然后介绍 `RandomizedSearchCV` 等，它们的用法类似
@@ -36,6 +36,9 @@ gscv = model_selection.GridSearchCV(estimator=mlp,
                                    return_train_score=True, # 默认不返回 train 的score
                                    refit=True, # 默认为 True, 用最好的模型+全量数据再次训练，用 gscv.best_estimator_ 获取最好模型
                                    n_jobs=-1)
+
+gscv.fit(X,y)
+gscv.cv_results_
 ```
 ### 关于score
 https://scikit-learn.org/stable/modules/model_evaluation.html
