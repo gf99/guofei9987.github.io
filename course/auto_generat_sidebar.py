@@ -113,7 +113,7 @@ f = open('sidebar.md', 'w', encoding='utf-8')
 f.write(head + content + tail)
 f.close()
 
-f = open('coverpage.md', 'w', encoding='utf-8')
+f = open('homepage.md', 'w', encoding='utf-8')
 # print(head+content)
 # f.write(head+content.encode('utf-8').decode('utf-8'))
 f.write(content)
