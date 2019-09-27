@@ -4,7 +4,7 @@
 </a>
 
 * 1_哲学
-    * [1_西方哲学<sup style = "color:red">49132字<sup>](docs/1_哲学/1_西方哲学.md)
+    * [1_西方哲学<sup style = "color:red">49130字<sup>](docs/1_哲学/1_西方哲学.md)
     * [2_诸子百家<sup style = "color:red">4059字<sup>](docs/1_哲学/2_诸子百家.md)
     * [3_佛家思想<sup style = "color:red">17370字<sup>](docs/1_哲学/3_佛家思想.md)
     * [5_《哲学家们都干了些什么》<sup style = "color:red">20326字<sup>](docs/1_哲学/5_《哲学家们都干了些什么》.md)
@@ -64,17 +64,18 @@
     * [行为心理学<sup style = "color:red">1163字<sup>](docs/9_心理学/行为心理学.md)
 * D_自我管理和项目管理
     * [《成大事者不纠结》<sup style = "color:red">2336字<sup>](docs/D_自我管理和项目管理/《成大事者不纠结》.md)
-    * [健康<sup style = "color:red">978字<sup>](docs/D_自我管理和项目管理/健康.md)
-    * [吉姆柯林斯<sup style = "color:red">3779字<sup>](docs/D_自我管理和项目管理/吉姆柯林斯.md)
-    * [如何学习<sup style = "color:red">2560字<sup>](docs/D_自我管理和项目管理/如何学习.md)
+    * [企业管理<sup style = "color:red">3779字<sup>](docs/D_自我管理和项目管理/企业管理.md)
+    * [健康管理<sup style = "color:red">978字<sup>](docs/D_自我管理和项目管理/健康管理.md)
     * [工作部署<sup style = "color:red">5783字<sup>](docs/D_自我管理和项目管理/工作部署.md)
-    * [敏捷<sup style = "color:red">3726字<sup>](docs/D_自我管理和项目管理/敏捷.md)
-    * [礼仪<sup style = "color:red">1469字<sup>](docs/D_自我管理和项目管理/礼仪.md)
-    * [罗伯特议事法<sup style = "color:red">841字<sup>](docs/D_自我管理和项目管理/罗伯特议事法.md)
     * [自我管理<sup style = "color:red">38字<sup>](docs/D_自我管理和项目管理/自我管理.md)
-    * [观人<sup style = "color:red">241字<sup>](docs/D_自我管理和项目管理/观人.md)
     * [逆向管理<sup style = "color:red">215字<sup>](docs/D_自我管理和项目管理/逆向管理.md)
-    * [项目管理<sup style = "color:red">296字<sup>](docs/D_自我管理和项目管理/项目管理.md)
+    * [项目管理<sup style = "color:red">4869字<sup>](docs/D_自我管理和项目管理/项目管理.md)
+* G_沟通
+    * [写<sup style = "color:red">456字<sup>](docs/G_沟通/写.md)
+    * [如何学习<sup style = "color:red">2560字<sup>](docs/G_沟通/如何学习.md)
+    * [看<sup style = "color:red">779字<sup>](docs/G_沟通/看.md)
+    * [礼仪<sup style = "color:red">1469字<sup>](docs/G_沟通/礼仪.md)
+    * [说](docs/G_沟通/说.md)
 * Y_碎片阅读
     * [其他<sup style = "color:red">3727字<sup>](docs/Y_碎片阅读/其他.md)
     * [冬吴相对论<sup style = "color:red">1548字<sup>](docs/Y_碎片阅读/冬吴相对论.md)
