@@ -9,6 +9,6 @@
 
 
 [GitHub](https://github.com/guofei9987/guofei9987.github.io)
-[读书](http://www.guofei.site/reading/#/homepage)
-[听课](http://www.guofei.site/course/#/homepage)
+[读书](http://www.guofei.site/reading/)
+[听课](http://www.guofei.site/course/)
 [Matlab](/homepage)

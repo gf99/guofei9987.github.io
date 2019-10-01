@@ -8,6 +8,6 @@
 
 
 [GitHub](https://github.com/guofei9987/guofei9987.github.io)
-[听课](http://www.guofei.site/course/#/homepage)
-[Matlab](http://www.guofei.site/matlab/#/homepage)
+[听课](http://www.guofei.site/course/)
+[Matlab](http://www.guofei.site/matlab/)
 [读书](/homepage)

@@ -63,8 +63,19 @@ on:
     - '!*.js'
 ```
 
-### 其它
+### 其它 events
 https://help.github.com/en/articles/events-that-trigger-workflows#scheduled-events
+
+摘抄几个常用的
+- fork
+- issue_comment
+  - created
+  - edited
+  - deleted
+  - 。。。
+- watch
+  - started
+
 
 ## job
 ```
@@ -263,15 +274,15 @@ https://api.github.com/users/guofei9987
    "svn_url": "https://github.com/guofei9987/scikit-learn",
    "homepage": "http://scikit-learn.org",
    "size": 94784,
-   "stargazers_count": 0,
-   "watchers_count": 0,
+   "stargazers_count": 0, // star 数量
+   "watchers_count": 0, // watch 数量
    "language": "Python",
    "has_issues": false,
    "has_projects": true,
    "has_downloads": true,
    "has_wiki": true,
    "has_pages": false,
-   "forks_count": 0,
+   "forks_count": 0, // fork 数量
    "mirror_url": null,
    "archived": false,
    "disabled": false,
