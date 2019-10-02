@@ -34,4 +34,5 @@ Triplet Loss
 
 
 ## 另一种算法
-![TimLine截图20190529212338](/assets/TimLine截图20190529212338.png)
+
+![1](http://www.guofei.site/pictures_for_blog/deep_learning/face.png)
