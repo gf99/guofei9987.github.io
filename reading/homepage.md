@@ -16,6 +16,7 @@
     * [8_企业传记<sup style = "color:red">1540字<sup>](docs/2_历史/8_企业传记.md)
     * [J_日本专题<sup style = "color:red">8560字<sup>](docs/2_历史/J_日本专题.md)
     * [其它<sup style = "color:red">2487字<sup>](docs/2_历史/其它.md)
+    * [枪炮病菌与钢铁<sup style = "color:red">6159字<sup>](docs/2_历史/枪炮病菌与钢铁.md)
 * 3_社科
     * [1_经济学读物<sup style = "color:red">3021字<sup>](docs/3_社科/1_经济学读物.md)
     * [2_认知升级<sup style = "color:red">463字<sup>](docs/3_社科/2_认知升级.md)
@@ -59,18 +60,17 @@
     * [行为心理学<sup style = "color:red">1163字<sup>](docs/9_心理学/行为心理学.md)
 * D_自我管理和项目管理
     * [《成大事者不纠结》<sup style = "color:red">2336字<sup>](docs/D_自我管理和项目管理/《成大事者不纠结》.md)
-    * [企业管理<sup style = "color:red">3779字<sup>](docs/D_自我管理和项目管理/企业管理.md)
     * [健康管理<sup style = "color:red">978字<sup>](docs/D_自我管理和项目管理/健康管理.md)
-    * [工作部署<sup style = "color:red">5783字<sup>](docs/D_自我管理和项目管理/工作部署.md)
-    * [自我管理<sup style = "color:red">38字<sup>](docs/D_自我管理和项目管理/自我管理.md)
-    * [逆向管理<sup style = "color:red">215字<sup>](docs/D_自我管理和项目管理/逆向管理.md)
-    * [项目管理<sup style = "color:red">4869字<sup>](docs/D_自我管理和项目管理/项目管理.md)
+    * [工作部署<sup style = "color:red">5821字<sup>](docs/D_自我管理和项目管理/工作部署.md)
+    * [情商<sup style = "color:red">1832字<sup>](docs/D_自我管理和项目管理/情商.md)
+    * [詹姆斯柯林斯 <sup style = "color:red">3779字<sup>](docs/D_自我管理和项目管理/詹姆斯柯林斯 .md)
+    * [项目管理<sup style = "color:red">5084字<sup>](docs/D_自我管理和项目管理/项目管理.md)
 * G_沟通
     * [写<sup style = "color:red">456字<sup>](docs/G_沟通/写.md)
-    * [如何学习<sup style = "color:red">2560字<sup>](docs/G_沟通/如何学习.md)
+    * [学<sup style = "color:red">2560字<sup>](docs/G_沟通/学.md)
     * [看<sup style = "color:red">779字<sup>](docs/G_沟通/看.md)
-    * [礼仪<sup style = "color:red">1469字<sup>](docs/G_沟通/礼仪.md)
-    * [说](docs/G_沟通/说.md)
+    * [礼仪<sup style = "color:red">1511字<sup>](docs/G_沟通/礼仪.md)
+    * [说<sup style = "color:red">1996字<sup>](docs/G_沟通/说.md)
 * Y_碎片阅读
     * [其他<sup style = "color:red">3727字<sup>](docs/Y_碎片阅读/其他.md)
     * [冬吴相对论<sup style = "color:red">1548字<sup>](docs/Y_碎片阅读/冬吴相对论.md)
