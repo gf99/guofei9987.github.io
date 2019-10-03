@@ -8,7 +8,7 @@
     * [《苏菲的世界》<sup style = "color:red">4600字<sup>](docs/1_哲学/《苏菲的世界》.md)
 * 2_历史
     * [1_尤瓦尔赫拉利<sup style = "color:red">43803字<sup>](docs/2_历史/1_尤瓦尔赫拉利.md)
-    * [2_吴晓波<sup style = "color:red">38492字<sup>](docs/2_历史/2_吴晓波.md)
+    * [2_吴晓波<sup style = "color:red">38067字<sup>](docs/2_历史/2_吴晓波.md)
     * [4_中国史<sup style = "color:red">2089字<sup>](docs/2_历史/4_中国史.md)
     * [5_世界史<sup style = "color:red">1836字<sup>](docs/2_历史/5_世界史.md)
     * [6_经济史<sup style = "color:red">3070字<sup>](docs/2_历史/6_经济史.md)
