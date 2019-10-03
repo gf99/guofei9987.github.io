@@ -8,7 +8,7 @@
     * [《苏菲的世界》<sup style = "color:red">4600字<sup>](docs/1_哲学/《苏菲的世界》.md)
 * 2_历史
     * [1_尤瓦尔赫拉利<sup style = "color:red">43803字<sup>](docs/2_历史/1_尤瓦尔赫拉利.md)
-    * [2_吴晓波<sup style = "color:red">3387字<sup>](docs/2_历史/2_吴晓波.md)
+    * [2_吴晓波<sup style = "color:red">38492字<sup>](docs/2_历史/2_吴晓波.md)
     * [4_中国史<sup style = "color:red">2089字<sup>](docs/2_历史/4_中国史.md)
     * [5_世界史<sup style = "color:red">1836字<sup>](docs/2_历史/5_世界史.md)
     * [6_经济史<sup style = "color:red">3070字<sup>](docs/2_历史/6_经济史.md)
@@ -16,7 +16,7 @@
     * [8_企业传记<sup style = "color:red">1540字<sup>](docs/2_历史/8_企业传记.md)
     * [J_日本专题<sup style = "color:red">8560字<sup>](docs/2_历史/J_日本专题.md)
     * [其它<sup style = "color:red">2487字<sup>](docs/2_历史/其它.md)
-    * [枪炮病菌与钢铁<sup style = "color:red">6159字<sup>](docs/2_历史/枪炮病菌与钢铁.md)
+    * [枪炮病菌与钢铁<sup style = "color:red">6127字<sup>](docs/2_历史/枪炮病菌与钢铁.md)
 * 3_社科
     * [1_经济学读物<sup style = "color:red">3021字<sup>](docs/3_社科/1_经济学读物.md)
     * [2_认知升级<sup style = "color:red">463字<sup>](docs/3_社科/2_认知升级.md)
