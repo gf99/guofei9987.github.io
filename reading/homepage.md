@@ -46,8 +46,8 @@
     * [《认知盈余》<sup style = "color:red">839字<sup>](docs/6_科技/《认知盈余》.md)
     * [科技（中分）<sup style = "color:red">2167字<sup>](docs/6_科技/科技（中分）.md)
 * 8_小说
-    * [刘慈欣<sup style = "color:red">7708字<sup>](docs/8_小说/刘慈欣.md)
-    * [反乌托邦小说<sup style = "color:red">3875字<sup>](docs/8_小说/反乌托邦小说.md)
+    * [刘慈欣<sup style = "color:red">7730字<sup>](docs/8_小说/刘慈欣.md)
+    * [反乌托邦小说<sup style = "color:red">4255字<sup>](docs/8_小说/反乌托邦小说.md)
     * [杜拉拉<sup style = "color:red">13761字<sup>](docs/8_小说/杜拉拉.md)
     * [科幻短篇<sup style = "color:red">1023字<sup>](docs/8_小说/科幻短篇.md)
     * [阿西莫夫<sup style = "color:red">44字<sup>](docs/8_小说/阿西莫夫.md)
@@ -60,10 +60,10 @@
     * [行为心理学<sup style = "color:red">1163字<sup>](docs/9_心理学/行为心理学.md)
 * D_自我管理和项目管理
     * [《成大事者不纠结》<sup style = "color:red">2336字<sup>](docs/D_自我管理和项目管理/《成大事者不纠结》.md)
-    * [健康管理<sup style = "color:red">978字<sup>](docs/D_自我管理和项目管理/健康管理.md)
+    * [健康管理<sup style = "color:red">1441字<sup>](docs/D_自我管理和项目管理/健康管理.md)
     * [工作部署<sup style = "color:red">5821字<sup>](docs/D_自我管理和项目管理/工作部署.md)
     * [情商<sup style = "color:red">1832字<sup>](docs/D_自我管理和项目管理/情商.md)
-    * [詹姆斯柯林斯 <sup style = "color:red">3779字<sup>](docs/D_自我管理和项目管理/詹姆斯柯林斯 .md)
+    * [詹姆斯柯林斯<sup style = "color:red">3779字<sup>](docs/D_自我管理和项目管理/詹姆斯柯林斯.md)
     * [项目管理<sup style = "color:red">5084字<sup>](docs/D_自我管理和项目管理/项目管理.md)
 * G_沟通
     * [写<sup style = "color:red">456字<sup>](docs/G_沟通/写.md)
@@ -75,6 +75,7 @@
     * [其他<sup style = "color:red">3727字<sup>](docs/Y_碎片阅读/其他.md)
     * [冬吴相对论<sup style = "color:red">1548字<sup>](docs/Y_碎片阅读/冬吴相对论.md)
     * [李永乐<sup style = "color:red">1043字<sup>](docs/Y_碎片阅读/李永乐.md)
+    * [百家讲坛<sup style = "color:red">87字<sup>](docs/Y_碎片阅读/百家讲坛.md)
     * [知乎文章<sup style = "color:red">7477字<sup>](docs/Y_碎片阅读/知乎文章.md)
     * [罗振宇<sup style = "color:red">2887字<sup>](docs/Y_碎片阅读/罗振宇.md)
     * [高晓松<sup style = "color:red">314字<sup>](docs/Y_碎片阅读/高晓松.md)

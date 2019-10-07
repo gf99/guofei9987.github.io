@@ -33,3 +33,49 @@ https://leetcode.com/explore/learn/card/binary-search/135/template-iii/945/
 https://leetcode.com/explore/learn/card/linked-list/214/two-pointer-technique/1215/discuss/49798/Concise-python-code-with-comments/156662  
 
 另一个巧妙使用 two pointer technique 的题目 ([142. Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/description/))
+
+## collection
+### 题目
+https://leetcode.com/explore/learn/card/hash-table/184/comparison-with-other-data-structures/1178/discuss/82269/Short-Python-C++
+
+来自大佬的解答
+```python
+import collections
+
+nums1 = [1, 2, 2, 1, 2]
+nums2 = [2, 2, 2]
+
+a, b = map(collections.Counter, (nums1, nums2))
+
+list((a & b).elements())
+```
+- map函数有并行能力
+- 两个collection对象用&可以做交集
+- elements是一个iterable对象
+
+top k
+```python
+a = collections.Counter(nums)
+sorted(a, key=lambda i: a[i],reverse=True)[:k]
+```
+
+## Recursion
+https://leetcode.com/explore/learn/card/recursion-i/255/recursion-memoization/1662
+
+这是一个类似斐波那契的题目，自然想到用 Recursion，但还有个更好的方法，且更快（不知道为啥更快）
+
+```python
+class Solution:
+    def climbStairs(self, n: int) -> int:
+        if n==1:
+            return 1
+        if n==2:
+            return 2
+        return self.climbStairs(n-1)+self.climbStairs(n-2)
+
+    def climbStairs2(self, n: int) -> int:
+     a=b=1
+     for _ in range(n):
+         a,b=b,a+b
+     return a
+        ```

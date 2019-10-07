@@ -91,8 +91,8 @@ sidebar = tree.pre_order(tree.root.children[tree.path2])
 print(sidebar)
 
 # 总字数
-# c = tree.pre_order2(tree.root.children[tree.path2])
-# print(c)
+c = tree.pre_order2(tree.root.children[tree.path2])
+print('总字数：',c)
 # %%
 head = '''
 <a href="http://www.guofei.site" target='blog'>

@@ -45,7 +45,7 @@ f.write('## 读完书单\n' + all_books_md)
 f.close()
 
 # %%
-# 分析最近的读书情况，并写入
+# 分析最近的读书情况，并写入书单那一页
 import pandas as pd
 import datetime
 import numpy as np

@@ -190,7 +190,8 @@ regex.split(text) # 返回list
 
 regex.findall(text) # 返回list
 regex.finditer(text) # 迭代器,存放的是<SRE_Match object>
-m = regex.match(text) # 是否精确匹配，返回<SRE_Match object>
+m = regex.match(text) # 是否精确匹配，返回<SRE_Match object>，从起始位置匹配，如果匹配不成功，返回None
+m = regex.search(text)
 
 regex.sub(sentence, replace_char, 2) # 把 sentence 前2个符合的语句，替换成replace_char
 ```
