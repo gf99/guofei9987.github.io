@@ -102,30 +102,24 @@ negative</td>
 
 #### 指标2：P-R曲线
 覆盖率	Recall(True Positive Rate，or Sensitivity)
-: R=TP/(TP+FN)
+: TPR = TP/(TP+FN)
 
 命中率	Precision(Positive Predicted Value,PV+)
-: P=TP/(TP+FP)
+: PPV = TP/(TP+FP)
 
 F-score
-:  $F_\beta=\dfrac{(1+\beta^2)PR}{\beta^2P+R}$
+:  $F_\beta=\dfrac{(1+\beta^2)TPR\times  PPV}{\beta^2PPV + TPR}$
 
-P-R 曲线
-:   横坐标是R，纵坐标是P
+P-R 曲线(Precision-Recall curve)
+:   横坐标是TPR，纵坐标是PPV
 
 #### 指标3：ROC曲线
-负例的覆盖率	Specificity(True Negative Rate)
-: TNR=TN/(FP+TN)
 
-负例的命中率	Negative predicted value(PV-)
-: TN/(TP+FP)
+TPR(True Positive Rate, sensitive, recall, hite rate)
+:    TPR = TP/P = TP/(TP+FN)
 
-#### ROC曲线
-真正例率(True Positive Rate, TPR)
-:    TPR=TP/(TP+FN)
-
-假正例率(False Positive Rate, FPR)
-:    FPR=FP/(TN+FP)
+FPR(False Positive Rate)
+:    FPR = FP/N = FP/(TN+FP)
 
 ROC曲线
 :    横轴是FPR，纵轴是TPR
