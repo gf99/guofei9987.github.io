@@ -1,12 +1,16 @@
 ---
 layout: post
-title: 条件概率,条件期望,条件方差
+title: 【丢弃】条件概率,条件期望,条件方差
 categories:
-tags: 4_2_概率论
+tags:
 keywords:
 description:
 order: 450
 ---
+
+这篇很多地方写的不够清楚，两年后做了更新，看[这里](http://www.guofei.site/2019/10/02/numerical_characteristics_of_random_variables.html)
+
+
 
 本文介绍概念：  
 条件概率  

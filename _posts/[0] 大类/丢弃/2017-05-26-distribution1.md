@@ -1,8 +1,8 @@
 ---
 layout: post
-title: 常见统计分布(2)
+title: 【丢弃】常见统计分布(2)
 categories:
-tags: 4_2_概率论
+tags:
 keywords:
 description:
 order: 9502
