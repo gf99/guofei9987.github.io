@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 常见统计分布(1)
+title: 常见统计分布
 categories:
 tags: 4_2_概率论
 keywords:
@@ -78,7 +78,7 @@ $\pi(\lambda_1)+\pi(\lambda_2)=\pi(\lambda_1+\lambda_2)$
 显微镜下单位分区内的细菌数<br>
 某放射性物质单位时间发射的粒子数</td></tr>
 <tr>
-<table></table>
+</table>
 
 
 
@@ -90,13 +90,6 @@ $\pi(\lambda_1)+\pi(\lambda_2)=\pi(\lambda_1+\lambda_2)$
   <th>均匀分布Uniform distribution</th>
   <td>$X \sim U(n,p)$</td>
 </tr>
-
-
-
-
-
-
-
 
 <tr><th> 指数分布Exponential distribution</th>
 <td></td>
@@ -148,11 +141,9 @@ $\bar X, S^2$相互独立  <br>
 $\dfrac{\bar X-\mu}{S/\sqrt{n}} \sim t(n-1)$
 </td>
 <tr>
-<table></table>
+</table>
 
-<br>
-<br>
-点击继续看...<a href='/2017/05/26/distribution1.html'>常见统计分布(2)</a>
+
 
 
 
