@@ -5,7 +5,7 @@ categories:
 tags: 4_2_概率论
 keywords: entropy, conditional entropy
 description:
-order: 280
+order: 422
 ---
 
 ## 期望

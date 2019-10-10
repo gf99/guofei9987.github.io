@@ -5,7 +5,7 @@ categories:
 tags: 4_2_概率论
 keywords:
 description:
-order: 9550
+order: 423
 ---
 
 ## 切比雪夫不等式
@@ -39,14 +39,31 @@ $\forall \epsilon >0,n\to \infty ,Pr[\mid \bar X-u \mid >\epsilon] \to 0$
 
 
 ### 辛钦大数定律
-辛钦大数定律：$$\lim\limits_{n\to \infty} P\{ \mid \dfrac{1}{n} \sum\limits_{k=1}^n X_k -u\mid < \varepsilon \}$$  
+条件：$X_k$独立同分布
+对任意$\varepsilon>0$  
+$$\lim\limits_{n\to \infty} P\{ \mid \dfrac{1}{n} \sum\limits_{k=1}^n X_k -u\mid < \varepsilon \}=1$$  
 
+（用切比雪夫不等式去证明）
 ### 伯努利大数定理
+$f_A$是n次独立实验中，事件A发生的概率。  
+p是事件A在每次实验中发生的概率。  
 
-伯努利大数定律：$$\lim\limits_{n\to \infty} P\{ \mid \dfrac{f_A}{n} -p\mid < \varepsilon \}$$  
+$$\lim\limits_{n\to \infty} P\{ \mid \dfrac{f_A}{n} -p\mid < \varepsilon \}=1$$  
 
+（用辛钦大数定律去证明）
 ## 中心极限定理
+（Lindberg-Levy中心极限定理）  
+前提：$X_1,X_2,...$独立同分布，且$EX_i=u, DX_i=\sigma^2$，总有  
 
-中心极限定理：$$\lim\limits_{n\to \infty} P\{ \dfrac{\sum\limits_{i=1}^n X_i -n \mu}{\sqrt n \sigma} \leq x\} =\Phi(x)$$  
+$$\lim\limits_{n\to \infty} P\{ \dfrac{\sum\limits_{i=1}^n X_i -n \mu}{\sqrt n \sigma} \leq x\} =\Phi(x)$$  
 
 也就是说，独立同分布的均值，服从$N(\mu,\sigma^2)$  
+
+### De Moivre-Laplace 中心极限定理
+其实就是 Levy 的特殊情况
+
+$X_i$是0-1分布，那么  
+$$\lim\limits_{n\to \infty} P\{ \dfrac{\sum\limits_{i=1}^n X_i -n p}{\sqrt n p(1-p)} \leq x\} =\Phi(x)$$  
+
+二项分布趋近于正态分布。  
+（有时可以用来做一些近似计算之类的）
