@@ -1,11 +1,11 @@
 ---
 layout: post
-title: 【回收】【读后感】《大国空巢》.
+title: 【丢弃】【读后感】《大国空巢》.
 categories: 回收
 ---
 
 
-*回收原因：放到独立的读书笔记库中[这里](http://www.guofei.site/reading/#/docs/6_%E7%A4%BE%E4%BC%9A%E5%AD%A6%E7%A7%91%E6%99%AE/%E5%A4%A7%E5%9B%BD%E7%A9%BA%E5%B7%A2)*
+*回收原因：放到独立的读书笔记库中[这里](http://www.guofei.site/reading/)*
 
 
 ## 一、世界人口。

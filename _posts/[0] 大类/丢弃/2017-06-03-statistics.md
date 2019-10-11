@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 【汇总】统计学知识汇总
-categories: 回收
+title: 【丢弃】【汇总】统计学知识汇总
+categories:
 tags:
 keywords:
 description:

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Linux命令
-categories: 回收
+title: 【丢弃】Linux命令
+categories:
 tags:
 keywords: model evaluation
 description:

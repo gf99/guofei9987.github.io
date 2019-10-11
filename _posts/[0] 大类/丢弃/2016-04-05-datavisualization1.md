@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 【回收】【可视化方法】
+title: 【丢弃】【可视化方法】
 categories: 回收
 tags:
 keywords: model evaluation

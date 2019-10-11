@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 数据分析的主要流程
-categories: 回收
+title: 【丢弃】数据分析的主要流程
+categories:
 tags:
 keywords:
 description:

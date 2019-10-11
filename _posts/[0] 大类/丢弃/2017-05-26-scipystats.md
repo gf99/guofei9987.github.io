@@ -1,6 +1,6 @@
 ---
 layout: post
-title: scipy的stats库
+title: 【丢弃】scipy的stats库
 categories:
 tags:
 keywords:

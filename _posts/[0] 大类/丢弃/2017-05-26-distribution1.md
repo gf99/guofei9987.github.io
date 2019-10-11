@@ -8,7 +8,7 @@ description:
 order: 9502
 ---
 
-
+更清晰的内容更新到[这里](http://www.guofei.site/2017/05/27/distribution.html)
 
 
 ## 引入Gamma Function

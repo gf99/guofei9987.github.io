@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 【假设检验】Python实现.
-categories: 回收
+title: 【丢弃】【假设检验】Python实现.
+categories:
 tags:
 keywords:
 description:

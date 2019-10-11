@@ -1,8 +1,8 @@
 ---
 layout: post
-title: 【Python】图像的读写显
+title: 【丢弃】【Python】图像的读写显
 categories:
-tags: 7_可视化
+tags:
 keywords:
 description:
 order: 741

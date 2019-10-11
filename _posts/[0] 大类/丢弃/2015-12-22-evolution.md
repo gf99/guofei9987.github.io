@@ -4,7 +4,7 @@ title: 【读后感】《进化论与生活》（戴维.斯隆.威尔逊）.
 categories: 回收
 ---
 
-*回收原因：读书笔记全部移动到独立代码库中[进化论与生活](http://www.guofei.site/reading/#/docs/8_%E8%BF%9B%E5%8C%96%E8%AE%BA/%E8%BF%9B%E5%8C%96%E8%AE%BA%E4%B8%8E%E7%94%9F%E6%B4%BB)*
+*回收原因：读书笔记全部移动到独立代码库中[进化论与生活](http://www.guofei.site/reading/)*
 
 ## 进化论三要素
 1. 变异
