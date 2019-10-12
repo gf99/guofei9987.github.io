@@ -27,7 +27,7 @@ order: 421
 |正态分布 <br> Normal distribution <br> Gaussian distribution|$X \sim N(\mu,\sigma^2)$|$f(x)=\dfrac{1}{\sqrt{2\pi}\sigma}e^{-\dfrac{(x-\mu)^2}{2 \sigma^2}}$|$$EX=\mu$$<br>$$DX=\sigma^2$$|可加性：<br>$X_i \sim N(\mu_i,\sigma_i^2)$，并且相互独立  <br>那么$\sum X_i \sim N(\sum\mu_i,\sum\sigma_i^2)$|如果同时满足以下两条：  <br>$X_i \sim(i.i.d)N(\mu,\sigma^2)$ 独立同分布  <br>$S^2=\dfrac{1}{n-1}\sum(X_i - \bar X)^2$  <br>那么，  <br>$\bar X \sim N(u,\dfrac{\sigma^2}{n})$  <br>$\dfrac{(n-1)S^2}{\sigma^2} \sim \chi^2(n-1)$  <br>$ES^2=\sigma^2$  <br>$\bar X, S^2$相互独立  <br>$\dfrac{\bar X-\mu}{S/\sqrt{n}} \sim t(n-1)$|
 |||||||
 
-### 多元正态分布
+## 多元正态分布
 $f(x_1,x_2,...x_p)=\dfrac{1}{(2\pi)^{p/2} \mid \Sigma \mid ^{1/2}} exp[-\dfrac{1}{2} (x-u)'\Sigma^{-1}(x-u)]$
 where,  
 - u是p阶向量
