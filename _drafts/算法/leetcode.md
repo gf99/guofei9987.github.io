@@ -73,31 +73,8 @@ class Solution:
 
 https://leetcode.com/problems/product-of-array-except-self/
 
-这个题，第一思路就是乘起来，然后除以各自的项。缺点是题目不让用除法，况且对0的处理略繁琐
-```
-class Solution:
-    def productExceptSelf(self, nums):
-        prod=1
-        has_zero=0
-        len_nums=len(nums)
-        for idx,num in enumerate(nums):
-            if num==0:
-                has_zero+=1
-                zero_idx=idx
-                continue
-            prod*=num
-        if has_zero==0:
-            return [int(prod/i) for i in nums]
-        elif has_zero==1:
-            print(zero_idx)
-            output=[0]*len(nums)
-            output[zero_idx]=prod
-            return output
-        else:
-            return [0]*len(nums)
-```
-
-参照上面下雨那题的思路
+这个题，第一思路就是乘起来，然后除以各自的项。缺点是题目不让用除法，况且对0的处理略繁琐  
+也可以参照上面下雨那题的思路  
 ```
 class Solution:
     def productExceptSelf(self, nums):
@@ -116,7 +93,7 @@ class Solution:
 时间和空间消耗和除法解法相似。再改进就是，其实不需要right这个list。不过这样可读性差点儿。
 
 衍生题目：https://leetcode.com/problems/maximum-product-subarray/
-有点难想到
+有点难想到，太漂亮了
 ```python
 class Solution:
     def maxProduct(self, nums) -> int:
@@ -130,10 +107,49 @@ class Solution:
         return r
 ```
 
+还有个漂亮的解
+https://leetcode.com/problems/maximum-product-subarray/discuss/183483/In-Python-it-can-be-more-concise-PythonC%2B%2BJava
+```Python
+def maxProduct(self, A):
+    B = A[::-1]
+    for i in range(1, len(A)):
+        A[i] *= A[i - 1] or 1
+        B[i] *= B[i - 1] or 1
+    return max(A + B)
+```
+
+
+
+
 这个题有3个衍生题目
 https://leetcode.com/problems/maximum-subarray/
-https://leetcode.com/problems/house-robber/
+这是个经典题目，找到一个漂亮的答案 https://leetcode.com/problems/maximum-subarray/discuss/20396/Easy-Python-Way
+```python
+class Solution:
+    def maxSubArray(self, nums: List[int]) -> int:
+        for i in range(1, len(nums)):
+            if nums[i-1] > 0:
+                nums[i] += nums[i-1]
+        return max(nums)
+```
+
+衍生题目
+https://leetcode.com/problems/longest-turbulent-subarray/
+
+
 https://leetcode.com/problems/subarray-product-less-than-k/
 
 
 https://leetcode.com/problems/trapping-rain-water-ii/
+
+##递归
+https://leetcode.com/problems/house-robber/
+
+我写的递归，超时，但这个就好用，有空要研究一下递归和这种写法的转化关系，以及为啥递归会超时
+```
+class Solution:
+    def rob(self, nums):
+        last, now = 0, 0
+        for i in nums: last, now = now, max(last + i, now)
+        return now
+```

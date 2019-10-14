@@ -2,7 +2,7 @@
 layout: post
 title: 【Python】【面向对象】继承&多态
 categories:
-tags: Python语法
+tags: Python设计模式
 keywords:
 description:
 order: 1001
@@ -148,9 +148,49 @@ Func(s2_obj) # 在Func函数中传入Ss类的对象 ss_obj，执行 Ss 的show�
 为了让Func函数既可以执行S1对象的show方法，又可以执行S2对象的show方法，所以，定义了一个S1和S2类的父类  
 而实际传入的参数是：S1对象和S2对象  
 
+## 其它
+### self是什么
 
+self 是类的实例
 
-参考文献：
-http://python.jobbole.com/82023/  
+```python
+class Test:
+    def prt(self):
+        print(self)
+        print(self.__class__)
 
-http://python.jobbole.com/83747/  
+t=Test()
+
+print(t)
+t.prt()
+
+# 输出是：
+# <__main__.Test object at 0x7fa25d134d30>
+# <__main__.Test object at 0x7fa25d134d30>
+# <class '__main__.Test'>
+```
+
+结论：self是类的实例  
+
+继续问：
+### 在继承时，self是什么
+
+```python
+class Parent:
+    def pprt(self):
+        print(self)
+
+class Child(Parent):
+    def cprt(self):
+        print(self)
+c = Child()
+c.cprt()
+c.pprt()
+p = Parent()
+p.pprt()
+
+# <__main__.Child object at 0x7fa25d1346a0>
+# <__main__.Child object at 0x7fa25d1346a0>
+# <__main__.Parent object at 0x7fa25d134668>
+```
+继承时，即使方法是在父类中定义的，self也是这次的实例（或者说，继承时从父类中把方法借过来给自己用）

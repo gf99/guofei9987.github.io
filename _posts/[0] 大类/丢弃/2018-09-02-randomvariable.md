@@ -1,12 +1,14 @@
 ---
 layout: post
-title: 【随机变量】矩阵
+title: 【丢弃】【随机变量】矩阵
 categories:
-tags: 4_2_概率论
+tags:
 keywords:
 description:
 order: 9510
 ---
+
+丢弃原因：整合到 [随机变量的数字特征](http://www.guofei.site/2019/10/02/numerical_characteristics_of_random_variables.html)
 
 ## 随机变量矩阵的推导
 $$x=\left ( \begin{array}{ccc}  x_1\\x_2\\x_3\\...\\x_k \end{array} \right ),
