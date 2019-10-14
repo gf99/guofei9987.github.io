@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 【读后感】《进化论与生活》（戴维.斯隆.威尔逊）.
-categories: 回收
+title: 【丢弃】《进化论与生活》（戴维.斯隆.威尔逊）.
+categories:
 ---
 
 *回收原因：读书笔记全部移动到独立代码库中[进化论与生活](http://www.guofei.site/reading/)*
