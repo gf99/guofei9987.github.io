@@ -18,6 +18,8 @@ order: 100
     - 改变 cost function. sklearn 很多方法可以输入 weights 参数，实际上就是改变 cost function，让稀有类的权重增加。
     - 使用可以处理不平衡问题的模型，如 朴素贝叶斯。有材料说 决策树 也可以？我表示怀疑，回头试试。
     - 吴恩达的神经网络课程上讲过一个方法。对于可以重复训练的模型，把多数类分割成多个部分，每部分都和稀有类结合起来去训练模型。
+    - 【TODO: 这一部分以后补充，因为很有用且重要】考虑不同误分类情况代价的差异性对算法进行优化，主要是基于代价敏感学习算法(Cost-Sensitive Learning)，代表的算法有adacost；
+    - 不平衡数据集的问题考虑为一分类（One Class Learning）或者异常检测（Novelty Detection）问题，代表的算法有One-class SVM。 `sklearn.svm.OneClassSVM`
 
 
 ## 2. over sampling
@@ -41,6 +43,9 @@ X_resampled, y_resampled = osamp.fit_sample(X, y)
 Counter(y_resampled)
 ```
 
+- 优点：简单
+- 缺点：小众样本复制多份，一个点会在高维空间中反复出现。导致过拟合，或者运气好就能分对很多点，否则分错很多点。
+
 ### SMOTE
 ```python
 from imblearn import over_sampling
@@ -53,6 +58,12 @@ Counter(y_resampled)
 - kind='regular'
 - kind='borderline1', kind='borderline2'关注在最优化决策函数边界的一些危险样本
 - kind='svm' 使用支持向量机分类器产生支持向量然后再生成新的少数类样本。
+
+
+缺点：
+- 增加了类之间重叠的可能性（由于对每个少数类样本都生成新样本，因此容易发生生成样本重叠(Overlapping)的问题），
+- 生成一些没有提供有益信息的样本。
+
 
 ### ADASYN
 

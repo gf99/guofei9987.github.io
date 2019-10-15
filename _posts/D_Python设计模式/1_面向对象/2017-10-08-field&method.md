@@ -96,40 +96,39 @@ obj_son.show() # 派生类中可以访问
 
 ```py
 class Foo:
-
     def __init__(self, name):
         self.name = name
 
     def ord_func(self):
         """ 定义普通方法，至少有一个self参数 """
-
-        # print self.name
-        print( '普通方法')
+        print('普通方法')
 
     @classmethod
     def class_func(cls):
         """ 定义类方法，至少有一个cls参数 """
-
-        print ('类方法')
+        print('类方法', cls)
 
     @staticmethod
     def static_func():
         """ 定义静态方法 ，无默认参数"""
+        print('静态方法')
 
-        print( '静态方法')
+
+f = Foo('abc')
 
 # 调用普通方法
-f = Foo('abc')
 f.ord_func()
 
-# 调用类方法
+# 调用类方法，这个案例中，print出来的都一样，都是 Foo 类
 Foo.class_func()
+f.class_func()
 
 # 调用静态方法
 Foo.static_func()
+f.static_func()
 ```
 
-
+## 装饰器
 ### 经典类-装饰器型属性
 ```py
 # ############### 定义 ###############
@@ -210,6 +209,30 @@ del Foo.BAR          # 自动调用第三个参数中定义的方法：del_bar�
 obj.BAR.__doc__      # 自动获取第四个参数中设置的值：description...
 ```
 
+## 修饰器
+```python
+class Foo:
+    def __get__(self,instance,owner):
+        print("触发 Foo.__get__",instance,owner)
+        return instance.__dict__['x']
+    def __set__(self,instance,value):
+        print("触发 Foo.__set__ ",instance, value)
+        instance.__dict__['x'] = value
+    def __delete__(self,instance):
+        print("触发 Foo.__delete__ ",instance)
+
+class Bar:
+    x = Foo() # 描述符,对x对象属性的调用去找Foo对象
+    def __init__(self,n):
+        self.x = n
+
+b1 = Bar(10) # 首先触发Bar的__init__函数。然后 self.x = n 触发Foo的x方法,触发Foo的set方法
+print(b1.__dict__) # {'x': 10}
+print(Bar.__dict__) # 类的字段，没有 {'x': 10}
+b1.x = 11111111 # 触发 Foo.__set__
+b1.x   # 触发 Foo.__get__
+del b1.x # 触发 Foo.__delete__
+```
 
 ## 参考文献
 

@@ -302,11 +302,14 @@ for i in fibs():
 class Foo:
     def __del__(self):
         print('wtf?')
-        pass
+        pass # 虽然这里没写如何del，但仍然从内存中删除
 ```
 这么用：
 ```py
-del a#输出wtf?
+a = Foo()
+b = a
+del b # 不会触发 __del__ 因为引用数量不为0
+del a # 触发 __del__，输出 "wtf?"，虽然 __del__ 方法没有指明如何删除，但仍然会从内存中删除
 ```
 
 ### `__call__`
