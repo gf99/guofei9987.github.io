@@ -55,7 +55,7 @@ is null            is not null
 - OUTER(JOIN)：如 果指定了OUTER JOIN（相对于CROSS JOIN 或(INNERJOIN),保留表（preserved table：左外部联接把左表标记为保留表，右外部联接把右表标记为保留表，完全外部联接把两个表都标记为保留表）中未找到匹配的行将作为外部行添加到 VT2,生成VT3.如果FROM子句包含两个以上的表，则对上一个联接生成的结果表和下一个表重复执行步骤1到步骤3，直到处理完所有的表为止。  
 - WHERE：对VT3应用WHERE筛选器。只有使<where_condition>为true的行才被插入VT4.  
 - GROUPBY：按GROUP BY子句中的列列表对VT4中的行分组，生成VT5.  
-- CUBE|ROLLUP：把超组(Suppergroups)插入VT5,生成VT6.  
+- CUBE/ROLLUP：把超组(Suppergroups)插入VT5,生成VT6.  
 - HAVING：对VT6应用HAVING筛选器。只有使<having_condition>为true的组才会被插入VT7.  
 - SELECT：处理SELECT列表，产生VT8
 - DISTINCT：将重复的行从VT8中移除，产生VT9
@@ -121,28 +121,27 @@ INTERSECT ALL表示不删除重复行。
 
 
 ```sql
-select field1 ,field2 ... ,fieldn
+select field1, field2, ... ,fieldn
 from join_tablename1
-inner join join_tablename2【inner join join_tablenamen】
+inner join join_tablename2
 on joincondition;
 ```
 
 三重内连接+别名
 ```sql
-select e.empno,e.ename employeename,e.sal,e.job,l.ename loadername,d.dname,d.loc
-from t_employee e
-inner join t_tmployee l
-on e.mgr=l.empno
-inner join
-t_dept d
-on l.deptno=d.deptno;
+select a.id, a.name, b.salary, c.department
+from table_name1 a
+inner join table_name2 b
+on a.id=b.id
+inner join table_name3 c
+on a.id=c.id;
 ```
 
 以上可以用where的形式实现(更简单)
-```
-select e.empno,e.ename employeename,e.sal,e.job,l.ename loadername,d.dname,d.loc
-from t_employee e ,t_tmployee l ,t_dept d
-where  e.mgr=l.empno and l.deptno=d.deptno;
+```sql
+select a.id, a.name, b.salary, c.department
+from table_name1 a, table_name2 b, table_name3 c
+where a.id=b.id and a.id=c.id;
 ```
 
 ## 子查询
@@ -169,7 +168,7 @@ not in(select...)
 #### 简单Case
 
 格式说明    
-```
+```sql
 case 列名
     when   条件值1   then  选择项1
     when   条件值2    then  选项2.......
@@ -177,28 +176,30 @@ case 列名
 end
 ```
 eg:
-```
+```sql
 select
     case 　　job_level
-        when     '1'     then    '1111'
-        when　  '2'     then    '1111'
-        when　  '3'     then    '1111'
-        else       'eee'
+        when    '1'     then    'rich'
+        when　  '2'     then    'middle'
+        when　  '3'     then    'poor'
+        else       'not sure'
     end
-from dbo.employee
+from table_employee
 ```
 
 #### 复杂Case
 
 格式说明    
-```
+```sql
 case  
-    when  列名= 条件值1   then  选择项1
-    when  列名=条件值2    then  选项2.......
-else
+    when  条件值1   then  选择项1
+    when  条件值2   then  选择项2
+    ...
+    else 选择项n
+end
 ```
 eg:
-```
+```sql
 update  employee
 set e_wage =
 case
@@ -210,7 +211,7 @@ end
 ```
 
 ### 函数1
-```
+```sql
 distinct 字段1
 is null：字段1 is null
 is missing：字段1 is missing
@@ -220,7 +221,7 @@ CONTAINS(*,'beijing')
 
 ### 类型转化函数
 
-```
+```sql
 decimal, double, Integer, smallint,real  
 Hex(arg):转化为参数的16进制表示。  
 转化为字符串类型的：  
@@ -233,7 +234,7 @@ date, time,timestamp
 ### 时间
 Mysql 中的时间
 ```sql
-year, quarter, month, week, day, hour, minute ,second  
+year, quarter, month, week, day, hour, minute, second  
 dayofyear(arg)  
 Dayofweek(arg)  
 days(arg):返回日期的整数表示法，从0001-01-01来的天数。   
@@ -254,13 +255,14 @@ select datediff('2008-12-19','2008-12-10'); -- 两个日期之差
 ```sql
 coalesce(arg1,arg2….) -- 返回参数集中第一个非null参数。
 greatest(col1,col2,...,coln) -- 返回多列中，最大的那个值
+least()
 ```
 
 ### 字符串函数
 
 ```sql
 length,lcase, ucase, ltrim , rtrim  
-Concat (arg1,arg2):连接两个字符串arg1和arg2。  
+Concat(arg1,arg2):连接两个字符串arg1和arg2。  
 insert(arg1,pos,size,arg2):返回一个，将arg1从pos处删除size个字符，将arg2插入该位置。  
 left(arg,length):返回arg最左边的length个字符串。  
 locate(arg1,arg2,<pos>;):在arg2中查找arg1第一次出现的位置，指定pos，则从arg2的pos处开始找arg1第一次出现的位置。  

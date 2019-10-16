@@ -90,13 +90,13 @@ df.dropDuplicates(subset=[i for i in df.columns if i != 'id'])
 
 
 ## 统计分析类操作
-### order
+### orderBy
 ```py
-df.orderBy(['col1','col2'],ascending=[0,1])
+df.orderBy(['col1','col2'], ascending=[0,1])
 ```
 ### 分位数
 ```py
-df.approxQuantile('col1',[0.25,0.75],0.05) # 返回一个list，大小与第二个参数相同，表示分位数。
+df.approxQuantile('col1', [0.25,0.75], 0.05) # 返回一个list，大小与第二个参数相同，表示分位数。
 # 第一个参数是列名，第二个参数是分位数，第三个参数是准确度，设定为0时代价巨大
 
 df.corr('pv','uv') # 相关系数，目前只支持两个字段，只支持Person相关系数
@@ -104,8 +104,8 @@ df.cov('a','b')
 ```
 
 ### pivot
+- 借用pandas
 ```py
-# 用 pandas 造数据并做 pivot
 import pandas as pd
 import numpy as np
 pd_df=pd.DataFrame(np.arange(40).reshape(4,-1).T,columns=list('wxyz'))
@@ -113,15 +113,16 @@ pd_df.w=pd_df.w%2
 pd_df.x=pd_df.x//3
 pd_df.pivot_table(index='w',columns='x',values='y',aggfunc=sum)
 ```
+- 借用spark
 ```py
 df=spark.createDataFrame(pd_df)
-df.groupBy('w','x').pivot('y').sum('z')
+df.groupBy('w', 'x').pivot('y').sum('z')
 # 详解：
 # 1. groupby 后面的内容作为 index （因为 spark.DataFrame 不搞 index，因此作为普通列）
 # 2. pivot 后面的内容作为 col
 # 3. 后面接的agg func 作为返回的表里面的 value
-# df.groupBy('w','x').pivot('y',[20,21,22]).sum('z') # pivot 的第二个参数用来限定 col 所取的范围
-# df.groupBy('w','x').pivot('y') 是一个 <GroupedData> ，因此后面可以跟 agg 等操作
+# df.groupBy('w', 'x').pivot('y', [20,21,22]).sum('z') # pivot 的第二个参数用来限定 col 所取的范围
+# df.groupBy('w', 'x').pivot('y') 是一个 <GroupedData> ，因此后面可以跟 agg 等操作
 ```
 
 ## groupby

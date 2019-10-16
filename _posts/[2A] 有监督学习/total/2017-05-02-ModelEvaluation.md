@@ -200,11 +200,209 @@ plt.title('ROC curve')
 
 见于[kmeans方法](http://www.guofei.site/2017/06/09/kmeans.html#title8)
 
-## 模型保存与载入
+## 一套代码
 
 参见[SVM](http://www.guofei.site/2017/09/28/svm.html#title8)
 
-<iframe src="http://www.guofei.site/StatisticsBlog/%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BB%B7.html" width="100%" height="3600em" marginwidth="10%"></iframe>
+### 1. 生成数据并导入包
+
+```py
+import pandas as pd
+import numpy as np
+from sklearn import datasets, model_selection, preprocessing, metrics
+
+X, y = datasets. \
+    make_classification(n_samples=1000, n_features=5, flip_y=0.1)
+
+df=pd.DataFrame(np.concatenate([X,y.reshape(-1,1)],axis=1))
+df.corr()
+```
+这里会打印相关系数矩阵，在进行流程之前看一下，对数据有个大概感觉
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+      <th>5</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1.000000</td>
+      <td>0.584082</td>
+      <td>0.989028</td>
+      <td>-0.008031</td>
+      <td>-0.094029</td>
+      <td>-0.004766</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.584082</td>
+      <td>1.000000</td>
+      <td>0.697582</td>
+      <td>0.027633</td>
+      <td>0.753178</td>
+      <td>0.642409</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.989028</td>
+      <td>0.697582</td>
+      <td>1.000000</td>
+      <td>-0.002060</td>
+      <td>0.054074</td>
+      <td>0.112709</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>-0.008031</td>
+      <td>0.027633</td>
+      <td>-0.002060</td>
+      <td>1.000000</td>
+      <td>0.040401</td>
+      <td>0.015829</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>-0.094029</td>
+      <td>0.753178</td>
+      <td>0.054074</td>
+      <td>0.040401</td>
+      <td>1.000000</td>
+      <td>0.791798</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>-0.004766</td>
+      <td>0.642409</td>
+      <td>0.112709</td>
+      <td>0.015829</td>
+      <td>0.791798</td>
+      <td>1.000000</td>
+    </tr>
+  </tbody>
+</table>
+
+
+### 2. 划分训练集和测试集，并且特征工程
+#### 划分训练集和测试集
+```python
+X_train, X_test, y_train, y_test = model_selection.train_test_split(
+    X, y, test_size=0.2, train_size=0.8, random_state=123)
+```
+
+#### 简单的特征工程
+
+这一步还应当包括异常值处理、无关特征剔除、降维等，相关内容在别的地方写了，这里重点写评价指标。  
+
+这里有个需要注意的点，test应当按照train来进行预处理,而不能用test的信息进行预处理。这两种做法都是错的：
+- 先用全量数据做标准化，然后 train_test_split
+- 先 train_test_split，然后在各自集合上各自做标准化。
+
+
+```python
+min_max_scaler = preprocessing.MinMaxScaler()
+
+min_max_scaler.fit(X_train)
+X_train_scaled=min_max_scaler.transform(X_train) # fit_transform(train_data)可以两步一起做
+X_test_scaled=min_max_scaler.transform(X_test)
+```
+
+### 3. 建模
+这里展示简单的，实际工作中更为复杂。参见[【sklearn】一次训练几十个模型](http://www.guofei.site/2019/10/01/all_models.html)
+```python
+from sklearn import neighbors
+model = neighbors.KNeighborsClassifier()
+model.fit(X_train, y_train)
+
+y_test_predict = model.predict(X_test)
+y_train_predict = model.predict(X_train)
+```
+
+### 4. 评价
+这里重点写评价指标
+#### score
+```python
+model.score(X_train, y_train), model.score(X_test, y_test)
+```
+#### 混淆矩阵
+```python
+metrics.confusion_matrix(y_test, y_test_predict, labels=[0,1]) # label可以控制显示哪些标签，用于多分类中
+```
+输出类似这样
+```
+>>array([[97,  3],  
+       [ 3, 97]])
+```
+
+#### 很多指标
+- accuracy_score: metrics.accuracy_score(test_target, test_predict)
+- precision_score:metrics.precision_score(test_target, test_predict)
+- recall_score:metrics.recall_score(test_target, test_predict)
+- metrics.f1_score(test_target, test_predict)
+- metrics.fbeta_score(test_target, test_predict)
+
+一次看完这些指标：
+```python
+print(metrics.classification_report(test_target, test_predict))
+```
+
+输出
+```txt
+precision    recall  f1-score   support
+
+0       0.97      0.97      0.97       100
+1       0.97      0.97      0.97       100
+
+micro avg       0.97      0.97      0.97       200
+macro avg       0.97      0.97      0.97       200
+weighted avg       0.97      0.97      0.97       200
+```
+
+#### P-R曲线
+```python
+metrics.precision_recall_curve(y_true, y_predict_proba)
+```
+
+#### ROC
+
+```python
+import matplotlib.pyplot as plt
+
+y_test_proba_predict = model.predict_proba(X_test)[:,0]
+y_train_proba_predict = model.predict_proba(X_train)[:,0]
+fpr_test, tpr_test, th_test = metrics.roc_curve(y_test==0, y_test_proba_predict)
+fpr_train, tpr_train, th_train = metrics.roc_curve(y_train==0, y_train_proba_predict)
+plt.figure(figsize=[6,6])
+plt.plot(fpr_test, tpr_test, color='blue',label='test')
+plt.plot(fpr_train, tpr_train, color='red',label='train')
+plt.legend()
+plt.title('ROC curve')
+```
+
+![ROC](http://www.guofei.site/pictures_for_blog/ml_process/ROC.png)
+
+#### AUC
+`metrics.roc_auc_score(y_true, y_predict_proba)`
+
+```python
+metrics.roc_auc_score(y_train==0, y_train_proba_predict), metrics.roc_auc_score(y_test==0, y_test_proba_predict)
+```
+
+### 回归模型的评价指标
+- 误差绝对值的平均值 metrics.mean_absolute_error(y_true,y_pred)
+- 误差平方的绝对值（MSE） metrics.mean_squared_error(y_true,y_pred)
+
+### 综合评价指标（图）
+- 验证曲线 validation_curve,参数不同时，各个评价指标的曲线
+- 学习曲线 learning_curve, 数据集大小不同时，各个评价指标的曲线
+
 
 
 
