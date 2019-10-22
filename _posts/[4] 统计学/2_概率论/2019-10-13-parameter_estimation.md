@@ -32,10 +32,17 @@ $\hat \theta=\psi(X_1,...,X_n)$
 $P(\hat\theta_L\leq \theta\leq\hat\theta_R)\geq1-\alpha,\forall \theta \in \Theta$
 
 ### 区间估计的例子
-下面例子都在正态分布上(推导过程就不写了)
+下面例子都在正态分布上(只写一个的推导过程)
 
 #### 1. 总体方差已知，均值的区间估计
 $(\bar X-z_{1-\alpha/2} \dfrac{\sigma}{\sqrt n},\bar X+z_{1-\alpha/2} \dfrac{\sigma}{\sqrt n})$
+
+推导要点：  
+我们想找到连个统计量$\hat u_L=\psi_1(X_1,...,X_n), \hat u_R=\psi_2(X_1,...,X_n)$，  
+使得 $P(\hat u_L\leq u \leq \hat u_R)\geq 1-\alpha$  
+然后，得到$P(\dfrac{\bar X-\hat u_R}{\sigma/\sqrt n} \leq \dfrac{\bar X- u}{\sigma/\sqrt n} \leq \dfrac{\bar X-\hat u_L}{\sigma/\sqrt n})\geq 1-\alpha$  
+再推导一步就得到结果啦。
+
 
 #### 2. 总体方差未知，均值的区间估计
 
@@ -51,8 +58,7 @@ $(\bar X-z_{1-\alpha/2} \dfrac{\sigma}{\sqrt n},\bar X+z_{1-\alpha/2} \dfrac{\si
 以上都参看 [统计推断](http://www.guofei.site/2017/10/27/hypothesistesting.html)
 
 
-## 其它
-一个关于方差的知识点
+## 一个关于方差的知识点
 
 样本方差$s^2=\dfrac{(x_i-\bar x)^2}{n-1}$
 
@@ -64,3 +70,8 @@ $S_n^2=\dfrac{\sum\limits_{i=1}^n(X_i-\bar X)^2}{n}$
 
 $ES^2=\sigma^2$（无偏性）（虽然用定义能证出来，但是用$DX=EX^2-(EX)^2$更轻松证出来）  
 但是均方误意义下的有效性，$S_n^2$ 更优
+
+
+书上还有一个说明，$S_n^2$ 是$\sigma^2$ 的极大似然估计  
+
+另外，注意一下，$S$不是$\sigma$的无偏估计，虽然加上平方就是。

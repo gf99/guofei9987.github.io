@@ -14,6 +14,11 @@ jupyter原文见于<a href='http://www.guofei.site/StatisticsBlog/%E7%BB%9F%E8%A
 
 
 ## 理论篇
+第一类错误：H0为真，但错误地拒绝了H0  
+第二类错误：H0为假，但错误地接受了H0
+
+
+
 大图见于<a href='http://www.guofei.site/StatisticsBlog/HypothesisTesting.htm' target="HypothesisTesting">这里</a>  
 
 
