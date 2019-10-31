@@ -48,7 +48,7 @@ $\hat\beta_1\sim N(\beta_1,\dfrac{\sigma^2}{l_{xx}})$
 $\hat\beta_0 \sim  N(\beta_0, (\dfrac{1}{n} + \dfrac{\bar x^2}{l_{xx}}) \sigma^2)$  
 $Cov(\hat\beta_0,\hat\beta_1)=-\dfrac{\bar x}{l_{xx}}\sigma^2$  
 
-
+#### 参数的区间估计
 (上面的结论用于显著性检验，下面以$\beta_1$为例)
 $H_0:\beta_1=0,H_1:\beta_1 \not=0$  
 已知$\hat\beta_1\sim N(\beta_1,\dfrac{\sigma^2}{l_{xx}})$，  
@@ -56,6 +56,8 @@ $H_0:\beta_1=0,H_1:\beta_1 \not=0$
 $t=\dfrac{\hat \beta_1}{s_{\hat\beta_1}}\sim t(n-2)$   
 其中，$s_{\hat\beta_1}=\sqrt{\dfrac{\hat\sigma^2}{l_{xx}}},\hat\sigma^2=\dfrac{\sum\limits_{i=1}^n (y_i-\hat y_i)^2}{n-2}$  
 
+
+#### y的区间估计
 （上面三条结论也可以用来求出预测值的置信区间）  
 （根据正态分布的加法）  
 对 $x=x_0$ 处做预测 $\hat y_0=\beta_1 x_0 +\beta_0\sim N(\beta_1 x_0+\beta_0,(\dfrac{1}{n}+\dfrac{(x_0-\bar x)^2}{l_{xx}})\sigma^2)$  
