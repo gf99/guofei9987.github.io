@@ -13,9 +13,10 @@ author:
   facebook: https://www.facebook.com/guofei9987
 
 # 站点信息
-title: 郭飞的博客
-description: My personal blog
+title: 郭飞的笔记
+description: My blog
 url: http://www.guofei.site
+repurl: https://github.com/guofei9987/guofei9987.github.io/blob/master/
 # rss_url: /pages/atom.xml
 
 # gavatar头像及Favicon
