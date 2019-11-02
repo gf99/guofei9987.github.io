@@ -30,7 +30,7 @@ order: 10103
 - 把曲面上的均匀随机，定义为沿着曲面上的面积均匀采样。
 
 下面这个就不能定义为均匀随机采样
-![random_surface1](http://www.guofei.site/pictures_for_blog/random_sample/random_surface1.png)  
+![random_surface1](/pictures_for_blog/random_sample/random_surface1.png)  
 
 （不是我们要的结果）
 
