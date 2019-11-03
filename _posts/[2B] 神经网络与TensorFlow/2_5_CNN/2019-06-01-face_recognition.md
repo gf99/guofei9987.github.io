@@ -35,4 +35,4 @@ Triplet Loss
 
 ## 另一种算法
 
-![1](http://www.guofei.site/pictures_for_blog/deep_learning/face.png)
+![1](/pictures_for_blog/deep_learning/face.png)

@@ -105,7 +105,7 @@ $\lim\limits_{x\to\infty}\dfrac{\pi(x)}{x/\ln x}=1$
 $\zeta(s)=\prod_p\dfrac{1}{1-p^{-s}}$  
 
 证明如下：
-![](http://www.guofei.site/pictures_for_blog/tmp/tmp1.png)
+![](/pictures_for_blog/tmp/tmp1.png)
 
 推论
 - for $s.real>1, \zeta(s)\not=0$

@@ -386,7 +386,7 @@ plt.legend()
 plt.title('ROC curve')
 ```
 
-![ROC](http://www.guofei.site/pictures_for_blog/ml_process/ROC.png)
+![ROC](/pictures_for_blog/ml_process/ROC.png)
 
 #### AUC
 `metrics.roc_auc_score(y_true, y_predict_proba)`

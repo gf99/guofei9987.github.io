@@ -219,9 +219,9 @@ g.map_lower(sns.kdeplot)
 # 4. 美化：针对有分类 hue 的情况，会在右边显示 label
 g.add_legend()
 ```
-<img src='http://www.guofei.site/pictures_for_blog/data_visualization/pair_grid_1.png'>
+<img src='/pictures_for_blog/data_visualization/pair_grid_1.png'>
 
-<img src='http://www.guofei.site/pictures_for_blog/data_visualization/pair_grid_2.png'>
+<img src='/pictures_for_blog/data_visualization/pair_grid_2.png'>
 
 另外，还可以更精细地指定画哪些图
 ```py

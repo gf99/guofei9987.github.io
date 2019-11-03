@@ -16,7 +16,7 @@ order: 280
 ### 与其他模型的关系
 每一个HMM模型都等价于某个CRF[^1]  
 
-![svm2](http://www.guofei.site/pictures_for_blog/machine_learning/CRF.jpg)
+![svm2](/pictures_for_blog/machine_learning/CRF.jpg)
 
 
 概率图分为两类：  

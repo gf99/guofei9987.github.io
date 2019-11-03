@@ -27,7 +27,7 @@ function func_1(github_id){
 <hr style="height:10px;border:none;border-top:10px groove skyblue;" />
 
 ## 常用工具
-[文本比较工具](http://www.guofei.site/pictures_for_blog/text_compare/main.html)
+[文本比较工具](/pictures_for_blog/text_compare/main.html)
 
 
 

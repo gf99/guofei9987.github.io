@@ -55,7 +55,7 @@ sample = np.array([random_surface() for i in range(1000)])
 plt.plot(sample[:, 0], sample[:, 1], '.')
 ```
 
-![random_surface2](http://www.guofei.site/pictures_for_blog/random_sample/random_surface2.png)
+![random_surface2](/pictures_for_blog/random_sample/random_surface2.png)
 
 
 ## 曲线上的均匀随机
@@ -87,7 +87,7 @@ sample = np.array([random_surface() for i in range(200)])
 plt.plot(sample[:, 0], sample[:, 1], '.')
 ```
 
-![random_surface3](http://www.guofei.site/pictures_for_blog/random_sample/random_surface3.png)
+![random_surface3](/pictures_for_blog/random_sample/random_surface3.png)
 
 （是随机采样，所以看起来不均匀，但实际上是均匀的）
 
@@ -137,7 +137,7 @@ plt.show()
 - fprime 是雅克比矩阵，用于解方程时，加快迭代速度，可以省略。根据Lebniz定理，雅克比矩阵正好等于被积函数。
 
 
-![random_surface4](http://www.guofei.site/pictures_for_blog/random_sample/random_surface4.png)
+![random_surface4](/pictures_for_blog/random_sample/random_surface4.png)
 
 
 ### 方案3
@@ -278,7 +278,7 @@ np.array([func_g(i) for i in np.arange(-1, 1, 0.1)])
 ```
 
 
-![random_surface5](http://www.guofei.site/pictures_for_blog/random_sample/random_surface5.png)
+![random_surface5](/pictures_for_blog/random_sample/random_surface5.png)
 
 
 ### 缺点与改进

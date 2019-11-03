@@ -51,6 +51,8 @@ $x_{ijk}=u+\alpha_i+\beta_j+(\alpha\beta)_ {ij}+\varepsilon_{ijk}$
 H0:$\alpha_i=0,\beta_j=0,\forall i,j$  
 
 那么，
+
+
 |方差来源|公式|若H0成立，那么|F统计量|
 |--|--|--|--|
 |因子A|$SSA=bn\sum\limits_{i=1}^a(\bar x_{i\cdot\cdot}-\bar x_{\cdot\cdot\cdot})^2$|$SSA/\sigma^2\sim \chi^2(a-1)$|$\dfrac{SSA/(a-1)}{SSE/(ab(n-1))}$|
