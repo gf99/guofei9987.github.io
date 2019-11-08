@@ -15,7 +15,8 @@ order: 173
 ```
 scikit-opt/
     └── sko/
-        └── __init__.py
+    |   |── filename.py
+    |   └── __init__.py
     setup.py
 ```
 
@@ -52,7 +53,6 @@ import sko
 ## 上传
 
 ### 打包
-打包（官网上的步骤，不过还没试过，我用的上面的方法打包）
 
 ```bash
 # 更新 setuptools wheel 这两个工具
