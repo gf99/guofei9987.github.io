@@ -110,17 +110,21 @@ $\Delta s=\dfrac{\partial s}{\partial x} \Delta x
 $ds=\dfrac{\partial s}{\partial x} dx + \dfrac{\partial s}{\partial t} dt$
 
 ## 泊松过程
-### 计数过程
-- N(t)≥0
-- N(s)≤N(t)
-
-### Def1
+### 定义
+#### Def1
 - N(0)=0
 - N(t)是独立增量过程
-- $P\{ N(t+s) - N(s) \} = e^{-\lambda t} \dfrac{(\lambda t)^n}{n!}$
+- $P[N(t+s) - N(s) =n] = e^{-\lambda t} \dfrac{(\lambda t)^n}{n!}$
 
-### Def2
+#### Def2
 - N(0)=0
-- N(t)是独立增量过程,并且是平稳过程
-- $P\{ N(t+s) - N(t)=1 \} = \lambda h + o(h)$
-- $P\{ N(t+s) - N(t) \geq 2 \} = o(h)$
+- N(t)有平稳增量性和独立增量性
+- $P[ N(t+s) - N(t)=1 ] = \lambda h + o(h)$
+- $P[ N(t+s) - N(t) \geq 2 ] = o(h)$
+
+#### 例题
+假设A时间是强度为$\lambda$的泊松过程$N(t)$，如果每次事件发生时，有以概率p记录下来，表示为$M(t)$，证明$M(t)$是以$\lambda p$为强度的泊松过程。
+
+证明提要：  
+先证明前两个条件。这个不多说。  
+第三个条件，其实就是证明$P[M(t)=m]=$泊松分布公式。证明方法是用条件概率，处理一个求和公式。
