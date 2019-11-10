@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 【读论文】Deep neural networks are easily fooled: High confidence predictions for unrecognizable images
+title: 【读论文】Deep neural networks are easily fooled
 categories:
 tags: 0_读论文
 keywords:
