@@ -112,3 +112,18 @@ nx.algorithms.community.label_propagation.label_propagation_communities(G)
 - SLPA（Speak-Listen Propagation Algorithm)- 记录历史标签序列
 - Matrix blocking – 根据邻接矩阵列向量的相似性排序
 - Skeleton clustering – 映射网络到核心连接树后进行检测
+
+## 某论文的笔记
+
+M. E. J. Newman和M. Girvan在《Physical Review E》提出了网络社区结构的一个优化指标，即模块度，该指标被证明是一种可靠的评价指标。由于模块度指标不存在梯度信息，因此传统的数学优化方法如牛顿法、内外点法等等都难以求解这种优化问题，优化模块度问题被证明为一个NP hard问题
+
+美国科学院院士M. E. J. Newman，对启发式和群智能结合的研究工作贡献很大，他的个人主页 http://www-personal.umich.edu/~mejn/
+
+### 一些定义
+
+#### 小世界特性
+，依据两个指标：第一是看网络任意两个节点之间连通的边的数目是否尽可能的小，即节点间的路径尽可能短；第二是看网络任意节点连接的周边节点的数目尽可能的多。
+
+
+#### 无标度特性
+可以根据两点：第一是看网络的边的连接情况是否符合幂律分布；第二是看网络中的节点，大部分节点的度数是否比较小。
