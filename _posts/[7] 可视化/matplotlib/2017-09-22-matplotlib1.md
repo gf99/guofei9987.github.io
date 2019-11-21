@@ -399,14 +399,6 @@ figure = Figure(432x288)
 fillstyle = full
 gid = None
 label = $cos(x^2)$
-linestyle or ls = -
-linewidth or lw = 1.5
-marker = +
-markeredgecolor or mec = #1f77b4
-markeredgewidth or mew = 1.0
-markerfacecolor or mfc = #1f77b4
-markerfacecoloralt or mfcalt = none
-markersize or ms = 6.0
 markevery = None
 path = Path(array([[ 0., -0.],[ 0...]]))
 path_effects = []
@@ -430,9 +422,15 @@ zorder = 2
 |属性|解释|
 |--|--|
 |label|给plot的曲线一个标签名字，可以使用LaTeX|
-|color|给曲线指定颜色，可以是英文单词'red'等，也可以是16进制数'##ff0000',也可以用0~1tuple(1.0,0,0)|
-|linewidth|曲线宽度，可以不是整数|
-
+|color|给曲线指定颜色，可以是英文单词'red'等，也可以是16进制数'#ff0000',也可以用0~1tuple(1.0,0,0)|
+|linewidth|曲线宽度，float|
+|markeredgecolor or mec| any matplotlib color|
+|markeredgewidth or mew| float value in points|
+|markerfacecolor or mfc| any matplotlib color|
+|markerfacecoloralt or mfcalt| any matplotlib color|
+|markersize or ms| float|
+|xdata | 1D array
+|ydata | 1D array
 
 ### linestyle
 
@@ -491,12 +489,6 @@ figure: a :class:`matplotlib.figure.Figure` instance
 fillstyle: ['full' | 'left' | 'right' | 'bottom' | 'top' | 'none']
 gid: an id string
 label: string or anything printable with '%s' conversion.
-linestyle
-markeredgecolor or mec: any matplotlib color
-markeredgewidth or mew: float value in points
-markerfacecolor or mfc: any matplotlib color
-markerfacecoloralt or mfcalt: any matplotlib color
-markersize or ms: float
 markevery: [None | int | length-2 tuple of int | slice | list/array of int | float | length-2 tuple of float]
 path_effects: unknown
 picker: float distance in points or callable pick function ``fn(artist, event)``
@@ -508,8 +500,6 @@ solid_capstyle: ['butt' | 'round' |  'projecting']
 solid_joinstyle: ['miter' | 'round' | 'bevel']
 transform: a :class:`matplotlib.transforms.Transform` instance
 url: a url string
-xdata: 1D array
-ydata: 1D array
 ```
 
 ## patch

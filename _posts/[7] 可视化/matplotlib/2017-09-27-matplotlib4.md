@@ -140,6 +140,7 @@ plt.rcParams['animation.ffmpeg_path'] = r'C:\Users\guofei\Downloads\ffmpeg\bin\f
 step3: 保存  
 ```py
 ani.save('test.mp4',fps=25)
+ani.save('pso.gif', writer='pillow') # 或者gif
 ```
 
 效果:  

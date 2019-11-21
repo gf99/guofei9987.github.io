@@ -2,19 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="342257b4-4d7a-4e67-9352-dbfb5f4606d2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/guofei9987.github.io.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/guofei9987.github.io.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyKnowledge/[2] python/[0] 总览.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyKnowledge/[T] MyToolBox/[2] 重复文件检索工具/EmptyFolderRemoverSetup.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_drafts/Python/抓网页.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/[1A] 数据平台/2018-03-27-spark.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/[1A] 数据平台/2018-03-27-spark.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/[2B] 神经网络与TensorFlow/2_2_浅层神经网络/2018-01-05-boltzmann.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/[2B] 神经网络与TensorFlow/2_2_浅层神经网络/2018-01-05-boltzmann.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/[2B] 神经网络与TensorFlow/TensorFlow/2018-10-20-tf5.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/[2B] 神经网络与TensorFlow/TensorFlow/2018-10-20-tf5.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/[3] 无监督学习/3_3_其它无监督算法/2017-11-26-apriori.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/[3] 无监督学习/3_3_其它无监督算法/2019-02-09-community_detection.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/[3] 无监督学习/3_3_其它无监督算法/2019-02-10-networkx.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/[7] 可视化/2017-09-20-matplotlib.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/[7] 可视化/2017-09-20-matplotlib.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../reading/docs/1_历史和哲学/2_佛家.md" beforeDir="false" afterPath="$PROJECT_DIR$/../reading/docs/1_历史和哲学/2_佛家.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/base.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,23 +20,34 @@
     <SUITE FILE_PATH="coverage/guofei9987_github_io$auto_generat_sidebar.coverage" NAME="auto_generat_sidebar Coverage Results" MODIFIED="1550115363337" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../Matlab_notes" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>了自己的代</find>
+      <find>204</find>
+      <find>line-content-box</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../Matlab_notes" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../MyKnowledge" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/../Matlab_notes/auto_generat_sidebar.py" />
         <option value="$PROJECT_DIR$/../Matlab_notes/_coverpage.md" />
+        <option value="$PROJECT_DIR$/_posts/[0] 大类/文档语法/2017-05-06-blog.md" />
+        <option value="$PROJECT_DIR$/_posts/[0] 大类/丢弃/2017-05-06-jekyll.md" />
+        <option value="$PROJECT_DIR$/public/css/base.css" />
+        <option value="$PROJECT_DIR$/pages/about.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1939" />
-    <option name="y" value="316" />
-    <option name="width" value="1943" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="165" />
+    <option name="y" value="67" />
+    <option name="width" value="2019" />
     <option name="height" value="1043" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -51,17 +56,36 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
       <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="guofei9987.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="guofei9987.github.io" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="guofei9987.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="guofei9987.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../dp_monitor" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../scikit-opt" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\guofei8\Desktop\git\GitHub\guofei9987.github.io\_drafts" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\guofei8\Desktop\git\GitHub\Matlab_notes" />
     </key>
@@ -119,17 +143,34 @@
       <updated>1550109546516</updated>
       <workItem from="1550633793029" duration="39000" />
       <workItem from="1550633942922" duration="3920000" />
+      <workItem from="1574262724988" duration="4472000" />
+      <workItem from="1574296708171" duration="2183000" />
+      <workItem from="1574300252497" duration="283000" />
     </task>
+    <task id="LOCAL-00001" summary="update about">
+      <created>1574265879928</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1574265879929</updated>
+    </task>
+    <task id="LOCAL-00002" summary="update about">
+      <created>1574266217962</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1574266217962</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3959000" />
+    <option name="totallyTimeSpent" value="10897000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1935" y="320" width="1295" height="695" extended-state="6" />
-    <editor active="true" />
+    <frame x="165" y="67" width="2019" height="1043" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24494745" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2302195" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -157,44 +198,163 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update about" />
+    <option name="LAST_COMMIT_MESSAGE" value="update about" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../Matlab_notes/generate_sidebar.bat">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../reading/generate_sidebar.bat">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Matlab_notes/_coverpage.md">
+    <entry file="file://$PROJECT_DIR$/../Matlab_notes/generate_sidebar.bat" />
+    <entry file="file://$PROJECT_DIR$/../reading/generate_sidebar.bat" />
+    <entry file="file://$PROJECT_DIR$/../Matlab_notes/_coverpage.md" />
+    <entry file="file://$PROJECT_DIR$/../reading/_coverpage.md" />
+    <entry file="file://$PROJECT_DIR$/../reading/auto_generat_sidebar.py" />
+    <entry file="file://$PROJECT_DIR$/../Matlab_notes/auto_generat_sidebar.py" />
+    <entry file="file://$PROJECT_DIR$/_drafts/milestone.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="286">
-            <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/test.md" />
+    <entry file="file://$PROJECT_DIR$/pages/certification.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="567">
+            <caret line="73" column="8" selection-start-line="73" selection-start-column="2" selection-end-line="73" selection-end-column="8" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../reading/_coverpage.md">
+    <entry file="file://$PROJECT_DIR$/_posts/[0] 大类/文档语法/2017-05-06-blog.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="220">
-            <caret line="10" column="23" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="23" />
+          <first_editor relative-caret-position="1256">
+            <caret line="372" column="23" selection-start-line="372" selection-start-column="23" selection-end-line="372" selection-end-column="23" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../reading/auto_generat_sidebar.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="81" column="43" selection-end-line="151" />
+    <entry file="file://$PROJECT_DIR$/_posts/[0] 大类/丢弃/2015-12-21-population.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Matlab_notes/auto_generat_sidebar.py">
+    <entry file="file://$PROJECT_DIR$/_posts/[0] 大类/丢弃/2016-10-01-gaMatlab.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/[0] 大类/丢弃/2016-05-28-matlabspeed.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/[0] 大类/丢弃/2017-05-06-jekyll.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="60">
+            <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../MyKnowledge/assets/a8598a63dc053a4ac4c73091a5e73916.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../MyKnowledge/[Z] 进行中/[1] 购物篮模型.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../MyKnowledge/[3] 算法/代码简洁.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-2700" />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../MyKnowledge/[3] 算法/代码的艺术.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../MyKnowledge/[2] python/[0] 总览.md" />
+    <entry file="file://$PROJECT_DIR$/public/css/base.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="136" column="10" lean-forward="true" selection-start-line="136" selection-start-column="10" selection-end-line="136" selection-end-column="10" />
+        <state relative-caret-position="517">
+          <caret line="239" column="2" selection-start-line="239" selection-start-column="2" selection-end-line="239" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../MyKnowledge/[2] python/[1] 配置&amp;module&amp;sched&amp;py2exe.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="5130">
+            <caret line="171" selection-start-line="171" selection-end-line="171" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../MyKnowledge/[2] python/[3] 程序结构.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="90" column="56" lean-forward="true" selection-start-line="90" selection-start-column="56" selection-end-line="90" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="176" column="60" selection-start-line="176" selection-start-column="60" selection-end-line="176" selection-end-column="60" />
+          <folding>
+            <element signature="n#style#0;n#li#0;n#ol#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#1;n#ol#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#span#0;n#div#0;n#div#12;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#1;n#span#0;n#div#0;n#div#12;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../MyKnowledge/[2] python/module/graphics.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../MyKnowledge/[2] python/module/k11.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
