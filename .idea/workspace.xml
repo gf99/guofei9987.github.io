@@ -4,11 +4,10 @@
     <list default="true" id="342257b4-4d7a-4e67-9352-dbfb5f4606d2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../MyKnowledge/[2] python/[0] 总览.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../MyKnowledge/[T] MyToolBox/[2] 重复文件检索工具/EmptyFolderRemoverSetup.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_drafts/有一次来学随机过程了.md" beforeDir="false" afterPath="$PROJECT_DIR$/_drafts/有一次来学随机过程了.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/base.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,7 +19,7 @@
     <SUITE FILE_PATH="coverage/guofei9987_github_io$auto_generat_sidebar.coverage" NAME="auto_generat_sidebar Coverage Results" MODIFIED="1550115363337" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../Matlab_notes" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -30,7 +29,7 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../MyKnowledge" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -41,12 +40,13 @@
         <option value="$PROJECT_DIR$/_posts/[0] 大类/丢弃/2017-05-06-jekyll.md" />
         <option value="$PROJECT_DIR$/public/css/base.css" />
         <option value="$PROJECT_DIR$/pages/about.html" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="165" />
-    <option name="y" value="67" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="65" />
+    <option name="y" value="157" />
     <option name="width" value="2019" />
     <option name="height" value="1043" />
   </component>
@@ -68,6 +68,11 @@
               <item name="guofei9987.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="guofei9987.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="guofei9987.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="guofei9987.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="reading" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -146,6 +151,8 @@
       <workItem from="1574262724988" duration="4472000" />
       <workItem from="1574296708171" duration="2183000" />
       <workItem from="1574300252497" duration="283000" />
+      <workItem from="1574412877008" duration="298000" />
+      <workItem from="1574438302172" duration="47000" />
     </task>
     <task id="LOCAL-00001" summary="update about">
       <created>1574265879928</created>
@@ -165,12 +172,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10897000" />
+    <option name="totallyTimeSpent" value="11242000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="165" y="67" width="2019" height="1043" extended-state="0" />
+    <frame x="67" y="-8" width="1861" height="1096" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2302195" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2559689" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -325,13 +332,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="90" column="56" lean-forward="true" selection-start-line="90" selection-start-column="56" selection-end-line="90" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/about.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="372">
@@ -354,6 +354,16 @@
           <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="94" column="104" lean-forward="true" selection-start-line="94" selection-start-column="104" selection-end-line="94" selection-end-column="104" />
+          <folding>
+            <element signature="e#2460#2479#0" expanded="true" />
           </folding>
         </state>
       </provider>
