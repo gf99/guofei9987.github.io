@@ -59,12 +59,14 @@
                   <a class="list-group-item-lay pjaxlink" href="/pages/certification.html">证书陈列柜</a>
                 {% endif %}
 
+                {% if category[0] == '产品' %}
+                  <a class="list-group-item-lay pjaxlink" href="/pages/sko_en.html">【open source】scikit-opt</a>
+                  <a class="list-group-item-lay pjaxlink" href="/pages/sko_zh.html">【开源】scikit-opt</a>
+                {% endif %}
+
                 {% for post in category[1] %}
                   <a href="{{ post.url }}" class="list-group-item-lay pjaxlink">{{post.title}}</a>
                 {% endfor %}
-                {% if category[0] == '橱窗' %}
-                  <a class="list-group-item-lay pjaxlink" href="/pages/milestone.html">小事记</a>
-                {% endif %}
               </div>
             </div>
           {% endfor %}

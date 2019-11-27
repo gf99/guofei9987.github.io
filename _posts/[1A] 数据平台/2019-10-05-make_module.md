@@ -50,25 +50,24 @@ import sko
 
 （如果只是想做一个包，到这里就算完事了，但如果你想让全世界人方便地用 `pip install` 安装你的包，看下面）
 
-## 上传
-
-### 打包
-
+## 打包上传到 PyPI
+step1:更新相关工具
 ```bash
-# 更新 setuptools wheel 这两个工具
+# 更新 setuptools wheel 这两个工具，用于打包
 python3 -m pip install --user --upgrade setuptools wheel
 
-# 打包
-python setup.py sdist bdist_wheel
+
+# 上传前，还要先在 https://pypi.org/ 注册个账号
+# 更新 twine 这个工具，用于上传
+$python -m pip install --user --upgrade twine
 ```
 
-### 上传
 
-先在 https://pypi.org/ 有个账号
+step2：打包上传
 
 ```bash
-# 更新 twine 这个工具
-$python -m pip install --user --upgrade twine  
+# 打包
+python setup.py sdist bdist_wheel
 
 # 上传
 python -m twine upload --repository-url https://upload.pypi.org/legacy/ dist/*
@@ -76,11 +75,59 @@ python -m twine upload --repository-url https://upload.pypi.org/legacy/ dist/*
 
 
 
-## 享受成功！
+step3： 享受成功！
 上传成功后，全世界所有人都可以使用pip下载你的包啦！
 ```
 $pip install scikit-opt
 ```
+
+## 相关扩展应用
+
+### travis-ci
+一个自动化测试和构建GitHub代码的网站。  
+www.travis-ci.org  
+
+[官方文档](https://docs.travis-ci.com/)  
+
+分为2步。  
+1. 权限和配置
+2. 配置文件 `.travis.yml`  
+
+成功后你需要一个类似 [![Build Status](https://travis-ci.com/guofei9987/scikit-opt.svg?branch=master)](https://travis-ci.com/guofei9987/scikit-opt) 的玩意儿，这东西也可以在你配置时可以找到。
+```
+[![Build Status](https://travis-ci.com/guofei9987/scikit-opt.svg?branch=master)](https://travis-ci.com/guofei9987/scikit-opt)
+```
+
+### coeralls
+一个代码覆盖率检测服务网站  
+coveralls.io  
+配置挺简单的，就是授权一下，然后 `.travis.yml` 改成这样
+```yaml
+language: python
+python:
+  - "3.6"
+  - "3.7"
+
+
+# command to install dependencies
+install:
+  - pip install -r requirements.txt
+  - pip install coverage codecov
+  - python setup.py install
+
+# command to run tests
+script:
+  - coverage run examples/demo_ga.py
+
+# Push the results back to codecov
+after_success:
+  - codecov
+```
+
+提一句，`coverage` 是一个包，可以用 `pip install` 或者 `easy_install` 安装，然后，  
+`coverage run -p test.py` 可以多条不覆盖  
+`coverage combine` 可以合并多条（经测试，不需要合并多条，就可以codecov上传）
+
 
 ## 参考资料
 

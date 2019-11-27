@@ -8,7 +8,15 @@ description:
 order: 423
 ---
 
-## 切比雪夫不等式
+## 基本不等式
+### The Markov inequality
+a nonnegative random variable Y, for every y > 0, $Pr(Y>=y)$ satisfies  
+$Pr(Y>=y)<=EY/y$  
+
+进一步，$\lim\limits_{y \to \infty}yP(Y>=y)=0$
+
+
+### 切比雪夫不等式
 （Chebyshev inequality）  
 **切比雪夫不等式**  
 X的均值是u,方差是$\sigma^2$,那么，$\forall t>0,Pr[\mid X-u \mid \geq t \sigma] \leq \dfrac{1}{t^2}$  
@@ -20,6 +28,10 @@ $\sigma^2=\sum\limits_{x_i}(x_i-u)^2f(x_i) \geq \sum\limits_{\mid x_i -u \mid \g
 $ \geq \sum\limits_{\mid x_i -u\mid \geq s}s^2f(x_i)=s^2\sum\limits_{\mid x_i -u\mid \geq s}f(x_i)$  
 $=s^2 Pr[\mid X-u \mid \geq s]$  
 
+（其实根据Markov inequality，也容易证明，如下）  
+$P((X-EX)^2\geq y)\leq \dfrac{E(X-EX)^2}{y}$  
+然后得到结论。
+
 **切比雪夫不等式的推广**  
 X的均值是u，n阶中心距$u_{\mid n \mid}=E[\mid X-u \mid ^n],(n \geq 1)$,有  
 $Pr[\mid X-u \mid \geq t]\leq \dfrac{u_{\mid n\mid}}{t^n}$  
@@ -29,6 +41,17 @@ $Pr[\mid X-u \mid \geq t]\leq \dfrac{u_{\mid n\mid}}{t^n}$
 **切比雪夫单边不等式**  
 X的均值是u,方差是$\sigma^2$,那么，$\forall s>0,Pr[ X-u  \geq s] \leq \dfrac{\sigma^2}{s^2+\sigma^2}$  
 
+### Cherno bounds
+根据 the Markov inequality  
+$P(\exp(rZ)\geq y)\leq \dfrac{E\exp(rZ)}{y}$  
+
+我们把y换成$\exp(rb)$，然后这个不等式变换为：  
+$P(Z\geq b)\leq E\exp(rZ) \exp{(-rb)}$  
+
+
+这个不等式有个重要应用：随机过程中的加和问题$S_n=X_1+X_2+...+X_n$，有：  
+$P(S_n\geq na)\leq E\exp(rS_n) \exp{(-rna)}$  
+所以，$P(S_n\geq na)\leq (E\exp{(rX)})^n \exp{(-rna)}$
 
 ## 大数定律
 
