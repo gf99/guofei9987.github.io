@@ -4,10 +4,9 @@
     <list default="true" id="342257b4-4d7a-4e67-9352-dbfb5f4606d2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../MyKnowledge/[2] python/[0] 总览.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../MyKnowledge/[T] MyToolBox/[2] 重复文件检索工具/EmptyFolderRemoverSetup.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_drafts/有一次来学随机过程了.md" beforeDir="false" afterPath="$PROJECT_DIR$/_drafts/有一次来学随机过程了.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_drafts/备案.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_drafts/进行中/star.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/star.md" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,10 +44,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="65" />
-    <option name="y" value="157" />
-    <option name="width" value="2019" />
-    <option name="height" value="1043" />
+    <option name="x" value="-1928" />
+    <option name="y" value="9" />
+    <option name="width" value="1936" />
+    <option name="height" value="1096" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -56,33 +55,13 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane" />
       <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="guofei9987.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="guofei9987.github.io" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="guofei9987.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="guofei9987.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="guofei9987.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="guofei9987.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="reading" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../scikit-opt" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../dp_monitor" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -153,6 +132,7 @@
       <workItem from="1574300252497" duration="283000" />
       <workItem from="1574412877008" duration="298000" />
       <workItem from="1574438302172" duration="47000" />
+      <workItem from="1575337483443" duration="80000" />
     </task>
     <task id="LOCAL-00001" summary="update about">
       <created>1574265879928</created>
@@ -172,12 +152,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11242000" />
+    <option name="totallyTimeSpent" value="11322000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="-8" width="1861" height="1096" extended-state="6" />
+    <frame x="-1928" y="9" width="1936" height="1096" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2559689" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2585288" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
