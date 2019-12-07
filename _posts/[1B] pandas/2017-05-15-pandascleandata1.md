@@ -189,7 +189,7 @@ workbook.close() # 别忘了完事之后删除
 ```
 - 附3：用 pandas 整合信息
 ```py
-writer=pd.ExcelWriter('test_excel.xlsx')
+writer = pd.ExcelWriter('test_excel.xlsx')
 workbook1 = writer.book
 worksheets = writer.sheets # 这是一个dict，key是sheet_name, value是一个 <xlsxwriter.worksheet.Worksheet> 对象
 # 既然是一个<xlsxwriter.worksheet.Worksheet> 对象，就可以用附2中的方法插入图片和数据
