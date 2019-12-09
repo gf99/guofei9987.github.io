@@ -34,3 +34,12 @@ with tf.device('/device:GPU:0'):
 
 print(c)
 ```
+
+## 主要模块
+
+- tf.data 加载数据
+- tf.keras 构建模型（estimator验证模型，hub迁移学习）
+- eager mode 运行和调试
+- 分发策略做分布式训练
+- SavedModel 导出模型
+- 部署模型TensorFlow Server， TensorFlow Lite（Android & IOS）， TensorFlow.js
