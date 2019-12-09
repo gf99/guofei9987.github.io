@@ -24,17 +24,28 @@ model = keras.Sequential([
     keras.layers.Dense(128, activation='relu'),
     keras.layers.Dense(10, activation='softmax')
 ])
+# 也可以用 model.add(keras.layers.Flatten(input_shape=(28, 28)) 来一步一步添加
 
 model.compile(optimizer='adam',
               loss='sparse_categorical_crossentropy',
               metrics=['accuracy'])
 
 
-model.fit(train_images, train_labels, epochs=10)
+history = model.fit(train_images, train_labels, epochs=10)
 
 
 predictions = model.predict(test_images)
 ```
+
+#### 显示模型的一些情况
+```
+model.layers
+model.summary()
+
+history.history # 存放的是迭代过程中的一些值
+```
+
+
 
 ## 示例2
 需要下载两个包，分别是训练好的模型、数据
@@ -142,3 +153,10 @@ results = model.evaluate(test_data.batch(512), verbose=2)
 for name, value in zip(model.metrics_names, results):
     print("%s: %.3f" % (name, value))
 ```
+
+
+（未完）
+
+## callback
+
+- earlystopping
