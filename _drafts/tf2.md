@@ -11,7 +11,8 @@ from tensorflow import keras
 
 fashion_mnist = keras.datasets.fashion_mnist
 (train_images, train_labels), (test_images, test_labels) = fashion_mnist.load_data()
-
+x_valid, y_valid = train_images[:5000], train_labels[:5000]
+x_train, y_train = train_images[5000:], train_labels[5000:]
 
 class_names = ['T-shirt/top', 'Trouser', 'Pullover', 'Dress', 'Coat',
                'Sandal', 'Shirt', 'Sneaker', 'Bag', 'Ankle boot']
@@ -30,9 +31,8 @@ model.compile(optimizer='adam',
               loss='sparse_categorical_crossentropy',
               metrics=['accuracy'])
 
-
-history = model.fit(train_images, train_labels, epochs=10)
-
+history = model.fit(x=x_train, y=y_train, epochs=10, validation_data=(x_valid, y_valid))
+# 或者 validation_split = 0.01 也可以自动分验证集
 
 predictions = model.predict(test_images)
 ```
@@ -44,6 +44,55 @@ model.summary()
 
 history.history # 存放的是迭代过程中的一些值
 ```
+
+### 回调函数
+常用的有 EarlyStopping, ModelCheckpoint, TensorBoard
+
+
+```
+logdir='./callbacks'
+output_model_file=logdir+'/fashin_mnist_model.h5'
+callbacks=[keras.callbacks.TensorBoard(logdir),
+           keras.callbacks.ModelCheckpoint(output_model_file,save_best_only=True), # 如果是 False，保存最后一个
+           keras.callbacks.EarlyStopping(min_delta=e-3,patience=5)
+
+]
+
+
+history = model.fit(x=x_train, y=y_train, epochs=1000, validation_data=(x_valid, y_valid),callbacks=callbacks)
+```
+
+TensorBoard：（跑不通？？？）
+```
+tensorboard --logdir=callbacks
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

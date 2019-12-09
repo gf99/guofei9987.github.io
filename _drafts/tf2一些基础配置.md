@@ -9,7 +9,7 @@ pip install tensorflow-gpu
 ```
 
 列出可用的设备
-```
+```python
 tf.config.experimental.list_physical_devices()
 tf.config.experimental.list_physical_devices("GPU")
 tf.config.experimental.list_physical_devices("CPU")
@@ -17,20 +17,20 @@ tf.config.experimental.list_physical_devices("CPU")
 
 
 切换回CPU的方法
-```
+```python
 import os
-os.environ["CUDA_VISIBLE_DEVICES"]="-1"
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 ```
 
 
 运行，并看用了哪个设备
 ```python
-tf.debugging.set_log_device_placement(True)
+tf.debugging.set_log_device_placement(True)  # 每个算子都会显示详细信息
 
 with tf.device('/device:GPU:0'):
-  a = tf.constant([[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]])
-  b = tf.constant([[1.0, 2.0], [3.0, 4.0], [5.0, 6.0]])
-  c = tf.matmul(a, b)
+    a = tf.constant([[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]])
+    b = tf.constant([[1.0, 2.0], [3.0, 4.0], [5.0, 6.0]])
+    c = tf.matmul(a, b)
 
 print(c)
 ```
