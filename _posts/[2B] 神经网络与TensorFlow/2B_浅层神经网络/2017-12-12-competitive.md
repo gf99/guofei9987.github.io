@@ -2,7 +2,7 @@
 layout: post
 title: 竞争神经网络
 categories:
-tags: 2_2_浅层神经网络
+tags: 2_2_老式神经网络
 keywords:
 description:
 order: 256

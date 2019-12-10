@@ -25,7 +25,7 @@ model = keras.Sequential([
     keras.layers.Dense(128, activation='relu'),
     keras.layers.Dense(10, activation='softmax')
 ])
-# 也可以用 model.add(keras.layers.Flatten(input_shape=(28, 28)) 来一步一步添加
+# 也可以用 model.add(keras.layers.Dense(128, activation='relu')) 来一步一步添加
 
 model.compile(optimizer='adam',
               loss='sparse_categorical_crossentropy',
@@ -38,50 +38,107 @@ predictions = model.predict(test_images)
 ```
 
 #### 显示模型的一些情况
-```
+```python
 model.layers
 model.summary()
 
 history.history # 存放的是迭代过程中的一些值
+
+model.evaluate(test_images, test_labels)
 ```
 
-### 回调函数
-常用的有 EarlyStopping, ModelCheckpoint, TensorBoard
+这里自编一个显示指标图形的代码
 
 
+```python
+import matplotlib.pyplot as plt
+
+fig,ax=plt.subplots(1,1)
+
+for i,j in history.history.items():
+    ax.plot(j,label=i)
+
+ax.set_ylim(0,1)
+ax.legend()
+
+plt.show()
 ```
-logdir='./callbacks'
-output_model_file=logdir+'/fashin_mnist_model.h5'
+
+
+
+
+### callbacks
+- EarlyStopping
+- ModelCheckpoint
+- TensorBoard
+
+
+```python
+import os
+logdir='.\\callbacks'
+output_model_file=os.path.join(logdir,'fashin_mnist_model.h5')
 callbacks=[keras.callbacks.TensorBoard(logdir),
            keras.callbacks.ModelCheckpoint(output_model_file,save_best_only=True), # 如果是 False，保存最后一个
-           keras.callbacks.EarlyStopping(min_delta=e-3,patience=5)
+           keras.callbacks.EarlyStopping(min_delta=1e-3,patience=5)
 
 ]
 
 
-history = model.fit(x=x_train, y=y_train, epochs=1000, validation_data=(x_valid, y_valid),callbacks=callbacks)
+history = model.fit(x=train_images, y=train_labels, epochs=100, validation_split = 0.01 ,callbacks=callbacks)
 ```
 
 TensorBoard：（跑不通？？？）
-```
+```bash
 tensorboard --logdir=callbacks
 ```
 
+### 归一化
+
+代码待补，因为下面的 batch normalization，在数据归一化的前提下，效果才更好。
+
+### batch normalization
 
 
 
+批归一化可以缓解深度神经网络的梯度消失，因为每一层更加规整。
+
+批归一化有3种做法：（下面代码中）
+1. 先归一化再激活，
+2. 先激活后归一化，
+3. 用selu作为激活函数，这是个自带Normalization的激活函数，而且相比之下，训练速度快，训练效果好
+
+```python
+model = keras.Sequential([
+    keras.layers.Flatten(input_shape=(28, 28))
+])
+for _ in range(20):
+    model.add(keras.layers.Dense(100,activation='selu'))
+
+    # 先激活，后归一化
+    #     model.add(keras.layers.Dense(100,activation='relu'))
+    #     model.add(keras.layers.BatchNormalization())
+
+    # 先归一化，再激活
+    # model.add(keras.layers.Dense(100))
+    # model.add(keras.layers.BatchNormalization())
+    # model.add(keras.layers.Activation('relu'))
+
+model.add(keras.layers.Dense(10, activation='softmax'))
+```
 
 
+### dropout
 
+一般不会给每一层都添加dropout，而是最后几层。
+```python
+model.add(keras.layers.Dropout(rate=0.5))
+model.add(keras.layers.AlphaDropout(rate=0.5))
+```
 
-
-
-
-
-
-
-
-
+关于 AlphaDropout：
+- 均值和方差不变
+- 因此归一化性质不变
+- 因此可以和 BatchNormalization 连用
 
 
 
