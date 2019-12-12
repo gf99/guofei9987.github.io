@@ -127,7 +127,7 @@ ani = FuncAnimation(fig, update_line, blit=True, interval=25, frames=1000)
 plt.show()
 ```
 1. blit=True表示使用缓存快速重绘
-2. frames参数设置最大帧数，update_line()的输入值i将在0到frames之间循环变化，frames也可以是一个list或array
+2. frames参数设置最大帧数，update_line()的输入值i将在0到frames-1之间循环变化，frames也可以是一个list或array
 3. interval时间间隔
 
 ## 动画保存

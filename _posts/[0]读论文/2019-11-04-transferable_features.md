@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 【读论文】How transferable are features in deep neural networks
+title: 【论文笔记】How transferable are features in deep neural networks
 categories:
 tags: 0_读论文
 keywords:

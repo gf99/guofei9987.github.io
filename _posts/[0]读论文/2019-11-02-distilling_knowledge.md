@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 【读论文】Distilling the Knowledge in a Neural Network
+title: 【论文笔记】Distilling the Knowledge in a Neural Network
 categories:
 tags: 0_读论文
 keywords:

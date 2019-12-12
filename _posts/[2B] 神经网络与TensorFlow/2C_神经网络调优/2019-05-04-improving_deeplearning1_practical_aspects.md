@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Practical aspects of Deep Learning
+title: Practical aspects of DNN
 categories:
 tags: 2_3_神经网络与TF
 keywords:
@@ -10,7 +10,7 @@ order: 450
 *吴恩达的课程笔记*  
 
 ## train/dev/test
-这个已经很熟悉了。  
+
 dev又称为 development set, hold-out cross-validation set
 
 - 分割问题  
@@ -115,3 +115,100 @@ notes
 - remember regularization
 - Does not work with dropout
 - Rarely, dw is correct when w is close to 0, so train for a while before do gradient check.  
+
+
+--------------------------
+
+## 过拟合的应对
+### 1. 增加数据量往往可以有效降低过拟合的可能性
+效果显著，但成本巨大
+### 2. 人为扩展训练数据。  
+第一条说了，增加数据量往往可以有效降低过拟合的可能性，但获取真实数据的成本往往很高，这里考虑在原数据上进行一些扩展。  
+例如，MNIST数据库中，将图像进行少量旋转。
+
+### 3. validation
+
+一种 early stopping  
+如果发现在 validation datasets 上误差连续上升，就停止迭代。
+
+### 4. L1, L2 规范化
+
+
+$C=C_0+\dfrac{\lambda}{2n}\sum w^2$（其中n是数据集的大小）  
+偏导数就变成这种形式：  
+1. $\dfrac{\partial C}{\partial w}=\dfrac{\partial C_0}{\partial w}+\dfrac{\lambda}{n}w$
+2. $\dfrac{\partial C}{\partial b}=\dfrac{\partial C_0}{\partial b}$
+
+
+训练算法变成这样：
+1. $w\to w-\eta\dfrac{\partial C_0}{\partial b}-\dfrac{\eta\lambda}{n}w$
+2. $b\to b-\eta\dfrac{\partial C_0}{\partial b}$
+
+
+对于L1正则化，$\dfrac{\partial C}{\partial w}=\dfrac{\partial C_0}{\partial w}+\dfrac{\lambda}{n}  \mathcal{N}w$
+
+
+以下引用 [Michael Nielsen](http://michaelnielsen.org/) 的说法  
+规范化能够减轻过拟合，但背后的原因还不得而知。通常认为是因为小的权重意味着更低的复杂性。  
+例如，一个线性模型和一个9阶多项式都可以回归一组点，有两种可能：
+1. 9次多项式是正确的
+2. 线性模型是正确的，噪音是因为存在测量误差
+
+
+科学中，很难说明哪种原则正确，“奥卡姆剃刀”也不是一个一般的科学原理。例如，爱因斯坦的理论更能预测天体的微小偏差，但复杂很多。  
+归根结底，你可以把规范化看成某种整合的技术，尽管其效果不错，但我们并没有一套完整的理解，仅仅当作不完备的启发规则或经验。规范化是一种帮助神经网络泛化的魔法，但不会带来原理上理解的指导。
+
+
+### 5. Dropout
+随机、临时关闭某些神经元。实际预测时，全部神经元激活，为了补偿这个，把权重按比例缩小。  
+Dropout 类似于某种投票机制，有些类似训练不同的神经网络  
+
+## Underfitting
+- model is not powerful enough
+- over-regularized
+- simply not been trained long enough
+
+## 权重初始化
+### 1/n
+举例说明，某个3层神经元，输入层有1000个神经元，其中500个输出1,500个输出0  
+用$N(0,1)$初始化隐含层的 weight 和 bias  
+那么，对于某个隐含层的神经元，其输入是$\sum w_i^{l-1} v_i^{l-1}+b \sim N(0,501)$  
+这是一个非常宽的正态分布，导致其值较大和较小的概率都不低，这样会导致训练缓慢。  
+
+
+可以用$w\sim N(0,1/n),b\sim N(0,1)$来初始化 weight 和 bias，这样某个隐含层的输入是$\sum w_i^{l-1} v_i^{l-1}+b \sim N(0,1.5)$  
+
+
+实际上，两种方案训练很多次，准确率趋向于一致
+
+### 非0
+初始化时，不能用全0初始化，因为这样的话，每一层内部的神经元都一样，无论迭代多少次，值也都一样，也就失去了神经网络的意义。  
+
+实际上，可以设定w=0.01*np.random.randn,b=0  
+当然，w不能太大，容易落在sigmoid函数的尾部，导致迭代很慢。  
+
+## batch_size
+理论上，只要权重更新足够频繁，就可以训练到最优，这样看来在线学习（batch_size=1）似乎更好。  
+但是，
+1. 神经网络每 batch_size 个样本，更新一次权重。在线学习更新太过频繁。
+2. 现有的硬件支持矩阵运算，所以 batch_size 不为1时，每多一个样本，花费时间并不太增多。
+3. batch_size 是一个相对独立的超参数（独立于网络整体架构之外）
+
+
+## momentum
+用 Hessian 矩阵做最优化有巨大的优势，关于 Hessian 矩阵，出门左转[非线性无约束最优化-牛顿法](http://www.guofei.site/2018/05/26/nonlinearprogramming.html#title6)  
+问题是 Hessian 矩阵太大了，加入有n个权重，Hessian矩阵就是$n\times n$大小的  
+作为改进，使用 momentum  
+
+
+momentum 从物理中引入了两个概念，
+1. 速度，梯度类似力，只改变加速度
+2. 摩擦力，用来逐步减少速度
+
+
+$v\to v'=\mu v-\eta \nabla C$  
+$w\to w'=w+v'$  
+$1-\mu$是摩擦力，$0\leq\mu\leq1$  
+
+
+其它最优化算法：共和梯度法、BFGS方法(limited memory BFGS,L-BFGS)
