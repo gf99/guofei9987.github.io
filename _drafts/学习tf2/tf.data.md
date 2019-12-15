@@ -39,3 +39,33 @@ for batch, label in dataset.take(1):
 然后，还可以：（代码省略，用的时候查）
 - 把字符串格式的值，转为float格式
 - dataset.map 后的返回值，可以直接作为 `model.fit` 的入参
+
+## numpy
+
+```python
+from sklearn import datasets
+
+X, y = datasets.make_classification(n_samples=1000, n_features=10)
+
+dataset = tf.data.Dataset.from_tensor_slices((X, y))
+# dataset 的类型是 <BatchDataset>
+dataset = dataset.shuffle(100).batch(64)
+```
+
+使用
+```python
+# 取一个batch
+dataset.take(1)
+
+# 可以直接使用
+model.fit(dataset, epochs=10)
+model.evaluate(dataset)
+```
+
+## images
+```python
+import pathlib
+data_dir = tf.keras.utils.get_file(origin='https://storage.googleapis.com/download.tensorflow.org/example_images/flower_photos.tgz',
+                                         fname='flower_photos', untar=True)
+data_dir = pathlib.Path(data_dir)
+```
