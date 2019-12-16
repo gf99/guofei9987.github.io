@@ -130,7 +130,14 @@ plt.show()
 2. frames参数设置最大帧数，update_line()的输入值i将在0到frames-1之间循环变化，frames也可以是一个list或array
 3. interval时间间隔
 
-## 动画保存
+### jupyter 支持
+
+删掉 `plt.show()`，加上下面这一句
+```python
+from IPython.display import HTML
+HTML(ani.to_jshtml())
+```
+### 动画保存
 
 step1：下载[ffmpeg](https://ffmpeg.org/),[FFmpeg for Windows](https://ffmpeg.zeranoe.com/builds/)，并解压缩  
 step2: 代码中添加一行:  
