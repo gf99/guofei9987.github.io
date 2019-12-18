@@ -62,6 +62,16 @@ model.fit(dataset, epochs=10)
 model.evaluate(dataset)
 ```
 
+numpy 与 tensor 的算子都可以直接相互套用。  
+而且他们共享内存，但如果用GPU，那么会做一个copy
+```python
+import numpy as np
+
+ndarray = np.ones([3, 3])
+
+```
+
+
 ## images
 ```python
 import pathlib

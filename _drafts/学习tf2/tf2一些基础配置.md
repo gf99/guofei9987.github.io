@@ -15,6 +15,12 @@ tf.config.experimental.list_physical_devices("GPU")
 tf.config.experimental.list_physical_devices("CPU")
 ```
 
+看 tensor 所用的资源
+```python
+x = tf.random.uniform([3, 3])
+x.device
+```
+
 
 切换回CPU的方法
 ```python
