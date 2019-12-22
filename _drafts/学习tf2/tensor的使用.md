@@ -27,6 +27,13 @@ ds_tensors.shuffle(2).batch(2).map(tf.square)
 # 这是个 <dataset> 用法见于相关内容
 ```
 
+还有啥
+```
+tf.where
+tf.print
+
+```
+
 ## 自动微分
 
 
@@ -60,8 +67,116 @@ with tf.GradientTape() as t:
 d2y_dx2 = t.gradient(dy_dx, x)
 ```
 
-## 训练
-```
+## 训练相关
+```python
 v = tf.Variable(3.0)
 v.assign(tf.square(v))
+tf.assign_sub # 手写梯度下降时用的多
+```
+
+## 激活函数
+```
+tf.nn.softmax
+
+
+```
+## 完整案例
+
+### 简陋款
+```python
+import tensorflow as tf
+import numpy as np
+
+
+class MyModel():
+    def __init__(self):
+        self.W = tf.Variable(1.0)
+        self.b = tf.Variable(1.0)
+
+    def __call__(self, x):
+        return self.W * x + self.b
+
+
+my_model = MyModel()
+
+# %%
+n_samples = 1000
+X = np.random.rand(n_samples, 1) * 5
+y = 5*X + np.random.randn(n_samples, 1)+2
+
+import matplotlib.pyplot as plt
+
+plt.plot(X, y, '.', label='true')
+plt.plot(X, my_model(X), '.', label='predict')
+plt.legend()
+plt.show()
+
+
+# %%
+
+def loss(predict_y, true_y):
+    return tf.reduce_mean(tf.square(predict_y - true_y))
+
+
+def train(model, X, y, learning_rate):
+    with tf.GradientTape() as t:
+        current_loss = loss(my_model(X), y)
+        dW, db = t.gradient(current_loss, [my_model.W, my_model.b])
+        model.W.assign_sub(learning_rate * dW)
+        model.b.assign_sub(learning_rate * db)
+
+
+#%%
+Ws,bs=[],[]
+losses=[]
+
+for epoch in range(100):
+    Ws.append(my_model.W.numpy())
+    bs.append(my_model.b.numpy())
+    losses.append(loss(my_model(X),y))
+    train(my_model,X,y,learning_rate=0.01)
+
+
+#%%
+plt.figure(2)
+plt.plot(Ws,label='W')
+plt.plot(bs,label='b')
+# plt.plot(Ws,label='W')
+
+plt.legend()
+
+plt.figure(3)
+plt.plot(losses)
+
+plt.show()
+```
+
+## tf.func
+类似这样的，但速度更快
+```python
+@tf.function
+def add(a, b):
+    return a + b
+```
+
+
+有时候想限定输入值的类型，如果不符合，让它报错（例如，上面这个例子输入数字和字符串都可以）
+```python
+# 注意，shape也要严格满足，不然也会报错
+@tf.function(input_signature=(tf.TensorSpec(shape=[None,None], dtype=tf.int32),))
+def next_collatz(x):
+  print("Tracing with", x)
+  return tf.where(x % 2 == 0, x // 2, 3 * x + 1)
+
+next_collatz(tf.constant([[1, 2], [3, 4]]))
+
+
+# 或者用现成的
+@tf.function
+def double(a):
+    return a + a
+
+double_string = double.get_concrete_function(tf.TensorSpec(shape=None, dtype=tf.string))
+
+double_string(tf.constant(["a"]))
 ```

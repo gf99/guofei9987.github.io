@@ -78,6 +78,8 @@ __delattr__(self,name)  # 定义当一个属性被删除时的行为
 `__and__(self,other)`| 定义按位与`&`
 `__or__(self,other)`| 定义按位或`|`
 `__xor__(self,other)`| 定义按位异或`^`
+`__eq__(self, other)`|`==`
+
 
 
 ```py
