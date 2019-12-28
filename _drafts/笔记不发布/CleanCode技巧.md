@@ -36,7 +36,7 @@ __import__('numpy')
 ```
 
 
-```
+```python
 # 这是一个dict，内容是已经加载的包
 sys.modules
 
@@ -45,3 +45,78 @@ dir()
 ```
 
 （不是严格标准）尽量避免使用类似 `from scikit-opt import GA`，因为在大型项目中，如果频繁使用这个句式，会增加命名空间冲突的可能性。
+
+## with语句
+with语句做了什么？
+1. 计算表达式的值，返回一个上下文管理对象
+2. 加载上下文管理对象的 `__exit__()` 方法以备后用
+3. 调用上下文管理器对象的 `__enter__()` 方法
+4. 如果with语句中设置了目标对象，把 `__enter__()` 方法的返回值赋值给目标对象
+5. 执行 `with` 中的代码块
+6. 如果正常结束，调用 `__exit__()` 方法，忽略返回值。
+7. 如果发生异常，调用 `__exit__()` 方法，把异常类型、值、traceback信息传递给 `__exit__()`。如果 `__exit__()` 返回 True，异常被挂起，程序继续执行；如果返回False，抛出异常。
+
+with语句好处是无论何种方式跳出代码块，`__exit__()` 总是被执行
+
+
+你可以定义自己的上下文管理器：
+```python
+class MyContextManager(object):
+    def __enter__(self):
+        print('enter')
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        print('leaving', exc_type, exc_val, exc_tb)
+        if exc_type is None:
+            return False
+        if exc_type is ZeroDivisionError:
+            print('ZeroDivisionError')
+            return True
+        print('other error')
+        return True
+
+with MyContextManager():
+    1/0
+```
+
+## 多用else
+for循环后面可以跟else，当循环自然终结时，会执行else；如果被break打断，不执行else
+
+```python
+for i in range(4):
+    print(i)
+    if i>5:break
+else:
+    print('no more then 5')
+```
+
+
+try 后面跟else，当try语句没发生异常时，执行else，全语句： `try-except-else-finnaly`
+
+## 可变对象和不可变对象
+
+
+```python
+class STUDENT:
+    def __init__(self, name, course=[]):
+        self.name = name
+        self.course = course
+
+    def add_course(self, course_name):
+        self.course.append(course_name)
+
+
+Lucy = STUDENT('Lucy')
+Lily = STUDENT('Lily')
+
+Lucy.add_course('math')
+Lily.add_course('PE')
+
+print(Lucy.course)
+print(Lily.course)
+```
+
+很惊讶的发现，虽然 `Lucy` 和 `Lily` 是不同的对象，但course却指向同一个地址。这是因为默认参数仅仅评估一次。
+
+## 配置文件
+常见有XML，ini

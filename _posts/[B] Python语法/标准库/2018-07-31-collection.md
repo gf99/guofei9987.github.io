@@ -10,17 +10,41 @@ order: 1220
 
 *来自[python官网](https://docs.python.org/3.7/library/index.html),仅摘抄自己用的最多的部分*
 ## Counter
+
+生成
 ```py
 import collections
 counter=collections.Counter('aaabbc')
 # 返回 Counter({'a': 3, 'b': 3})
-counter.keys(),counter.values()
+
+collections.Counter({'a':2,'b':1}) # 返回 Counter({'a': 2, 'b': 1})
+collections.Counter(a=2, b=1)
+```
+
+
+使用
+```python
+counter.keys(), counter.values()
+
 counter.most_common(2) # 返回频率最高的n个，例如 [('a', 3), ('b', 2)]
 
-# 其它生成 Counter 对象的方法
-collections.Counter({'a':2,'b':1}) # 返回 Counter({'a': 2, 'b': 1})
+# 访问不存在的元素时，返回0，而不是报错
+collections.Counter(a=2, b=1)['c']
 
-collections.Counter('aab')-collections.Counter('abc') # 结果的value中，剔除了0和负数（因此看起来应用范围不是很宽）
+# update() 统计数字加进去，而不是覆盖
+a = collections.Counter('aab')
+a.update({'a': 1})
+
+# subtract() 减，但是允许结果有负号
+a.subtract({'a': 5})
+```
+
+运算符
+```python
+collections.Counter('aab') - collections.Counter('abc') # 结果的value中，剔除了0和负数（因此看起来应用范围不是很宽）
+collections.Counter('aab') + collections.Counter('abc')
+collections.Counter('aab') & collections.Counter('abc') # 共同元素的最小值
+collections.Counter('aab') | collections.Counter('abc') # 共同元素的最大值
 ```
 
 ## defaultdict
