@@ -18,7 +18,7 @@ order: 1
 ensemble 方法确实不错，但太消耗算力。这里提出一种 Distilling the Knowledge 的方法，使训练快速、并行。
 
 
-我们可以训练一个笨重的（cumbersome）模型，然后用 Distilling the Knowledge 在部署阶段部署一个轻量的模型。
+我们可以训练一个笨重的（cumbersome）模型，然后用 Distilling the Knowledge  的方法，最终在部署阶段部署一个轻量的模型。
 
 在很多个class的多分类模型中，有些class的概率很低，但objective function仍然要计算他们。
 

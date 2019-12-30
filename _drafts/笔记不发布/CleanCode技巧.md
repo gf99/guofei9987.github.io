@@ -120,3 +120,51 @@ print(Lily.course)
 
 ## 配置文件
 常见有XML，ini
+
+`ConfigParser` 是一个常用的解析配置文件的包
+
+`getboolean('section1', 'option1')` 可以解析 yes/no, true/false, on/off
+
+## traceback来调试报错信息
+## logging 来记录日志
+
+logger分为五个等级
+1. DEBUG，
+2. INFO，正常的信息
+3. WARNING
+4. ERROR
+5. CRITICAL
+
+
+```python
+import logging
+
+logging.Logger.setLevel()
+logging.Logger.addHandler()
+logging.Logger.removeHandler()
+logging.Logger.addFilter()
+
+logging.Logger.debug()
+logging.Logger.info()
+logging.Logger.warning()
+logging.Logger.error()
+```
+
+一个简单案例
+```python
+import logging
+
+logging.basicConfig(
+    level=logging.DEBUG,
+    filename='log.txt',
+    filemode='w',
+)
+
+k = 0
+for i in range(5):
+    k += i
+    logging.info('[INFO]:calling i={i}'.format(i=i))
+```
+
+
+##
