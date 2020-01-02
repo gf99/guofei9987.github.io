@@ -111,6 +111,25 @@ shark.move()
 shark.move()
 ```
 
+### `__new__` 方法
+```python
+class A:
+    def __new__(cls, *args, **kwargs):
+        print(cls, args, kwargs)
+
+    def __init__(self, value):
+        self.value = value
+        print(self)
+
+
+a = A(1)
+# 发现 __init__ 未被调用
+```
+是 `__new__` 方法调用的 `__init__`
+- `__new__` 是一个静态方法
+- `__new__` 返回类的对象，然后自动用 `__init__` 初始化。如果没有返回对象，那么 `__init__` 不被调用
+- `__init__` 不显示返回（或者只能return None），否则报错
+- `__new__` 和 `__init__` 的入参必须一模一样，否则报错
 
 
 ## 多态

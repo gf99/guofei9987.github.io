@@ -89,8 +89,8 @@ obj_son.func()
 **ps：如果想要强制访问私有字段，可以通过 【对象._类名__私有字段明 】访问（如：obj._C__foo），不建议强制访问私有成员。**  
 
 
-
-## 类方法和静态方法
+## 方法
+### 类方法和静态方法
 
 - 普通方法：由对象调用；至少一个self参数；执行普通方法时，自动将调用该方法的对象赋值给self；
 - 类方法：由类调用； 至少一个cls参数；执行类方法时，自动将调用该方法的类复制给cls；
@@ -137,6 +137,69 @@ f.class_func()
 Foo.static_func()
 f.static_func()
 ```
+
+### 动态地添加方法
+
+```python
+# operator_wapper 是一个普通的函数，在类里面这么写，可以把普通函数做成一个类方法
+def operator_wapper(*wrapper_args):
+    return operator(*(wrapper_args + args), **kwargs)
+setattr(self, operator_name, types.MethodType(operator_wapper, self))
+```
+
+直接等号，缺点是不能传入self
+```python
+def my_func1():
+    print('my_func1')
+
+
+class FOO(object):
+    def func1(self):
+        print(self)
+
+
+foo = FOO()
+foo.func1 = my_func1
+```
+
+类中间等号，需要传入self
+```python
+def my_func1(self):
+    print('my_func1', self)
+
+
+class FOO(object):
+    func1 = my_func1
+
+
+foo = FOO()
+foo.func1()
+```
+
+## 描述符
+
+对于属性
+```python
+class FOO:
+    a = 1
+
+    def __init__(self):
+        self.b = 2
+
+
+FOO.__dict__  # 所有属性，包括a不包括b
+
+foo = FOO()
+foo.__dict__  # 包括b，不包括a
+
+```
+用点的时候，先从实例中找，如果找不到会从类属性中找。换句话说，操作符 `.` 封装了两种不同属性进行查找的细节。
+
+
+
+
+
+
 
 
 ## 装饰器型属性
