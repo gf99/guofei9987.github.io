@@ -102,7 +102,7 @@ my_model = MyModel()
 # %%
 n_samples = 1000
 X = np.random.rand(n_samples, 1) * 5
-y = 5*X + np.random.randn(n_samples, 1)+2
+y = 5 * X + np.random.randn(n_samples, 1) + 2
 
 import matplotlib.pyplot as plt
 
@@ -126,27 +126,26 @@ def train(model, X, y, learning_rate):
         model.b.assign_sub(learning_rate * db)
 
 
-#%%
-Ws,bs=[],[]
-losses=[]
+# %%
+Ws, bs = [], []
+losses = []
 
 for epoch in range(100):
     Ws.append(my_model.W.numpy())
     bs.append(my_model.b.numpy())
-    losses.append(loss(my_model(X),y))
-    train(my_model,X,y,learning_rate=0.01)
+    losses.append(loss(my_model(X), y))
+    train(my_model, X, y, learning_rate=0.01)
 
-
-#%%
-plt.figure(2)
-plt.plot(Ws,label='W')
-plt.plot(bs,label='b')
-# plt.plot(Ws,label='W')
-
-plt.legend()
-
-plt.figure(3)
-plt.plot(losses)
+# %%
+fig, ax = plt.subplots(3, 1)
+ax[0].plot(Ws, label='W')
+ax[0].plot(bs, label='b')
+ax[1].plot(losses, label='loss')
+ax[2].plot(X, y, '.', label='true')
+ax[2].plot(X, my_model(X), '.', label='predict')
+ax[0].legend()
+ax[1].legend()
+ax[2].legend()
 
 plt.show()
 ```

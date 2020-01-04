@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 【Python】设计模式：装饰器
+title: 【Python】装饰器
 categories:
 tags: Python设计模式
 keywords:
@@ -124,6 +124,33 @@ def test_with_param(p):
 test_with_param(1)
 ```
 
+## 应用
+能显示运行时间的装饰器
+
+
+```python
+import time
+
+
+def timer(func):
+    def d_func(*args, **kwargs):
+        start_time = time.time()
+        result = func(*args, **kwargs)
+        end_time = time.time()
+        print(end_time - start_time)
+        return result
+
+    return d_func
+
+
+@timer
+def myfunc(a):
+    time.sleep(2)
+    print(a)
+
+
+myfunc(3)
+```
 
 
 ## 附：scipy的做法
