@@ -1,11 +1,11 @@
 ---
 layout: post
-title: 【torch】学习1
-categories:
+title: 【pytorch】【进行中】建立模型
+categories: 2_6_torch
 tags:
 keywords:
 description:
-order: 286
+order: 262
 ---
 
 
