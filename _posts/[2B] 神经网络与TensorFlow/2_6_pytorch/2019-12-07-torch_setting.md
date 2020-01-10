@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 【pytorch】【进行中】基本配置
-categories: 2_6_torch
-tags:
+categories:
+tags: 2_6_torch
 keywords:
 description:
 order: 261

@@ -1,8 +1,8 @@
 ---
 layout: post
-title: 【pytorch】【进行中】建立模型
-categories: 2_6_torch
-tags:
+title: 【pytorch】【进行中】data
+categories:
+tags: 2_6_torch
 keywords:
 description:
 order: 263
