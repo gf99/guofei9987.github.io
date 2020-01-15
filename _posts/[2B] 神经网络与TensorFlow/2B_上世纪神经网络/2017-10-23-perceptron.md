@@ -2,7 +2,7 @@
 layout: post
 title: 【感知机】理论简介
 categories:
-tags: 2_2_老式神经网络
+tags: 2_2_上世纪神经网络
 keywords:
 description:
 order: 280
