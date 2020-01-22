@@ -50,7 +50,7 @@ bonus = pd.read_excel('bonus_schedule.xls')
 bonus.to_excel('foo1.xlsx', sheet_name='sheet1')
 ```
 
-### to_csv&read_csv
+### csv
 ```python
 macrodata = pd.read_csv('macrodata.csv')
 macrodata.to_csv('d:/foo.csv')
@@ -65,6 +65,13 @@ macrodata.to_csv('d:/foo.csv')
 # names： 自定义columns name
 # sep：`'\t', '\s+'` 等
 ```
+
+`read_csv` 还有一些入参:
+- `skiprows` 忽略的行数
+- `skip_footer` 忽略的行数（从文件末尾算起）
+- `nrows` 只读取前nrows行
+- `chunksize` 返回一个迭代器，迭代器中每个元素是一个 chunk
+
 
 ### to_json
 
