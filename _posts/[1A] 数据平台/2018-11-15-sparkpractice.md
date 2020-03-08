@@ -35,7 +35,7 @@ spark = SparkSession.builder.appName("app_name_"+cal_dt_str).enableHiveSupport()
 # %% 下面放你的代码
 df = spark.createDataFrame([[cal_dt_str, np.random.randint(5)]], schema=['dt', 'rand_num'])
 df.write.mode('overwrite').format('orc').partitionBy('dt').saveAsTable('app.app_test_guofei8')
-spark.sql("ALTER TABLE app.app_test_guofei8 SET TBLPROPERTIES ('author' = 'guofei8')")
+spark.sql("ALTER TABLE app.app_test_guofei9987 SET TBLPROPERTIES ('author' = 'guofei9987')")
 ```
 
 ### 2. 串行提交
@@ -47,11 +47,7 @@ spark-submit   --master yarn \
       --executor-memory 10g \
       --num-executors 400 \
       --executor-cores 6 \
-      --conf spark.yarn.appMasterEnv.yarn.nodemanager.container-executor.class=DockerLinuxContainer \
-      --conf spark.executorEnv.yarn.nodemanager.container-executor.class=DockerLinuxContainer \
-      --conf spark.yarn.appMasterEnv.yarn.nodemanager.docker-container-executor.image-name=bdp-docker.guofei.site:5000/wise_mart_bag:latest \
-      --conf spark.executorEnv.yarn.nodemanager.docker-container-executor.image-name=bdp-docker.guofei.site:5000/wise_mart_bag:latest \
-      --py-files ../dp_monitor.zip \
+      --py-files ../your_py_files.zip \
       {pyfile} "{arrs}"
 '''
 # --master:
@@ -93,7 +89,7 @@ result_code_list = [func_run(args=args) for args in input_file]
 for i in result_code_list: print(i)
 # for i in result_code_list:
 #     if i[1] != 0:
-#         exit(i[1])
+#         raise error
 ```
 
 ### 3. 并行提交
@@ -109,9 +105,9 @@ import time
 
 right_dt = datetime.datetime(year=2019, month=7, day=31)
 left_dt = datetime.datetime(year=2019, month=7, day=1)
-pyfile = 'app_1_1.py'
+pyfile = 'app_1_1.py' # 你的待提交代码
 step = -1  # 运行间隔
-job_num = 5
+job_num = 5 # 同时提交这么多个
 
 # 先把待提交的参数算出来
 one_day = datetime.timedelta(days=1)
@@ -127,11 +123,7 @@ spark-submit   --master yarn \
       --executor-memory 10g \
       --num-executors 400 \
       --executor-cores 6 \
-      --conf spark.yarn.appMasterEnv.yarn.nodemanager.container-executor.class=DockerLinuxContainer \
-      --conf spark.executorEnv.yarn.nodemanager.container-executor.class=DockerLinuxContainer \
-      --conf spark.yarn.appMasterEnv.yarn.nodemanager.docker-container-executor.image-name=bdp-docker.guofei.site:5000/wise_mart_bag:latest \
-      --conf spark.executorEnv.yarn.nodemanager.docker-container-executor.image-name=bdp-docker.guofei.site:5000/wise_mart_bag:latest \
-      --py-files ../dp_monitor.zip \
+      --py-files ../core_code.zip \
       {pyfile} "{arrs}"
 '''
 
@@ -166,7 +158,7 @@ def paral_submit(input_arr_list, job_num=10):
 paral_submit(input_arr_list,job_num=10)
 ```
 
-## 代码定时上传git
+## 代码定时备份到git
 ```py
 import os
 import subprocess
@@ -253,8 +245,6 @@ hive -e 'use app;show tables'
 ''',shell=True).decode('utf-8').split('\n')
 
 table_guofei=[table for table in tables_all if table.find('guofei')>=0]
-
-a
 ```
 
 ```py
