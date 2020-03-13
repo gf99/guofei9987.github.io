@@ -2,7 +2,7 @@
 layout: post
 title: Unbalanced Data
 categories:
-tags: 1_3_特征工程
+tags: 1-3-特征工程
 keywords:
 description:
 order: 100

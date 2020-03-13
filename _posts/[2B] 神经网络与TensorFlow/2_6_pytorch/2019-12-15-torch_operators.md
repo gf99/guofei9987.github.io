@@ -2,7 +2,7 @@
 layout: post
 title: 【pytorch】【进行中】运算符
 categories:
-tags: 2_6_torch
+tags: 2-6-torch
 keywords:
 description:
 order: 263

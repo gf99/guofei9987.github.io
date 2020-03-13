@@ -2,7 +2,7 @@
 layout: post
 title: 参数估计
 categories:
-tags: 4_2_概率论
+tags: 4-2-概率论
 description:
 order: 424
 ---

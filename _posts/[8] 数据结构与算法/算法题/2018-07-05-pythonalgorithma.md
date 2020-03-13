@@ -2,7 +2,7 @@
 layout: post
 title: 【Python】【算法题集3】
 categories:
-tags: 8_数据结构与算法
+tags: 8-数据结构与算法
 keywords:
 description:
 order: 591

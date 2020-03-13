@@ -2,7 +2,7 @@
 layout: post
 title: 数据查询优化
 categories:
-tags: 1_1_算法平台
+tags: 1-1-算法平台
 keywords:
 description:
 order: 190

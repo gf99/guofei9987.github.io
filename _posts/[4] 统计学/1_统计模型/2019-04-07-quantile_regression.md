@@ -2,7 +2,7 @@
 layout: post
 title: 【statsmodels】Quantile regression
 categories:
-tags: 4_1_统计模型
+tags: 4-1-统计模型
 keywords:
 description:
 order: 409

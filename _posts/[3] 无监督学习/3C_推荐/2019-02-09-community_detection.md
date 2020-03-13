@@ -2,7 +2,7 @@
 layout: post
 title: 【图挖掘】社区检测
 categories:
-tags: 3_3_推荐
+tags: 3-3-推荐
 keywords:
 description:
 order: 350
@@ -80,7 +80,7 @@ step4：重复步骤2和3，直到收敛或满足迭代次数；
 nx.algorithms.community.label_propagation.asyn_lpa_communities(G)
 nx.algorithms.community.label_propagation.label_propagation_communities(G)
 
-# 暂时不知道啥区别，可能是这样的：
+# 猜测区别是这样的：
 # 1是异步，2是半同步
 # 1返回<dict_valueiterator>，2返回<generator object label_propagation_communities>
 # 1结果不稳定，2结果稳定

@@ -2,7 +2,7 @@
 layout: post
 title: 竞争神经网络&LVQ
 categories:
-tags: 2_2_上世纪神经网络
+tags: 2-2-上世纪神经网络
 keywords:
 description:
 order: 256

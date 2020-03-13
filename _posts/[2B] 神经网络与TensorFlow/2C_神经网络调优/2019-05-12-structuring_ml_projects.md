@@ -2,7 +2,7 @@
 layout: post
 title: Structuring Machine Learning Projects
 categories:
-tags: 2_3_神经网络与TF
+tags: 2-3-神经网络与TF
 keywords:
 description:
 order: 450

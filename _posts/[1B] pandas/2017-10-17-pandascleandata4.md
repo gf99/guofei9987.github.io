@@ -2,7 +2,7 @@
 layout: post
 title: 【pandas】index&colums
 categories:
-tags: 1_2_Pandas与numpy
+tags: 1-2-Pandas与numpy
 keywords:
 description:
 order: 104

@@ -2,7 +2,7 @@
 layout: post
 title: law of large numbers
 categories:
-tags: 4_2_概率论
+tags: 4-2-概率论
 keywords:
 description:
 order: 423

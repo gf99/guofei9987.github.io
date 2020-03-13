@@ -2,7 +2,7 @@
 layout: post
 title: 【matplotlib】设置
 categories:
-tags: 7_可视化
+tags: 7-可视化
 keywords:
 description:
 order: 701

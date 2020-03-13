@@ -2,7 +2,7 @@
 layout: post
 title: 【排队论】基本概念
 categories:
-tags: 5_9_应用数学
+tags: 5-9-应用数学
 keywords:
 description:
 order: 7403

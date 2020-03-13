@@ -2,7 +2,7 @@
 layout: post
 title: 【matplotlib】键鼠响应事件
 categories:
-tags: 7_可视化
+tags: 7-可视化
 keywords:
 description:
 order: 731

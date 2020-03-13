@@ -2,7 +2,7 @@
 layout: post
 title: 【pandas】描述统计&简单作图
 categories:
-tags: 1_2_Pandas与numpy
+tags: 1-2-Pandas与numpy
 keywords:
 description:
 order: 105

@@ -2,7 +2,7 @@
 layout: post
 title: 【数值计算】若干简介.
 categories:
-tags: 5_5_数值计算
+tags: 5-5-数值计算
 keywords:
 description:
 order: 7512
