@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 【Python】【numpy】random随机数生成.
+title: 【Python】【numpy】random随机数生成
 categories:
 tags: A蒙特卡洛方法
 keywords:

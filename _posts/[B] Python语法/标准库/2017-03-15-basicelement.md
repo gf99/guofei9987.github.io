@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 【Python标准库】基本数据类型.
+title: 【Python标准库】基本数据类型
 categories:
 tags: Python语法
 keywords:

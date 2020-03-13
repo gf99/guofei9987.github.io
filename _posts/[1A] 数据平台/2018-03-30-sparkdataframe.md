@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 【spark】DataFrame.
+title: 【spark】DataFrame
 categories:
 tags: 1-1-算法平台
 keywords:

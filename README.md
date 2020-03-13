@@ -9,9 +9,9 @@
 |<font color="#FF9224">1</font>|【论文笔记】Distilling the Knowledge in a Neural Network|[链接](http://www.guofei.site/2019/11/02/distilling_knowledge.html)|
 |<font color="#FF9224">2</font>|【论文笔记】Deep neural networks are easily fooled|[链接](http://www.guofei.site/2019/11/03/dnn_fooled.html)|
 |<font color="#FF9224">3</font>|【论文笔记】How transferable are features in deep neural networks|[链接](http://www.guofei.site/2019/11/04/transferable_features.html)|
-|<font color="#FF9224">4</font>|【论文笔记】Visualizing and understanding CNN|[链接](http://www.guofei.site/2019/11/07/transfer_learning_dnn.html)|
-|<font color="#FF9224">4</font>|【论文笔记】Learning and transferring mid-Level image representations CNN|[链接](http://www.guofei.site/2019/11/06/transfer_learning_dnn.html)|
 |<font color="#FF9224">4</font>|【论文笔记】CNN features off-the-Shelf|[链接](http://www.guofei.site/2019/11/05/cnn_features_off_the_shelf.html)|
+|<font color="#FF9224">5</font>|【论文笔记】Learning and transferring mid-Level image representations CNN|[链接](http://www.guofei.site/2019/11/06/transfer_learning_dnn.html)|
+|<font color="#FF9224">6</font>|【论文笔记】Visualizing and understanding CNN|[链接](http://www.guofei.site/2019/11/07/transfer_learning_dnn.html)|
 
 
 

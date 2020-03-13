@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 【解方程】scipy.optimize.solve.
+title: 【解方程】scipy.optimize.solve
 categories:
 tags: 5-5-数值计算
 keywords:

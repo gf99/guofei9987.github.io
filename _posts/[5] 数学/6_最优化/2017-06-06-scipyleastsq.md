@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 【最小二乘估计】scipy.optimize.leastsq.
+title: 【最小二乘估计】scipy.optimize.leastsq
 categories:
 tags: 5-6-最优化
 keywords:

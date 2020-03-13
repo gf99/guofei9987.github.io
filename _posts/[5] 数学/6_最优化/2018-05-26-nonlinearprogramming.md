@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 【非线性无约束最优化】理论.
+title: 【非线性无约束最优化】理论
 categories:
 tags: 5-6-最优化
 keywords:

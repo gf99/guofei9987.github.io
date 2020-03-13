@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 【Mento Carlo 1】 背后的数学理论.
+title: 【Mento Carlo 1】 背后的数学理论
 categories:
 tags: A蒙特卡洛方法
 keywords:

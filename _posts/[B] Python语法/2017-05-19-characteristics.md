@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Python特性研究.
+title: Python特性研究
 categories:
 tags: Python语法
 keywords:

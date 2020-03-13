@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 【SQL】SELECT专题.
+title: 【SQL】SELECT专题
 categories:
 tags: 1-1-算法平台
 keywords:

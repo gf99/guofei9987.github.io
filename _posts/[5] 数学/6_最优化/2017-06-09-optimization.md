@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 【最优化】理论篇.
+title: 【最优化】理论篇
 categories:
 tags: 5-6-最优化
 keywords:

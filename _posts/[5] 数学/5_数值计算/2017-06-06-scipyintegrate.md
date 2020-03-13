@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 【数值积分】scipy.integrate.
+title: 【数值积分】scipy.integrate
 categories:
 tags: 5-5-数值计算
 keywords:

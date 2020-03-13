@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 【整数规划】理论.
+title: 【整数规划】理论
 categories:
 tags: 5-6-最优化
 keywords:

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 【插值】scipy.interpolate.
+title: 【插值】scipy.interpolate
 categories:
 tags: 5-5-数值计算
 keywords:

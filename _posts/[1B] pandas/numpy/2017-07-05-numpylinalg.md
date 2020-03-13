@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 【Python】【numpy】linalg线性代数.
+title: 【Python】【numpy】linalg线性代数
 categories:
 tags: 1-2-Pandas与numpy
 keywords:

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 【最优化】scipy.optimize.fmin.
+title: 【最优化】scipy.optimize.fmin
 categories:
 tags: 5-6-最优化
 keywords:

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 【Mento Carlo 2】随机数发生器.
+title: 【Mento Carlo 2】随机数发生器
 categories:
 tags: A蒙特卡洛方法
 keywords:

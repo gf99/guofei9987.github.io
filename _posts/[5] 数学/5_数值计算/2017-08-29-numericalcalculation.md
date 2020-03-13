@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 【数值计算】若干简介.
+title: 【数值计算】若干简介
 categories:
 tags: 5-5-数值计算
 keywords:

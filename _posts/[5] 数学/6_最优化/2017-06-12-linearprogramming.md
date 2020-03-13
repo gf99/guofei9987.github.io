@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 【线性最优化】理论篇.
+title: 【线性最优化】理论篇
 categories:
 tags: 5-6-最优化
 keywords:

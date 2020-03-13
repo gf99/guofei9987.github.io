@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 【最优化】应用场景.
+title: 【最优化】应用场景
 categories:
 tags: 5-6-最优化
 keywords:

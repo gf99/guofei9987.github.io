@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 【python】sqlAlchemy.
+title: 【python】sqlAlchemy
 categories:
 tags: 1-1-算法平台
 keywords:
