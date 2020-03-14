@@ -47,7 +47,7 @@ print(all_books_md)
 
 f = open('../书单/读完的书单.md', encoding='utf-8', mode='w')
 
-f.write('## 读完书单\n' + all_books_md)
+f.write('## 书单\n' + all_books_md)
 f.close()
 
 # # %%

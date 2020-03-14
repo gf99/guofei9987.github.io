@@ -1,4 +1,6 @@
-# 用二叉树自动print sidebar
+# print sidebar & detail list
+# 我另外写了一个多叉树实现的版本。
+# 我的目录结构都是两级，且都在docs下，所以也就不需要多叉树了。
 
 # %%
 import os
@@ -6,12 +8,16 @@ import re
 import string
 
 # 字数统计
-regex_chinese = re.compile('[\u4e00-\u9fa5]') # 汉字
-regex_English = re.compile('[0-9a-zA_Z]+') # 数字和英语单词
-# 中文标点和英文标点
+regex_chinese = re.compile('[\u4e00-\u9fa5]')  # 汉字
+regex_English = re.compile('[0-9a-zA_Z]+')  # 数字和英语单词
+# 去掉中文标点和英文标点
 regex_punctuation = re.compile('[!"()*+,./:;<=>?{|}~。；，：“”（）、？《》]')
 
+
 def word_count(file_name_md):
+    '''
+    返回文件的字数，（新增）二级目录
+    '''
     f = open(file_name_md, 'r', encoding='utf-8')
     passages = f.readlines()
     # word_num = sum([len(passage.replace('\n', '').replace(' ', '')) for passage in passages])
@@ -20,79 +26,43 @@ def word_count(file_name_md):
                     + len(regex_punctuation.findall(passage))
                     for passage in passages])
 
+    title_level_2 = [line.replace('## ', '').replace('\n', '') for line in passages if line.startswith('## ')]
     f.close()
-    return word_num
+    return word_num, title_level_2
 
 
-class TreeNode:
-    def __init__(self, name, type, layer, word_num=0):
-        self.name = name
-        self.type = type  # 'file' or 'path'
-        self.layer = layer
-        self.word_num = word_num
-        self.children = dict()
+# %%
 
-    def __repr__(self):
-        # return self.name+self.type+str(self.layer)+str([i for i in self.children])
-        return 'name={name},type={type},layer={layer},word_num={word_num},children={children}'. \
-            format(name=self.name, type=self.type, layer=self.layer, word_num=self.word_num,
-                   children=[i for i in self.children])
+path_walker = os.walk('docs', topdown=True)
 
+sidebar = ''
+detail = ''
+for top, dirs, nondirs in list(path_walker)[1:]:
+    block_name = top.replace('docs\\', '')
+    sidebar += '* ' + block_name + '\n'
+    # detail += '\n### ' + block_name + '\n'
+    detail += '''
+###  {block_name}
+|板块|笔记字数|书目|
+|--|--|--|
+'''.format(block_name=block_name)
+    for file_name in nondirs:
+        word_num, title_level_2 = word_count(top + '\\' + file_name)
+        article = file_name.replace('.md', '')
+        sidebar += '    * [{article}<sup style = "color:red">{word_num}字<sup>](docs/{block_name}/{article}.md)\n'. \
+            format(article=article, block_name=block_name, word_num=word_num)
+        detail += '|[{article}](docs/{block_name}/{article}.md)|{word_num}字|{title_level_2}\n'. \
+            format(article=article,
+                   block_name=block_name,
+                   word_num=word_num,
+                   title_level_2='，'.join(['[{l2}](docs/{block_name}/{article}.md?id={l2})'.
+                                          format(l2=l2, block_name=block_name, article=article)
+                                           for l2 in title_level_2]))
 
-class Tree:
-    def __init__(self, path):
-        path_walker = os.walk(path, topdown=True)
-        self.path1, self.path2 = '\\'.join(path.split('\\')[:-1]), path.split('\\')[-1]
-        # 'C:\\Users\\guofei8\\Desktop\\git\\GitHub\\reading', 'docs' 这种
-        self.root = TreeNode(self.path2, 'path', 0)
-        self.add_all_tree_node(path_walker)
-
-    def addTreeNode(self, path, dirs, nondirs):
-        pointer = self.root
-        for i in path:
-            if i not in pointer.children:
-                pointer.children[i] = TreeNode(i, 'path', pointer.layer + 1)
-            pointer = pointer.children[i]
-        for i in dirs:
-            pointer.children[i] = TreeNode(name='* ' + i, type='path', layer=pointer.layer + 1)
-        for i in nondirs:
-            # 每个节点的 name 是规整后的 markdown语句，这样前序遍历不需要太多处理就可以满足需求
-            word_num = word_count('\\'.join([self.path1] + path + [i]))
-
-            file_name_md = '* [' + i.replace('.md', '') + \
-                           ('<sup style = "color:red">' + str(word_num) + '字<sup>' if word_num else '') \
-                           + ']' \
-                           + '(' + '/'.join(path) + '/' + i + ')'
-            pointer.children[i] = TreeNode(name=file_name_md,
-                                           type='file',
-                                           layer=pointer.layer + 1,
-                                           word_num=word_num)
-
-    def add_all_tree_node(self, path_walker):
-        for top, dirs, nondirs in path_walker:
-            path = top.replace(self.path1, '').split('\\')[1:]  # 0号位是一个空字符串
-            self.addTreeNode(path, dirs, nondirs)
-
-    def pre_order(self, root):
-        return '' if (root is None) \
-            else ((root.layer - 2) * '    ' if root.layer > 1 else '# ') + root.name + '\n' + \
-                 ''.join([self.pre_order(i) for i in root.children.values()])
-
-    def pre_order2(self, root):
-        '''
-        总字数
-        '''
-        return 0 if (root is None) else root.word_num + sum([self.pre_order2(i) for i in root.children.values()])
-
-
-path = os.getcwd() + r'\docs'
-tree = Tree(path)
-sidebar = tree.pre_order(tree.root.children[tree.path2])
 print(sidebar)
 
-# 总字数
-c = tree.pre_order2(tree.root.children[tree.path2])
-print('总字数：',c)
+print('-' * 20)
+print(detail)
 # %%
 head = '''
 <a href="http://www.guofei.site" target='blog'>
@@ -114,54 +84,12 @@ tail = '''
     * [mermaid语法](建站日志/mermaid.md)
 '''
 
-content = '\n'.join(sidebar.split('\n')[1:])
-
 f = open('sidebar.md', 'w', encoding='utf-8')
 # print(head+content)
 # f.write(head+content.encode('utf-8').decode('utf-8'))
-f.write(head + content + tail)
+f.write(head + sidebar + tail)
 f.close()
 
 f = open('homepage.md', 'w', encoding='utf-8')
-# print(head+content)
-# f.write(head+content.encode('utf-8').decode('utf-8'))
-f.write(content)
+f.write(detail)
 f.close()
-
-# %%
-# 统计每个板块的字数
-def word_ana():
-    import re
-
-    regex = re.compile("[0-9]+['字']")
-
-    total_analys = []
-
-    for i in sidebar.split('\n')[1:]:
-        if len(i) > 0:
-            if i[0] == '*':
-                chapter = i[2:]
-            else:
-                k = regex.findall(i)
-                word_num = int(k[0].replace('字', '')) if len(k) > 0 else 0
-                total_analys.append([chapter, word_num])
-
-    import pandas as pd
-    total_analys_pd = pd.DataFrame(total_analys, columns=['chapter', 'word_num'])
-    a = total_analys_pd.groupby('chapter').sum()
-
-    import plotly.graph_objs as go
-    import plotly
-
-    # 拆成画图所需数据格式
-    data1 = go.Bar(
-        x=a.index,
-        y=a.word_num,
-        name='v1'
-    )
-
-    layout = go.Layout(title="bar charts", xaxis={'title': 'x'}, yaxis={'title': 'value'})
-    fig = go.Figure(data=[data1], layout=layout)
-    plotly.offline.plot(fig, filename='c:\\abc\\example.html')
-
-# word_ana()
