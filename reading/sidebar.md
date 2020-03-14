@@ -2,6 +2,10 @@
 <a href="http://www.guofei.site" target='blog'>
 <img src="http://www.guofei.site/public/img/me.png"  alt="回到blog" height="64" width="64">
 </a>
+<br>
+<a href="{{ site.author.github }}" target='GitHub'>
+  <img src="https://img.shields.io/github/followers/guofei9987?label=%20&logoColor=%231abc9c&style=social"  class="img-ronuded avatar" style="border-width:0px; border-color:#000">
+</a>
 
 * 1_哲学
     * [1_西方哲学<sup style = "color:red">49130字<sup>](docs/1_哲学/1_西方哲学.md)
@@ -40,6 +44,7 @@
     * [裸猿三部曲（阅读中）<sup style = "color:red">2927字<sup>](docs/4_进化论/裸猿三部曲（阅读中）.md)
     * [进化论与生活<sup style = "color:red">1594字<sup>](docs/4_进化论/进化论与生活.md)
 * 5_思维
+    * [《思考快与慢》<sup style = "color:red">143字<sup>](docs/5_思维/《思考快与慢》.md)
     * [《清醒思考的艺术》<sup style = "color:red">2880字<sup>](docs/5_思维/《清醒思考的艺术》.md)
     * [《赤裸裸的统计学》<sup style = "color:red">1487字<sup>](docs/5_思维/《赤裸裸的统计学》.md)
     * [批判性思维六册合辑<sup style = "color:red">8694字<sup>](docs/5_思维/批判性思维六册合辑.md)
@@ -63,8 +68,7 @@
 * 9_心理学
     * [1_《心理学十五讲》<sup style = "color:red">14729字<sup>](docs/9_心理学/1_《心理学十五讲》.md)
     * [2_武志红<sup style = "color:red">1354字<sup>](docs/9_心理学/2_武志红.md)
-    * [3_《非暴力沟通》<sup style = "color:red">280字<sup>](docs/9_心理学/3_《非暴力沟通》.md)
-    * [5_心理学读物<sup style = "color:red">870字<sup>](docs/9_心理学/5_心理学读物.md)
+    * [5_心理学读物<sup style = "color:red">872字<sup>](docs/9_心理学/5_心理学读物.md)
     * [《心流》<sup style = "color:red">1748字<sup>](docs/9_心理学/《心流》.md)
     * [心理学效应<sup style = "color:red">979字<sup>](docs/9_心理学/心理学效应.md)
     * [行为心理学<sup style = "color:red">1163字<sup>](docs/9_心理学/行为心理学.md)
@@ -73,10 +77,10 @@
     * [《成大事者不纠结》<sup style = "color:red">2336字<sup>](docs/D_自我管理和项目管理/《成大事者不纠结》.md)
     * [《精力管理》<sup style = "color:red">1979字<sup>](docs/D_自我管理和项目管理/《精力管理》.md)
     * [健康管理<sup style = "color:red">1595字<sup>](docs/D_自我管理和项目管理/健康管理.md)
-    * [工作部署<sup style = "color:red">5821字<sup>](docs/D_自我管理和项目管理/工作部署.md)
-    * [情商<sup style = "color:red">1832字<sup>](docs/D_自我管理和项目管理/情商.md)
+    * [工作部署<sup style = "color:red">5825字<sup>](docs/D_自我管理和项目管理/工作部署.md)
+    * [情商<sup style = "color:red">1836字<sup>](docs/D_自我管理和项目管理/情商.md)
     * [詹姆斯柯林斯<sup style = "color:red">3779字<sup>](docs/D_自我管理和项目管理/詹姆斯柯林斯.md)
-    * [项目管理<sup style = "color:red">5084字<sup>](docs/D_自我管理和项目管理/项目管理.md)
+    * [项目管理<sup style = "color:red">5086字<sup>](docs/D_自我管理和项目管理/项目管理.md)
 * G_沟通
     * [写<sup style = "color:red">456字<sup>](docs/G_沟通/写.md)
     * [学<sup style = "color:red">2560字<sup>](docs/G_沟通/学.md)
@@ -84,13 +88,9 @@
     * [礼仪<sup style = "color:red">1511字<sup>](docs/G_沟通/礼仪.md)
     * [说<sup style = "color:red">3707字<sup>](docs/G_沟通/说.md)
 * Y_碎片阅读
-    * [其他<sup style = "color:red">3727字<sup>](docs/Y_碎片阅读/其他.md)
-    * [冬吴相对论<sup style = "color:red">1548字<sup>](docs/Y_碎片阅读/冬吴相对论.md)
-    * [李永乐<sup style = "color:red">1043字<sup>](docs/Y_碎片阅读/李永乐.md)
-    * [百家讲坛<sup style = "color:red">87字<sup>](docs/Y_碎片阅读/百家讲坛.md)
-    * [知乎文章<sup style = "color:red">2596字<sup>](docs/Y_碎片阅读/知乎文章.md)
-    * [罗振宇<sup style = "color:red">2887字<sup>](docs/Y_碎片阅读/罗振宇.md)
-    * [高晓松<sup style = "color:red">314字<sup>](docs/Y_碎片阅读/高晓松.md)
+    * [大IP<sup style = "color:red">4377字<sup>](docs/Y_碎片阅读/大IP.md)
+    * [广播剧<sup style = "color:red">1637字<sup>](docs/Y_碎片阅读/广播剧.md)
+    * [文章<sup style = "color:red">6321字<sup>](docs/Y_碎片阅读/文章.md)
 * Z_专业类
     * [数据安全<sup style = "color:red">2308字<sup>](docs/Z_专业类/数据安全.md)
 
