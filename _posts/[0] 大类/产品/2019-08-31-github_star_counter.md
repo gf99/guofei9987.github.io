@@ -15,7 +15,7 @@ description:
 **如果点击按钮没反应，刷新一次就好了（网站框架的锅，以后有时间再修复）**  
 
 
-<script src="http://www.guofei.site/star_counter/star_counter.js"></script> <!--引用js代码-->
+<script src="https://www.guofei.site/star_counter/star_counter.js"></script> <!--引用js代码-->
 
 
 <script>
