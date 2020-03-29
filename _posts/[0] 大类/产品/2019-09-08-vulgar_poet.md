@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 【工具】恶俗古风诗歌生成器
-categories: 产品
+categories: 工具
 tags:
 keywords:
 description:

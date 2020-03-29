@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 【工具】震惊体标题生成器
-categories: 产品
+categories: 工具
 tags:
 keywords:
 description:

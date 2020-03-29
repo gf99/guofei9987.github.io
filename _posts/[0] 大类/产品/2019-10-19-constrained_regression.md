@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 【轮子】带约束的岭回归
-categories: 产品
+categories: 工具
 tags:
 keywords:
 description:
