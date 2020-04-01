@@ -93,3 +93,25 @@ Taobao 数据，按经验选了12个比较重要的 side information
 ## 模型部署
 
 离线+在线的形式，不多写了。
+
+
+## Airbnb word2vec
+另有一片 airbnb 的文章，大体类似，细节不同
+- reference《Real-time Personalization using Embeddings for Search Ranking at Airbnb(kdd 2018)》
+- 提出了自己的冷启动策略
+-  通过修改采样模式来优化word2vec的策略
+
+
+### 采样策略
+
+global context：
+- 如果用户点击了 like/share，那么这个session内，这个条目与每个浏览都形成点击对（窗口无限大）
+- 另一个做法（美图秀秀）做了借鉴。他们有dislike这个行为，那么条目作为负例。
+
+
+- 用session分割点击序列：将用户点击序列过滤再分段成n个sessions，一个session指的是相邻item时间间隔≤30mins的"有效"行为序列
+- 局部负例采样：提出要额外从同属一个cluster的其他item里抽负样本
+- 付费行为强化：点击序列中若有付费行为，则将这个 item 强制纳入该序列每个item的上下文窗口
+
+### 冷启动策略
+- airbnb并没有做end2end的学习属性的embedding，而是直接把new item按主要属性检索到最相似的top3个已知的item，取3个item向量的平均值初始化new item embedding
