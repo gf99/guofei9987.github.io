@@ -2,7 +2,7 @@
 layout: post
 title: 【规则学习】简介
 categories:
-tags: 3-3-推荐
+tags: 3-3-图模型
 keywords:
 description:
 order: 350
