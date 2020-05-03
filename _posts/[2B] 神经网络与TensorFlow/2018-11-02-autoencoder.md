@@ -127,13 +127,16 @@ with tf.Session() as sess:
 ## AutoEncoder 的变体
 
 ### 1. Sparse AutoEncoder 稀疏自动编码器
-在 AutoEncoder 的基础上加上 L1 Penalty
+在 AutoEncoder 的基础上加上 Penalty，目的是让尽可能多的神经元处于不激活状态。
 ### 2. Denoising AutoEncoders 降噪自动编码器
 训练数据中加入噪声，AutoEncoder 必须学习去除噪声，获得真正没有被噪声污染过的输出。因此 AutoEncoder 更加鲁棒，泛化能力比一般 AutoEncoder 强。  
 
 
 给输入增加一个随机损坏(stochastic corruption)操作. 这个操作可以有很多方式  
 原始的方法是，随机地将一些输入( 多达一半 )置零. 因此, 对于随机选择的丢失了特征的子集, 降噪自动编码器尝试根据未损坏( 即未丢失 )的值来预测损坏( 即丢失 )的值. 注意, 如何能够从剩余集合中预测任意变量的子集, 是完全获得一个集合的变量间的联合分布的充分条件( 这就是吉布斯采样([Gibbs sampling](https://en.wikipedia.org/wiki/Gibbs_sampling))的原理 ).
+
+### 3. 
+
 
 ## 参考资料
 https://github.com/greatgeekgrace/Technical-Analysis-And-Practice-in-TensorFlow/blob/master/source/9/9.6MNIST%E7%9A%84%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0.py
