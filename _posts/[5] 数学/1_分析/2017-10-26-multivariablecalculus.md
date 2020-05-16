@@ -154,7 +154,7 @@ $$\left \{ \begin{array}{ccc}
 F(x,y,z)=0\\G(x,y,z)=0
 \end{array}\right.$$
 
-Def:奈不拉算子
+Def:**nabla 算子**
 $\nabla =\vec i \dfrac{\partial}{\partial x}
 +\vec j \dfrac{\partial}{\partial y}
 +\vec k \dfrac{\partial}{\partial z}$
@@ -203,13 +203,13 @@ $\vec r(t) // \nabla F_{P_0} \times \nabla G_{P_0}$
 
 通量
 : 单位时间通过某个曲面的量  
-$\iint\limits_\sum \vec A \vec n d S$
+$\iint\limits_\Sigma \vec A \vec n d S$
 $\vec A$是一个场，$\vec n$是曲面$\sum$的法向量  
 
 
 散度
 : 规定曲面封闭，曲面缩小成一个点，就可以定义这个点的强度  
-$div \vec A (M)=\lim\limits_{\Omega \to M}\dfrac{1}{V} \iint_\sum \vec A \vec n dS$(要加个圈表示闭曲面上的积分)  
+$div \vec A (M)=\lim\limits_{\Omega \to M}\dfrac{1}{V} \iint_\Sigma \vec A \vec n dS$(要加个圈表示闭曲面上的积分)  
 
 
 散度为正，表示向外膨胀（如辐射粒子）。  
@@ -227,17 +227,29 @@ $\vec \tau$是曲线l的切线方向。
 $\sum$是封闭曲面$\Gamma$围成的区域，S是$\sum$的面积
 
 ### 计算方法
-用nabla算子可以统一表示场论里的某些运算[^nabla]
+用 nabla 算子可以统一表示场论里的某些运算[^nabla]  
+
+上文已经定义了 **nabla 算子**
+$\nabla =\vec i \dfrac{\partial}{\partial x}
++\vec j \dfrac{\partial}{\partial y}
++\vec k \dfrac{\partial}{\partial z}$  
+
+以三维为例，进行说明：
 
 梯度
-: $grad f =\nabla f$
+:    $grad f =\nabla f$  
+$= \vec i \dfrac{\partial f}{\partial x} +\vec j \dfrac{\partial f}{\partial y} +\vec k \dfrac{\partial f}{\partial z}$  
+（nabla 算子直接作用于标量函数f）  
 
 散度
-: $div \vec F = \nabla \cdot \vec F$
-
+:    $div \vec F = \nabla \cdot \vec F$
+$ =(\vec i \dfrac{\partial}{\partial x} + \vec j \dfrac{\partial}{\partial y} + \vec k \dfrac{\partial}{\partial z})\cdot (u(x,y,z)\vec i+v(x,y,z)\vec j+w(x,y,z)\vec k)=\dfrac{\partial u}{\partial x}+\dfrac{\partial v}{\partial y}+\dfrac{\partial w}{\partial z}$  
+(以内积的形式作用，输入一个矢量函数，输出一个标量)
 
 旋度
-: $curl \vec F = \nabla \times \vec F$
+:    $curl \vec F = \nabla \times \vec F$
+
+
 ## 曲线积分
 
 ### 定义
