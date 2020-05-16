@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 【排队论】基本概念
+title: 【模糊论】基本概念
 categories:
 tags: 5-9-应用数学
 keywords:
