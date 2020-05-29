@@ -34,11 +34,14 @@ def word_count(file_name_md):
 # %%
 
 path_walker = os.walk('docs', topdown=True)
+path_all = list(path_walker)[1:]
+path_all = sorted(path_all, key=lambda x: x[0])
+path_all = [(top, dirs, sorted(nondirs)) for top, dirs, nondirs in path_all]
 
 sidebar = ''
 detail = ''
-for top, dirs, nondirs in list(path_walker)[1:]:
-    block_name = top.replace('docs\\', '')
+for top, dirs, nondirs in path_all:
+    block_name = top.replace('docs' + os.sep, '')
     sidebar += '* ' + block_name + '\n'
     # detail += '\n### ' + block_name + '\n'
     detail += '''
@@ -47,7 +50,7 @@ for top, dirs, nondirs in list(path_walker)[1:]:
 |--|--|--|
 '''.format(block_name=block_name)
     for file_name in nondirs:
-        word_num, title_level_2 = word_count(top + '\\' + file_name)
+        word_num, title_level_2 = word_count(top + os.sep + file_name)
         article = file_name.replace('.md', '')
         sidebar += '    * [{article}<sup style = "color:red">{word_num}字<sup>](docs/{block_name}/{article}.md)\n'. \
             format(article=article, block_name=block_name, word_num=word_num)

@@ -126,9 +126,10 @@ corpus = ['this is the first document',
           'this is the second second document',
           'and the third one',
           'is this the first document']
-wp = VocabularyProcessor(max_vocabulary_size=5)
-wp.fit(corpus)
-X = wp.transform(corpus)
+vp = VocabularyProcessor(max_vocabulary_size=5)
+vp.fit(corpus)
+X = vp.transform(corpus)
+# vp.word_count, vp.dictionary, vp.reverse_dictionary
 print(X)
 ```
 >[[1, 2, 0, -1, 3], [1, 2, 0, -1, -1, 3], [-1, 0, -1, -1], [2, 1, 0, -1, 3]]
@@ -205,7 +206,7 @@ $TF_{ij}=\dfrac{f_{ij}}{\sum_k f_{kj}}$
 
 $n_i=$number of docs that mention term i  
 $N=$total number of docs  
-$IDF_{i}=\log\dfrac{N}{n_i}$  
+$IDF_{i}=\log\dfrac{N}{n_i}$，某个单词越频繁出现，这个数字越小  
 
 
 $TF-IDF_{ij}=TF_{ij}\times IDF_i$  
@@ -225,9 +226,25 @@ tf_idf_transformer.fit(counts)
 
 tf_idf_transformer.transform(counts).toarray()
 ```
-由于tf-idf经常用于文本特征，因此有另一个类称为TfidfVectorizer，将 CountVectorizer 和 TfidfTransformer 的所有选项合并在一个模型中：
+
+### TfidfVectorizer
+TfidfVectorizer = CountVectorizer + TfidfTransformer
+
 ```py
-TfidfVectorizer # =CountVectorizer+TfidfTransformer
+from sklearn.feature_extraction import text
+
+tf_idf=text.TfidfVectorizer()
+tf_idf.fit(X)
+
+# tf_idf.vocabulary_ # {'单词':idx}
+# tf_idf.fixed_vocabulary_ # 是否指定 vocabulary
+# tf_idf.idf_ # 每个单词的 idf 值
+# tf_idf.stop_words_
+
+
+
+
+
 ```
 
 
