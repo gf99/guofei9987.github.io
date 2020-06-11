@@ -1,6 +1,6 @@
 ---
 layout: post
-title: NLP中主要的feature提取方法
+title: 【NLP】feature提取
 categories:
 tags: 2-4-NLP
 keywords:
@@ -13,9 +13,9 @@ order: 301
 ### step1 读入数据
 ```py
 import pandas as pd
-df=pd.read_csv('http://www.guofei.site/datasets_for_ml/SMSSpamCollection/SMSSpamCollection.csv',sep='\t',header=None,names=['label','sentences'])
-Y=(df.label=='spam')*1
-X=df.sentences.values
+df = pd.read_csv('http://www.guofei.site/datasets_for_ml/SMSSpamCollection/SMSSpamCollection.csv', sep='\t', header=None, names=['label', 'sentences'])
+Y = (df.label == 'spam') * 1
+X_raw = df.sentences.values
 ```
 ### step2 初步清洗
 清洗目标：
@@ -27,10 +27,10 @@ X=df.sentences.values
 
 ```py
 import re
-regex=re.compile('[a-zA-Z]{2,}') # 2次以上字母组合，去除标点符号和数字
-X=[regex.findall(sentence.lower()) for sentence in X]
-X=[' '.join(words) for words in X] # 重新整合成句子
-# X=[' '.join([word for word in words if word not in stops]) for words in X] # 如果有stopswords的话
+regex = re.compile('[a-zA-Z]{2,}') # 2次以上字母组合，去除标点符号和数字
+X = [regex.findall(sentence.lower()) for sentence in X_raw]
+X = [' '.join(words) for words in X] # 重新整合成句子
+# X = [' '.join([word for word in words if word not in stops]) for words in X] # 如果有stopswords的话
 
 
 # train_test_split
@@ -39,7 +39,7 @@ X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2)
 ```
 
 
-给一个中文的例子：
+#### 中文清洗
 1. 用jieba拆词
 2. 去除数字
 3. 去除停词
@@ -48,12 +48,30 @@ X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2)
 ```py
 import jieba
 import re
-X = [jieba.lcut(sentence, cut_all=False) for sentence in X]  # 拆词
+X = [jieba.lcut(sentence, cut_all=False) for sentence in X_raw]  # 拆词
 regex = re.compile(u'[\u4e00-\u9fa5]')
 X = [[word for word in sentence if regex.match(word) is not None] for sentence in X]  # jieba 拆开的词，一串数字也作为一个词返回，这里过滤一下
 # X=[[word for word in sentence if word not in stops] for sentence in X] # 停词
 X = [' '.join(sentence) for sentence in X]
 ```
+
+
+
+针对中英繁体数字混合的，额外增加：
+1. （代码还没有）繁体转简体，
+2. （代码还没有）5位以上数字转NUM，
+3. 英文转小写
+
+```python
+import jieba
+import re
+X = [jieba.lcut(sentence.lower(), cut_all=False) for sentence in X_raw]  # 拆词
+regex = re.compile(u'[a-z\u4e00-\u9fa5]')
+X = [[word for word in sentence if regex.match(word) is not None] for sentence in X]  # jieba 拆开的词，一串数字也作为一个词返回，这里过滤一下
+# X=[[word for word in sentence if word not in stops] for sentence in X] # 停词
+X = [' '.join(sentence) for sentence in X]
+```
+
 
 
 ## 2. VocabularyProcessor
@@ -140,7 +158,8 @@ wp.word_count, wp.dictionary, wp.reverse_dictionary
 ```
 
 
-## 3. 词袋（Bag of Words）
+## 3. CountVectorizer
+又叫做词袋（Bag of Words），或者Tf(Text Frequency)
 
 ### 词袋介绍
 结果的长度等于字典的长度，结果的元素值是在这句话中单词出现的次数。  
@@ -159,6 +178,8 @@ sentence2 = [1, 1, 1, 0, 0]
 ```
 
 ### 代码实现
+
+[sklearn.feature_extraction.text.CountVectorizer](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html)
 ```py
 from sklearn.feature_extraction import text
 
@@ -177,23 +198,34 @@ X = ['This is the first document.',
      'Is this the first document?']
 
 count_vectorizer.fit(X)
-X_transform = count_vectorizer.transform(X)
+X_cnt_vec = count_vectorizer.transform(X)
 # 1. 不在vocabulary中的词，在transform阶段被忽略
 # 2. 返回的 numpy 的稀疏矩阵，用 X.toarray() 转换成普通矩阵
 
-X_transform.toarray()  # 是一个shape=(num_sentence,num_words) 的array
+X_cnt_vec.toarray()  # 是一个shape=(num_sentence,num_words) 的array
 
 # count_vectorizer.fit_transform(corpus) # 合并写法
 
-count_vectorizer.vocabulary_  # vocabulary向量（dict格式）
+count_vectorizer.vocabulary_  # vocabulary向量（dict格式，{单词:序号}）
 # {u'and': 0, u'document': 1, u'first': 2, u'is': 3, u'one': 4, u'second': 5, u'the': 6, u'third': 7, u'this': 8}
+
+count_vectorizer.get_feature_names() # 返回一个list，按照单词的序号排列
 ```
-其它自定义配置
+
+### ngram
 ```py
 ngram_range=(1, 2) # 分词时，除了自身外，还可以保留前后单词，例如，这个案例可以以这个为词典：
 # ['bi', 'grams', 'are', 'cool', 'bi grams', 'grams are', 'are cool']
 ```
 
+### 中文
+
+```python
+# 默认正则表达式，剔除了单个字，这在英文中是合适的，但中文不能剔除
+token_pattern = r'(?u)\b\w\w+\b'
+# 改成这样：
+token_pattern = r'\S'
+```
 
 ## TF-IDF
 TF-IDF(Text Frequency-Inverse Document Frequency)   
