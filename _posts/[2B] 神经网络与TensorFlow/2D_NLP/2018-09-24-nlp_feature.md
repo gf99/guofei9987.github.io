@@ -57,14 +57,21 @@ X = [' '.join(sentence) for sentence in X]
 
 
 
-针对中英繁体数字混合的，额外增加：
+更为复杂的情况，额外增加：
 1. （代码还没有）繁体转简体，
 2. （代码还没有）5位以上数字转NUM，
 3. 英文转小写
+4. 增加专有名词，防止分词时的戳五
 
 ```python
 import jieba
 import re
+
+add_words = ['沙瑞金', '田国富', '高育良', '侯亮平','钟小艾', '陈岩石', '欧阳菁', '易学习', '王大路', '蔡成功','孙连城', '季昌明', '丁义珍', '郑西坡',' 赵东来', '高小琴', '赵瑞龙', '林华华', '陆亦可', '刘新建', '刘庆祝']
+
+for add_word in add_words:
+    jieba.add_word(add_word)
+
 X = [jieba.lcut(sentence.lower(), cut_all=False) for sentence in X_raw]  # 拆词
 regex = re.compile(u'[a-z\u4e00-\u9fa5]')
 X = [[word for word in sentence if regex.match(word) is not None] for sentence in X]  # jieba 拆开的词，一串数字也作为一个词返回，这里过滤一下

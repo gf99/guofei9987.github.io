@@ -21,10 +21,10 @@ jobs:
         echo test, and deploy your project.
 ```
 
-### name
+## name
 名字，没什么好说的
 
-### on
+## on
 
 如何触发。  
 可以是string，array，map
@@ -37,7 +37,12 @@ on: [push, pull_request] # 或者的关系，任意一个满足条件，即可�
 ```
 
 
-#### 可以设定分支
+
+
+
+### on push
+
+可以设定分支
 
 ```
 on:
@@ -53,7 +58,8 @@ on:
       - v1.0           # Push events to v1.0 tag
 ```
 
-#### 可以设定路径
+
+可以设定路径
 ```
 # run on pushes which modify at least one file that doesn't have the .js extension
 on:
@@ -76,6 +82,13 @@ https://help.github.com/en/articles/events-that-trigger-workflows#scheduled-even
 - watch
   - started
 
+```
+on:
+  watch:
+    types: started
+
+```
+
 
 ## job
 ```
@@ -85,7 +98,7 @@ jobs:
   my_second_job:
     name: My second job
 ```
-### needsL设定先后顺序
+### needs：设定先后顺序
 ```
 # job1 must complete successfully before job2 begins, and job3 waits for both job1 and job2 to complete.
 jobs:
