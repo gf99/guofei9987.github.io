@@ -8,6 +8,15 @@ description:
 order: 1230
 ---
 
+## iter
+生成一个迭代器，可以用 next 处理这个迭代器。
+```python
+it = iter((1,2,4))
+
+next(it)
+```
+
+
 ## 无穷迭代器
 ```py
 itertools.count(start,[step])
@@ -52,8 +61,8 @@ itertools.product([1,2,3,4],repeat=2)
 itertools.permutations([1,2,3,4],r=2)
 # 所有的排列 ,有 $A_{len}^r$ 种结果
 
- itertools.combinations([5,2,3,4],r=2)
- # 所有的组合，有 $C_(len)^r$ 种结果
+itertools.combinations([5,2,3,4],r=2)
+# 所有的组合，有 $C_(len)^r$ 种结果
 ```
 
 

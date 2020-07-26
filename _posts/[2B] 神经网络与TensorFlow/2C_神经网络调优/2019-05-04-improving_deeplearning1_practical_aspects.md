@@ -78,6 +78,13 @@ da3/=keep_prob
 - Cannot rely on any one feature, so have to spread out weights. 实际上产生的是缩小weight的作用，也就是 regularization 的效果
 - 用实际上更小的 neural network 来实现 regularizing effect.  
 
+Dropout 和 Bagging 比较
+- 以 Bagging 的角度理解 Dropout，可以把 Dropout 当成很多子模型（子网络）。例如，有 n 个隐含层的2层神经网络，Dropout 就相当于 $2^n$ 个子模型的组合
+- Dropout 的子模型都是共享的，Bagging 的模型都是独立的
+- Dropout 的大部分子模型未能显式训练，因为在宇宙时间内都未必能采样到所有的子网络。
+- Bagging 的最终结果由子模型的投票给出（算术平均）
+
+
 ### Other regularization methods
 - 用更多数据效果会更好，但是获得新数据很贵，对图像来说，可以这么做：反转、随机缩放、轻微旋转、扭曲
 - early stopping. 实际上也是在W太大之前停止迭代，缺点是不太以$J$为优化目标。你可以用L2 regularization，然后就可以多迭代了。
@@ -212,3 +219,26 @@ $1-\mu$是摩擦力，$0\leq\mu\leq1$
 
 
 其它最优化算法：共和梯度法、BFGS方法(limited memory BFGS,L-BFGS)
+
+
+## 正则化
+
+正则化的目的是减少泛化误差，而不是减少训练误差。
+
+### 数据增强
+
+### 噪声鲁棒性
+- 向输入层注入噪声。噪声幅度被细心调整后，非常高效。
+- 向隐含层注入噪声。Dropout 是一种做法
+- 把噪声驾到权重。主要用于RNN。一定程度上等同于传统的正则化方法。
+- 向输出注入噪声。输出不再是0-1标签数据，而是类似 1-e, e/(k-1) 的形式。这样在softmax中，0标签对应的项也参与梯度运算。
+
+### 多任务学习
+多任务学习可以额外提高泛化能力。
+
+具体做法是，在神经网络前面的层共享，后面的层各自对应一个任务。
+
+### early stopping
+有这种现象：随着训练进行，训练集上的误差继续降低，验证集上的误差反而开始上升。这也是一种正则化方法，一种高效的方法。
+
+在某些情况下，early stopping 几乎等价于L2正则化。

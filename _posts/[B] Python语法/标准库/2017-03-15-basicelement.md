@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 【Python标准库】基本数据类型
+title: 【Python】基本数据类型
 categories:
 tags: Python语法
 keywords:
@@ -16,7 +16,8 @@ order: 1201
 - complex
 
 
-### 整数类型（没有取值范围的限制）
+### 整数类型
+整数类型没有取值范围的限制
 - pow(x,y)
 - 0x或0X开头表示16进制
 - 0b或0B开头表示2进制
@@ -26,7 +27,6 @@ order: 1201
 ```py
 str(1) #数字转字符
 int('1') #字符转数字
-long(x) #转换成一个long interger
 float(x) #转换成一个浮点数
 complex(x) #转换成复数
 int('51',base=14) #把base进制表示字符串，转为十进制
@@ -64,32 +64,15 @@ sys.float_info
 z=1.23e-4+5.6e+89j
 z.real   z.imag    
 ```
-#### 整数->小数->复数
+
+
 转化：
 ```python
-- int()(直接去掉小数部分)
-- float()（不能是复数）
-- complex()
+int(a) # 直接去掉小数部分
+float(a) # a不能是复数
+complex(a)
 ```
 type(x) 返回类型
-
-
-#### 运算符
-
-```python
-x+y x-y x*y x/y  
-x//y  不大于x/y的最大整数（负数也是）  
-x%y  余数  
-abs(x)  绝对值
-divmod(x,y) 实际是(x//y,x%y)
-x**y   pow(x,y)
-```
-
-
-
-
-
-
 
 ## tuple
 
@@ -105,8 +88,8 @@ t3=123,456,("hello","中国")
 ### 生成
 ```python
 x=(1,2,3)
-x=1,2,3#不加括号也能生成tuple
-x=1,#包含一个元素
+x=1,2,3 # 不加括号也能生成 tuple
+x=1, # 包含一个元素的 tuple
 ```
 ### 方法
 ```python
@@ -136,7 +119,7 @@ for i in x
 exp in x#返回逻辑值，判断exp是否在x中
 ```
 
-#### 用索引取数据
+### 切片
 - 索引从0开始计数，
 - -1是末尾，-2是倒数第二个
 ```py
@@ -196,6 +179,12 @@ unzip:
 a=[(1, 'a'), (2, 'b'), (3, 'c')]
 list(zip(*a))
 ```
+
+
+
+
+
+
 ### range
 ```py
 range(start, stop, step)
@@ -274,20 +263,35 @@ dict1= sorted(word_dict.items(), key=lambda d:d[1], reverse = True)
 ### 集合运算
 
 ```python
-z1=x.intersection(y) #交
-z2=y.union(x) #并
-z3=y.difference(x) #差
+z1=x.intersection(y) # 交
+z2=y.union(x) # 并
+z3=y.difference(x) # 差
+
+a.issebset(b) # a是否是b的子集
+a.issuperset(b)
+
+a.isdisjoint(b) # 是否有交集
 ```
 或者：
 ```python
-x&y #交
-x|y #并
-x-y #差
-a^b #补 =x|y-x&y
+a & b  # 交
+a | b  # 并
+a - b  # 差
+a ^ b  # 补 =x|y-x&y
 
-a.issebset(b) #a是否是b的子集
-a.issuperset(b)
+a == b  # 相等
+a > b  # 真超集
+a >= b  # 超集
+a < b  # 真子集
+a <= b  # 真超集
 ```
+
+此外，还支持update类操作，例如：
+```python
+a -= b
+a ^= b
+```
+
 
 ### 方法
 

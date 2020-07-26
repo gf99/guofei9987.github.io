@@ -82,6 +82,25 @@ str()  返回数字对应的字符串
 
 ```
 
+### string内容判断
+```python
+isprintable # 含\t,\n 时为 False，否则为 True. 另外空格是 True
+isspace # 纯\t,\n,空格，或者他们的组合，为 True. 如果混进了字母等，就是 False
+islower, isupper # 先剔除\t,\n,空格,数字，然后如果全是小写/大写，返回True。如果剔除空格后没了，返回False
+istitle # 先用\t,\n,空格,标点分割，剔除数字，得到单词。如果每个单词的首字母为大写，并且其余字母为小写，则返回True
+
+isidentifier # 是否可以作为Python的变量名，不多说
+
+isalpha # 全字母返回True。如果出现标点、数字、空格，都返回False。另外，中文返回True
+
+isalnum # 如果 string 至少有一个字符并且所有字符都是字母或数字则返回 True,否则返回 False.如果出现标点、空格等，都返回 False
+
+
+isdigit # 如果字符串只包含数字则返回 True 否则返回 False。有小数点也返回 False。有空格也返回False
+isnumeric # 似乎同上
+```
+
+
 ## 格式化方法
 ### format()方法
 
@@ -206,6 +225,10 @@ m.end() # 返回结束位置(不包含该位置的字符).
 
 m.span() # 返回一个tuple表示(m.start(), m.end())
 
+group() # 返回匹配的完整字符串。可以接收多个参数，⽤用于返回指定序号的分组。例如 m.group(1),m.group(0,2)
+# start,end,span 都可以接受参数，意义同上
+groups() # 返回分组信息
+groupdict() # 返回命名分组信息
 ```
 
 
