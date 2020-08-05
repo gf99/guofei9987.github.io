@@ -52,7 +52,9 @@ result=pd.concat([df1,df2,df3])
 ```
 
 效果如下：  
-<img src='http://www.guofei.site/public/postimg2/concat.jpg'>
+
+![concat.jpg](/pictures_for_blog/postimg2/concat.jpg)
+
 
 ### 1.1 axis：纵向合并还是横向合并
 ```py
@@ -61,7 +63,8 @@ result = pd.concat([df1, df4], axis=1)
 # axis='columns' 是横向合并，（等价：axis=1）
 ```
 效果如下：  
-<img src='http://www.guofei.site/public/postimg2/concat3.jpg'>
+
+![concat3.jpg](/pictures_for_blog/postimg2/concat3.jpg)
 
 ### 1.2 join
 join='outer'(默认),把所有未匹配到的也列出来，（上面这个案例）  
@@ -71,7 +74,8 @@ join='inner'，只列出左右两列都有的
 result = pd.concat([df1, df4], axis=1, join='inner')
 ```
 效果如下：  
-<img src='http://www.guofei.site/public/postimg2/concat4.jpg'>
+
+![concat4.jpg](/pictures_for_blog/postimg2/concat4.jpg)
 
 
 ### 1.3 keys分组键
@@ -85,7 +89,8 @@ result = pd.concat([df1,df2,df3], keys=['x', 'y', 'z'])
 ```
 
 效果如下：  
-<img src='http://www.guofei.site/public/postimg2/concat2.jpg'>
+
+![concat2.jpg](/pictures_for_blog/postimg2/concat2.jpg)
 
 
 ### 1.4 ignore_index
@@ -96,7 +101,8 @@ result=pd.concat([df1,df4],ignore_index=True)
 ```
 
 效果如下：  
-<img src='http://www.guofei.site/public/postimg2/concat5.jpg'>
+
+![concat5.jpg](/pictures_for_blog/postimg2/concat5.jpg)
 
 ## 2. merge：以指定列为合并条件
 除了简单合并外，有时需要匹配合并（类似SQL中的join命令）  
@@ -119,7 +125,7 @@ right = pd.DataFrame({'key1': ['K0', 'K1', 'K1', 'K2'],
 ```pu
 result = pd.merge(left, right, on=['key1', 'key2'])
 ```
-<img src='http://www.guofei.site/public/postimg2/merge1.jpg'>
+![merge1.jpg](/pictures_for_blog/postimg2/merge1.jpg)
 
 ### 3.2 how
 
@@ -134,19 +140,19 @@ result = pd.merge(left, right, how='left', on=['key1', 'key2'])
 
 ```
 
-<img src='http://www.guofei.site/public/postimg2/merge2.jpg'>
+![merge2.jpg](/pictures_for_blog/postimg2/merge2.jpg)
 
 
 ```py
 result = pd.merge(left, right, how='right', on=['key1', 'key2'])
 ```
-<img src='http://www.guofei.site/public/postimg2/merge3.jpg'>
+![merge3.jpg](/pictures_for_blog/postimg2/merge3.jpg)
 
 
 ```py
 result = pd.merge(left, right, how='outer', on=['key1', 'key2'])
 ```
-<img src='http://www.guofei.site/public/postimg2/merge4.jpg'>
+![merge4.jpg](/pictures_for_blog/postimg2/merge4.jpg)
 
 ### on
 
@@ -173,7 +179,7 @@ inner_joined = pd.merge(left, right, how='inner', left_on='group', right_on='lab
 result = pd.merge(left, right, on='k', suffixes=['_l', '_r'])
 ```
 
-<img src='http://www.guofei.site/public/postimg2/merge5.jpg'>
+![merge5.jpg](/pictures_for_blog/postimg2/merge5.jpg)
 
 
 ## 3. 加减乘除

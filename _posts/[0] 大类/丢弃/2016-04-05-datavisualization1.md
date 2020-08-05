@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 【丢弃】【可视化方法】
-categories: 
+categories:
 tags:
 keywords: model evaluation
 description:
@@ -24,7 +24,7 @@ ax.boxplot(df.values)
 plt.show()
 ```
 
-<img src='http://www.guofei.site/public/postimg/boxplot.png'>
+![boxplot](/pictures_for_blog/postimg/boxplot.png)
 
 |参数|意义|
 |--|--|

@@ -233,7 +233,7 @@ graph #在jupyter中有用
 ```
 
 结果：  
-<img src='http://www.guofei.site/public/postimg/decisiontree1.png'>
+![decisiontree1.png](/pictures_for_blog/postimg/decisiontree1.png)
 
 预测  
 ```py
@@ -255,7 +255,7 @@ x.shape=-1,1
 y=np.sin(x)+np.random.normal(size=x.shape)*0.5
 ```
 模型的输入是一维的连续变量  
-<img src='http://www.guofei.site/public/postimg/decisiontree2.png'>
+![decisiontree2.png](/pictures_for_blog/postimg/decisiontree2.png)
 
 
 下面是拟合并作图
@@ -274,7 +274,7 @@ plt.plot(x,ynew)
 plt.show()
 ```
 
-<img src='http://www.guofei.site/public/postimg/decisiontree3.png'>
+![decisiontree3.png](/pictures_for_blog/postimg/decisiontree3.png)
 
 
 

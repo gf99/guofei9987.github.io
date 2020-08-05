@@ -97,7 +97,7 @@ plt.show()
 ```
 
 画图如下：  
-<img src='http://www.guofei.site/public/postimg/numericalcalculation1.png'>
+![numericalcalculation1.png](/pictures_for_blog/postimg/numericalcalculation1.png)  
 
 
 ## 雅克比迭代法求线性方程组

@@ -152,7 +152,6 @@ plt.show()
 
 
 下面这3个目标函数拟合效果的展示：  
-
-<img src='http://www.guofei.site/public/postimg/fun1.png'>
-<img src='http://www.guofei.site/public/postimg/fun2.png'>
-<img src='http://www.guofei.site/public/postimg/fun3.png'>
+![fun1.png](/pictures_for_blog/postimg/fun1.png)  
+![fun2.png](/pictures_for_blog/postimg/fun2.png)  
+![fun3.png](/pictures_for_blog/postimg/fun3.png)  

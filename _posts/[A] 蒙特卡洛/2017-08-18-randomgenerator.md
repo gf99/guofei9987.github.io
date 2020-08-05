@@ -93,8 +93,8 @@ plt.hist(random_func(seed,10000),bins=20)
 plt.show()
 ```
 
+![randomgenerator1.png](/pictures_for_blog/postimg/randomgenerator1.png)  
 
-<img src='http://www.guofei.site/public/postimg/randomgenerator1.png'>
 
 ### 乘性同余发生器
 
@@ -133,7 +133,7 @@ plt.plot(x,y,'.')
 plt.show()
 ```
 
-<img src='http://www.guofei.site/public/postimg/randomgenerator2.png'>
+![randomgenerator2.png](/pictures_for_blog/postimg/randomgenerator2.png)  
 
 横、纵坐标分别是$x_{t-1},x_t$  
 

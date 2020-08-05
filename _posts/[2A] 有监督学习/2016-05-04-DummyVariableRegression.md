@@ -46,7 +46,7 @@ $D_1=1$代表夏季，0代表冬季
 $D_2=1$代表城市，0代表农村  
 
 模型是这样的：  
-![dummy_variable1](https://www.guofei.site/pictures_for_blog//dummy_variable/dummy_variable1.png)
+![dummy_variable1](https://www.guofei.site/pictures_for_blog/dummy_variable/dummy_variable1.png)
 
 其特点是斜率不变  
 
@@ -77,7 +77,7 @@ $$D=\left \{ \begin{array}{ccc}
 
 图像是一个折线（两条共点的线段）
 
-![dummy_variable4](https://www.guofei.site/pictures_for_blog//dummy_variable/dummy_variable4.png)
+![dummy_variable4](https://www.guofei.site/pictures_for_blog/dummy_variable/dummy_variable4.png)
 
 
 ## 其它虚拟变量回归模型

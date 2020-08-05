@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 【小工具】github star数量统计
-categories: 工具
+categories: 开源
 tags:
 keywords:
 description:

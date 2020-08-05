@@ -83,10 +83,10 @@ pl.show()
 ```
 下面这2个优化方法的展示：  
 fmin:  
-<img src='http://www.guofei.site/public/postimg/fmin.png'>
+![fmin.png](/pictures_for_blog/postimg/fmin.png)  
 
 fmin_tnc:  
-<img src='http://www.guofei.site/public/postimg/fmin_tnc.png'>
+![fmin_tnc.png](/pictures_for_blog/postimg/fmin_tnc.png)  
 
 ## opt.minimize
 `opt.minimize` 这个函数将众多优化算法打包到一起

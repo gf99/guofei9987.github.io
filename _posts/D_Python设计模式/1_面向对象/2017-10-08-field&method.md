@@ -38,7 +38,7 @@ obj2=Province()
 Province.country='德国' # obj2.country会变，而obj.country不会变，因为obj已经指向一个新变量了
 ```
 
-<img src='http://www.guofei.site/public/postimg2/pythonoop1.jpg'>  
+![pythonoop1.jpg](/pictures_for_blog/postimg2/pythonoop1.jpg)  
 
 - 静态字段在内存中只保存一份
 - 普通字段在每个对象中都要保存一份

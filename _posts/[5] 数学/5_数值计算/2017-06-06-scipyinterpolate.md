@@ -37,11 +37,11 @@ pl.show()
 interp1d比Matlab的interp有些优势，因为返回的是函数，不需要在事先设定需要求解的点，而是在需要使用时调用函数。
 
 这个是linear和nearest的效果：  
-<img src='http://www.guofei.site/public/postimg/interp1d.png'>
 
 这个是zero, slinear, quadratic, cubic  
 也就是0, 1, 2, 3 次样条插值，所以这里的参数可以用str，也可以用数字   
-<img src='http://www.guofei.site/public/postimg/interp1d1.png'>
+![interp1d.png](/pictures_for_blog/postimg/interp1d.png)  
+
 
 ## UnivariateSpline
 interp1d不能外推运算（外插值）  
@@ -76,7 +76,7 @@ plt.show()
 
 *也就插值到(0,12)，范围再大就不行了，毕竟插值的专长不在于预测*  
 
-<img src='http://www.guofei.site/public/postimg/univariatespline1.png'>
+![univariatespline1.png](/pictures_for_blog/postimg/univariatespline1.png)  
 
 ### s>0：不强制通过所有点  
 
@@ -96,7 +96,7 @@ plt.plot(sx2,sy2)
 plt.show()
 ```
 
-<img src='http://www.guofei.site/public/postimg/univariatespline2.png'>
+![univariatespline2.png](/pictures_for_blog/postimg/univariatespline2.png)  
 
 ## 二维插值interp2d()
 ```
@@ -138,7 +138,7 @@ ax.scatter(x,y,z,c='r',marker='^')
 plt.show()
 ```
 
-<img src='http://www.guofei.site/public/postimg/interp2d.png'>
+![interp2d.png](/pictures_for_blog/postimg/interp2d.png)  
 
 ## 二维插值Rbf()
 Rbf的优点是，排列可以无序，可以不是等距的网格  
@@ -171,4 +171,4 @@ ax.plot_surface(xnew,ynew,znew)
 ax.scatter(x,y,z,c='r',marker='^')
 plt.show()
 ```
-<img src='http://www.guofei.site/public/postimg/rbf.png'>
+![rbf.png](/pictures_for_blog/postimg/rbf.png)  

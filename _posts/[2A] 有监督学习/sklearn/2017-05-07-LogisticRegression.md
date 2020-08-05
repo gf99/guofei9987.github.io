@@ -72,7 +72,7 @@ plt.plot(data2.iloc[:, 0], data2.iloc[:, 1], '.')
 plt.show()
 ```
 
-<img src='http://www.guofei.site/public/postimg/logisticregression1.png'>
+![logisticregression1.png](/pictures_for_blog/postimg/logisticregression1.png)
 
 迭代求解：  
 ```py
@@ -107,7 +107,8 @@ plt.show()
 
 ```
 
-<img src='http://www.guofei.site/public/postimg/logisticregression2.png'>
+![logisticregression2.png](/pictures_for_blog/postimg/logisticregression2.png)
+
 
 ### 随机梯度下降法
 随机梯度下降法并没有引入新理论，解决的主要问题是步长alpha的问题。  

@@ -110,7 +110,7 @@ plt.show()
 
 
 结果：（点是随机生成的，所以每次运行图未必一样）  
-<img src='http://www.guofei.site/public/postimg/minimumspanningtree1.png'>
+![minimumspanningtree1.png](/pictures_for_blog/postimg/minimumspanningtree1.png)  
 
 
 ## Python实现：Kruskal算法改进版

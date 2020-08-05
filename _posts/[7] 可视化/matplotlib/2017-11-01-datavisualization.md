@@ -40,7 +40,7 @@ plt.show()
 |rug|是否显示边际毛毯|
 
 
-<img src='http://www.guofei.site/public/postimg2/seaborn1_1.png'>
+![seaborn1_1.png](/pictures_for_blog/postimg2/seaborn1_1.png)  
 
 
 
@@ -58,7 +58,7 @@ sns.boxplot(data=df, x="day", y="total_bill", hue="sex", palette="PRGn")
 >palette='Set1','Set2','Set3','PRGn'...  
 
 
-<img src='http://www.guofei.site/public/postimg/boxplot.png'>  
+![boxplot.png](/pictures_for_blog/postimg/boxplot.png)  
 
 
 ### 小提琴图
@@ -77,7 +77,7 @@ df = sns.load_dataset("tips")
 sns.violinplot(data=df, palette="Set3", bw=.2, cut=3, linewidth=1)
 ```
 
-<img src='http://www.guofei.site/public/postimg/violinplot.png'>
+![violinplot.png](/pictures_for_blog/postimg/violinplot.png)  
 
 
 #### 小提琴图2
@@ -88,7 +88,7 @@ df = sns.load_dataset("tips")
 
 sns.violinplot(data=df, x="day", y="total_bill", hue="sex", bw=.2, cut=3, linewidth=1, palette="PRGn")
 ```
-<img src='http://www.guofei.site/public/postimg/violinplot1.png'>  
+![violinplot1.png](/pictures_for_blog/postimg/violinplot1.png)  
 
 #### 小提琴图3
 ```py
@@ -100,7 +100,7 @@ sns.violinplot(data=df, x="day", y="total_bill", hue="sex",split=True, bw=.2, cu
 ```
 
 
-<img src='http://www.guofei.site/public/postimg/violinplot2.png'>  
+![violinplot2.png](/pictures_for_blog/postimg/violinplot2.png)  
 
 
 ### qq图
@@ -119,7 +119,7 @@ fig = sm.qqplot(data=data, dist=t, distargs=(3,), fit=True, line='45')
 plt.show()
 ```
 
-<img src='http://www.guofei.site/public/postimg/datavisualization1.png'>
+![datavisualization1.png](/pictures_for_blog/postimg/datavisualization1.png)  
 
 
 ## 多变量
@@ -144,7 +144,7 @@ sns.regplot(x=df.x, y=df.y,
 # 另一种用法
 # sns.regplot(x='x', y='y', data=df)
 ```
-<img src='http://www.guofei.site/public/postimg/regplot.png'>
+![regplot.png](/pictures_for_blog/postimg/regplot.png)  
 
 还有些其它用法：
 - order=2, 多项式回归
@@ -166,19 +166,20 @@ sns.jointplot(x=df.x, y=df.y, kind='kde', space=0)
 ```
 
 kind='kde':  
-<img src='http://www.guofei.site/public/postimg/jointplot_kde.png'>  
+![jointplot_kde.png](/pictures_for_blog/postimg/jointplot_kde.png)  
+
 
 
 kind='hex'  
-<img src='http://www.guofei.site/public/postimg/jointplot_hex.png'>  
+![jointplot_hex.png](/pictures_for_blog/postimg/jointplot_hex.png)  
 
 
 kind='scatter'  
-<img src='http://www.guofei.site/public/postimg/jointplot_scatter.png'>  
+![jointplot_scatter.png](/pictures_for_blog/postimg/jointplot_scatter.png)  
 
 
 kind='reg'  
-<img src='http://www.guofei.site/public/postimg/jointplot_reg.png'>  
+![jointplot_reg.png](/pictures_for_blog/postimg/jointplot_reg.png)  
 
 ### PairGrid
 
@@ -244,7 +245,7 @@ import seaborn as sns
 sns.clustermap(df)
 plt.show()
 ```
-<img src='http://www.guofei.site/public/postimg/clustermap1.png'>
+![clustermap1.png](/pictures_for_blog/postimg/clustermap1.png)  
 
 
 对应的参数：  
@@ -258,7 +259,7 @@ row_cluster=False
 sns.clustermap(df.corr())
 plt.show()
 ```
-<img src='http://www.guofei.site/public/postimg/clustermap2.png'>   
+![clustermap2.png](/pictures_for_blog/postimg/clustermap2.png)  
 
 
 

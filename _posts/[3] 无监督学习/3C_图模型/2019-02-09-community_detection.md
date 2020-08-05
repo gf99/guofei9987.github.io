@@ -22,7 +22,7 @@ step3. 根据相似度从强到弱递归合并节点；
 step4. 根据实际需求横切树状图 ；  
 
 树状图类似这个：
-![](http://www.guofei.site/public/postimg/hierachicalcluster.png)
+![](/pictures_for_blog/postimg/hierachicalcluster.png)
 
 ## 图划分
 从一个整体切分成两个，算法目标：

@@ -20,6 +20,16 @@
           <a href="#tags" data-toggle="tab">{{ site.locals.tags }}</a>
         </li>
         {% for category in site.categories %}
+
+        <!-- 这两个标签不放侧边栏，而是放到橱窗里面 -->
+          {% if category[0] == '前端' %}
+          {% continue %}
+          {% endif %}
+
+          {% if category[0] == '趣文' %}
+          {% continue %}
+          {% endif %}
+
           <li>
             <a href="#{{ category | first }}" data-toggle="tab">
               {{ category[0] }}
@@ -57,19 +67,31 @@
                   <a class="list-group-item-lay pjaxlink" href="/pages/course.html">听课笔记库</a>
                   <a class="list-group-item-lay pjaxlink" href="/pages/matlab.html">Matlab笔记库</a>
                   <a class="list-group-item-lay pjaxlink" href="/pages/certification.html">证书陈列柜</a>
+                  <a class="list-group-item-lay pjaxlink" href="/pages/web_design.html">前端笔记集合</a>
+                  <a class="list-group-item-lay pjaxlink" href="/pages/interesting.html">趣文集合</a>
+                  {% for post in category[1] %}
+                    <a href="{{ post.url }}" class="list-group-item-lay pjaxlink">{{post.title}}</a>
+                  {% endfor %}
                 {% endif %}
 
-                {% if category[0] == '工具' %}
+
+
+
+
+                {% if category[0] == '开源' %}
                   <a class="list-group-item-lay pjaxlink" href="/pages/sql_ol.html">【工具】在线sql</a>
                   <a class="list-group-item-lay pjaxlink" href="/pages/text_diff.html">【工具】在线文本比较</a>
                   <a class="list-group-item-lay pjaxlink" href="/pages/searcher.html">【工具】清爽搜索</a>
                   <a class="list-group-item-lay pjaxlink" href="/pages/sko_en.html">【open source】scikit-opt</a>
                   <a class="list-group-item-lay pjaxlink" href="/pages/sko_zh.html">【开源】scikit-opt</a>
+                  {% for post in category[1] %}
+                    <a href="{{ post.url }}" class="list-group-item-lay pjaxlink">{{post.title}}</a>
+                  {% endfor %}
                 {% endif %}
 
-                {% for post in category[1] %}
+                <!-- {% for post in category[1] %}
                   <a href="{{ post.url }}" class="list-group-item-lay pjaxlink">{{post.title}}</a>
-                {% endfor %}
+                {% endfor %} -->
               </div>
             </div>
           {% endfor %}

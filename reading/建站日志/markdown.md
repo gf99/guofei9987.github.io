@@ -80,7 +80,7 @@ http://emojihomepage.com/
 
 
 
-![我的头像](http://www.guofei.site/public/img/me.png)
+![我的头像](/public/img/me.png)
 
 ```
 ![我的头像](http://www.guofei.site/public/img/me.png)

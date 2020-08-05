@@ -85,9 +85,11 @@ plt.show()
 
 图与kmeans很像了  
 
-<img src='http://www.guofei.site/public/postimg/kmeans5.png'>  
+![kmeans5.png](/pictures_for_blog/postimg/kmeans5.png)  
 
-<img src='http://www.guofei.site/public/postimg/kmeans6.png'>  
+
+![kmeans6.png](/pictures_for_blog/postimg/kmeans6.png)  
+
 
 ## scipy实现
 
@@ -126,7 +128,7 @@ plt.show()
 ```
 
 
-<img src='http://www.guofei.site/public/postimg/hierachicalcluster.png'>  
+![hierachicalcluster.png](/pictures_for_blog/postimg/hierachicalcluster.png)  
 
 
 ## 参考文献：

@@ -2,7 +2,7 @@
 layout: post
 title: 【Python】2 examples of Chebyshev inequality.
 categories: 趣文
-tags: 
+tags:
 keywords:
 description:
 ---
@@ -62,6 +62,7 @@ plt.show()
 ```
 output:  
 
-<img src='http://www.guofei.site/public/postimg/chebyshev.png'>
+![chebyshev.png](/pictures_for_blog/postimg/chebyshev.png)
+
 
 The graph tells us the accuracy of the Chebysheve inequality.  

@@ -15,7 +15,7 @@ WTA学习法则
 自组织竞争神经网络是一种无监督学习算法
 
 ## 竞争神经网络
-<img src='http://www.guofei.site/public/postimg/ann_competitive.png'>
+![ann_competitive.png](/pictures_for_blog/postimg/ann_competitive.png)
 
 
 输入层记为第I层，输出层记为第J层

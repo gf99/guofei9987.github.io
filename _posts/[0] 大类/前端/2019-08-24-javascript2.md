@@ -193,7 +193,7 @@ xmlhttp.onreadystatechange = function() {
 	a.push(myObj);
   }
 };
-xmlhttp.open("GET", url, true);// false 会阻塞直到 readyState=4，true（默认）会立即返回并在后台线程中基础处理 
+xmlhttp.open("GET", url, true);// false 会阻塞直到 readyState=4，true（默认）会立即返回并在后台线程中基础处理
 xmlhttp.send();
 ```
 
