@@ -169,6 +169,19 @@ bs.decode("utf-8") # byte 格式 转为 utf-8
 
 在计算机内存中，统一使用Unicode编码，当需要保存到硬盘或者需要传输的时候，就转换为UTF-8编码。
 
+### 转二进制
+
+```python
+s = '这是一个字符串'
+s_bin = [bin(ord(c))[2:] for c in s]  # 字符串转二进制
+[chr(int(b, 2)) for b in s_bin]  # 转回来
+```
+
+压缩+转十六进制
+```python
+encrypt_str = zlib.compress(ori_str.encode('utf-8')).hex() # 压缩+转16进制
+zlib.decompress(bytes.fromhex(''.join(encrypt_split))).decode('utf-8') # 16进制转字符串+解压缩
+```
 
 ## enumerate迭代器
 ```python
