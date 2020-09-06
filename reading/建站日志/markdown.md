@@ -83,8 +83,8 @@ http://emojihomepage.com/
 ![我的头像](/public/img/me.png)
 
 ```
-![我的头像](http://www.guofei.site/public/img/me.png)
-<img src='http://www.guofei.site/public/img/me.png'>
+![我的头像](https://www.guofei.site/public/img/me.png)
+<img src='https://www.guofei.site/public/img/me.png'>
 ```
 
 
