@@ -11,13 +11,13 @@ order: 450
 
 
 ## 基本统计学
-- <a href='http://www.guofei.site/StatisticsBlog/describe.htm' target="describe">描述性统计</a>
+- <a href='https://www.guofei.site/StatisticsBlog/describe.htm' target="describe">描述性统计</a>
     - 数据类型
     - 数据探索
     - 描述性统计绘图
     - 标准化
     - 相关分析
-- <a href='http://www.guofei.site/StatisticsBlog/HypothesisTesting.htm' target="HypothesisTesting">假设检验</a>
+- <a href='https://www.guofei.site/StatisticsBlog/HypothesisTesting.htm' target="HypothesisTesting">假设检验</a>
     - 对均值的检验
         - ztest
         - ttest
@@ -32,8 +32,8 @@ order: 450
         - KStest
 - <a href='http://www.guofei.site/2017/11/21/corr.html' target="hh">相关分析</a>
 
-- <a href='http://www.guofei.site/StatisticsBlog/pca.htm'  target="pca">主成分分析</a>
-- <a href='http://www.guofei.site/StatisticsBlog/regression.htm' target="regression">回归分析</a>
+- <a href='https://www.guofei.site/StatisticsBlog/pca.htm'  target="pca">主成分分析</a>
+- <a href='https://www.guofei.site/StatisticsBlog/regression.htm' target="regression">回归分析</a>
     - 一元回归
     - 多元回归
       - 多重共线性
@@ -45,7 +45,7 @@ order: 450
 
 项目地址：<a href='https://github.com/guofei9987/StatisticsBlog' target="github">项目地址</a>
 <br>  
-<a href='http://www.guofei.site/StatisticsBlog/' target="StatisticsBlog">项目主页</a>
+<a href='https://www.guofei.site/StatisticsBlog/' target="StatisticsBlog">项目主页</a>
 <br>
 
 

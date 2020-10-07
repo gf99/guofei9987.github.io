@@ -30,4 +30,4 @@ $\gamma$由gamma参数确定，r由coef0参数确定
 
 
 
-<iframe src="http://www.guofei.site/StatisticsBlog/KernelPCA.html" width="100%" height="1600em" marginwidth="10%"></iframe>
+<iframe src="https://www.guofei.site/StatisticsBlog/KernelPCA.html" width="100%" height="1600em" marginwidth="10%"></iframe>

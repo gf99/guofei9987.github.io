@@ -16,12 +16,12 @@ order: 408
 
 
 ## 线性回归
-大图见于<a href='http://www.guofei.site/StatisticsBlog/regression.htm' target="HypothesisTesting">这里</a>  
+大图见于<a href='https://www.guofei.site/StatisticsBlog/regression.htm' target="HypothesisTesting">这里</a>  
 
 
-<iframe src="http://www.guofei.site/StatisticsBlog/regression.htm" width="100%" height="3600em" marginwidth="10%"></iframe>
+<iframe src="https://www.guofei.site/StatisticsBlog/regression.htm" width="100%" height="3600em" marginwidth="10%"></iframe>
 
-大图见于<a href='http://www.guofei.site/StatisticsBlog/regression.htm' target="HypothesisTesting">这里</a>  
+大图见于<a href='https://www.guofei.site/StatisticsBlog/regression.htm' target="HypothesisTesting">这里</a>  
 
 ## 一元线性模型
 为简化记号，记：  
@@ -81,12 +81,12 @@ $F=\dfrac{SSR/1}{SSE/(n-2)}$
 ## Python实现
 
 
-大图见于<a href='http://www.guofei.site/StatisticsBlog/回归分析.html' target="HypothesisTesting">这里</a>  
+大图见于<a href='https://www.guofei.site/StatisticsBlog/回归分析.html' target="HypothesisTesting">这里</a>  
 
 
-<iframe src="http://www.guofei.site/StatisticsBlog/回归分析.html" width="100%" height="3600em" marginwidth="10%"></iframe>
+<iframe src="https://www.guofei.site/StatisticsBlog/回归分析.html" width="100%" height="3600em" marginwidth="10%"></iframe>
 
-大图见于<a href='http://www.guofei.site/StatisticsBlog/回归分析.html' target="HypothesisTesting">这里</a>  
+大图见于<a href='https://www.guofei.site/StatisticsBlog/回归分析.html' target="HypothesisTesting">这里</a>  
 
 ### AIC
 模型的似然函数为$L(\theta, x)$,其中$\theta$的维度为p，那么[^AppliedRegression]:  

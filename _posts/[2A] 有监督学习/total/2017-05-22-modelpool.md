@@ -69,14 +69,14 @@ order: 200
 
 </table>
 
-[大图](http://www.guofei.site/StatisticsBlog/sklearn_有监督.htm)
-<iframe src="http://www.guofei.site/StatisticsBlog/sklearn_有监督.htm" width="100%" height="1000em" marginwidth="10%"></iframe>
+[大图](https://www.guofei.site/StatisticsBlog/sklearn_有监督.htm)
+<iframe src="https://www.guofei.site/StatisticsBlog/sklearn_有监督.htm" width="100%" height="1000em" marginwidth="10%"></iframe>
 
-[大图](http://www.guofei.site/StatisticsBlog/sklearn_降维.htm)
-<iframe src="http://www.guofei.site/StatisticsBlog/sklearn_降维.htm" width="100%" height="1000em" marginwidth="10%"></iframe>
+[大图](https://www.guofei.site/StatisticsBlog/sklearn_降维.htm)
+<iframe src="https://www.guofei.site/StatisticsBlog/sklearn_降维.htm" width="100%" height="1000em" marginwidth="10%"></iframe>
 
-[大图](http://www.guofei.site/StatisticsBlog/sklearn_聚类.htm)
-<iframe src="http://www.guofei.site/StatisticsBlog/sklearn_聚类.htm" width="100%" height="1000em" marginwidth="10%"></iframe>
+[大图](https://www.guofei.site/StatisticsBlog/sklearn_聚类.htm)
+<iframe src="https://www.guofei.site/StatisticsBlog/sklearn_聚类.htm" width="100%" height="1000em" marginwidth="10%"></iframe>
 
 ### 按照问题分类
 
