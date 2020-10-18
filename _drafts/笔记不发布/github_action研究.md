@@ -34,6 +34,11 @@ jobs:
 on: push
 
 on: [push, pull_request] # 或者的关系，任意一个满足条件，即可触发
+
+on:
+  push:
+    branches:
+      - master
 ```
 
 
