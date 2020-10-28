@@ -231,10 +231,11 @@ method说明：
 import pandas as pd
 import numpy as np
 from scipy import stats
-rv=stats.uniform()
-df=pd.DataFrame(rv.rvs(size=(100,5)),columns=list('abcde'))
+rv = stats.uniform()
+df = pd.DataFrame(rv.rvs(size=(100, 5)), columns=list('abcde'))
 ```
 ### apply 后接 func：接受1行/列
+这种用法比较清晰，推荐。
 ```py
 # 生成新的两列
 df_new = df.apply(lambda x:pd.Series({'new_a':x['a']+x['b'],'new_b':x['a']+x['b']}),axis=1)
@@ -245,6 +246,17 @@ df_new = df.apply(lambda x:pd.Series({'new_a':x['a']+x['b'],'new_b':x['a']+x['b'
     - func返回一个Series（记为s_new），最后组成df_new。数据情况同上，s_new.index是df_new的列名，s_new.name是df_new的index。额外的，如果不指定s_new.name，那么df_new.index 会与 df.index 保持一致。
 - axis=0 （默认） 时，是按列计算，每次给func一列，df_new 是一个相同宽度的DataFrame。apply函数对应关系与上面类似
 - 如果func的return的是数字、列表等，那么返回的 df_new 是一个 Series
+
+
+如果想保留原本的列，添加新列：
+```python
+df_new = df.apply(lambda x: x.append(pd.Series({
+    'new_a': x.a + x.b
+    , 'new_b': x.b + x.c
+})), axis=1)
+```
+
+
 
 ### applymap：对每个单元格独立操作
 ```python
