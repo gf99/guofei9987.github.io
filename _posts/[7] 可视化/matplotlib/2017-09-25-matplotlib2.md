@@ -95,7 +95,7 @@ y=rv.rvs(size=100)
 plt.scatter(x,y,s=x*1000,c=y,marker=(5,1))
 plt.show()
 ```
-![matplotlib3_4.png](/pictures_for_blog/postimg2/matplotlib3_4.png)  
+![matplotlib3_4.jpg](/pictures_for_blog/postimg2/matplotlib3_4.jpg)  
 
 按照输入顺序，scatter的输入值分别代表：
 1. 每个点的X坐标
