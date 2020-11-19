@@ -8,8 +8,11 @@ description:
 order: 59003
 ---
 
-## 0. 本文结构
+## 0. 前言
 
+我在做 [Blind Watermark <img src="https://img.shields.io/github/stars/guofei9987/blind_watermark.svg?style=social">](https://github.com/guofei9987/blind_watermark)  这个库的时候，翻阅了大量材料，学到了关于隐写术、盲水印的很多知识，现在梳理了一遍，发出来。
+
+本文结构：
 1. 简介：隐写术的应用场景、分类、特点
 2. 隐写术：介绍几种巧妙的隐写术的算法
 3. 隐写术的衡量指标：如何衡量算法的好坏
