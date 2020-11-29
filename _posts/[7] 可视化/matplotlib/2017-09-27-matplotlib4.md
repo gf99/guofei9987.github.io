@@ -139,7 +139,7 @@ HTML(ani.to_jshtml())
 ```
 ### 动画保存
 
-step1：下载[ffmpeg](https://ffmpeg.org/),[FFmpeg for Windows](https://ffmpeg.zeranoe.com/builds/)，并解压缩  
+step1：安装 ffmpeg，（conda install ffmpeg） 另一种方法：下载[ffmpeg](https://ffmpeg.org/),[FFmpeg for Windows](https://ffmpeg.zeranoe.com/builds/)，并解压缩  
 step2: 代码中添加一行:  
 ```py
 plt.rcParams['animation.ffmpeg_path'] = r'C:\Users\guofei\Downloads\ffmpeg\bin\ffmpeg'
