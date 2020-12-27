@@ -239,7 +239,7 @@ step2：使用regex对象
 
 ```py
 text='a\n b \t  c'
-regex.split(text) # 返回list
+regex.split(text) # 返回list，regex是 split 的间隔，regex对应的内容以空字符串 '' 的形式也放在 list 中
 
 regex.findall(text) # 返回list
 regex.finditer(text) # 迭代器,存放的是<SRE_Match object>
@@ -247,7 +247,13 @@ m = regex.match(text) # 从起始位置匹配，匹配成功返回 返回<SRE_Ma
 regex.fullmatch(text) # 精确全文匹配，匹配成功返回 返回<SRE_Match object>，如果匹配不成功，返回None
 m = regex.search(text) # 扫描并返回第一个成功的匹配
 
-regex.sub(sentence, replace_char, 2) # 把 sentence 前2个符合的语句，替换成replace_char
+regex.sub(replace_char, sentence, 2) # 把 sentence 前2个符合的语句，替换成replace_char
+regex.subn(replace_char, sentence, 2) # 返回2个元素的元组，第一个元素是 regex.sub 的返回结果，第二个元素是实际被替换了多少个。
+
+# sub 可以后接 lambda
+regex = re.compile('[0-9]+')
+regex.sub(lambda m: str(int(m.group(0))+1), '12ab21a12', 6)
+# 这里的 m 是 regex.match 的返回值
 ```
 
 step3：使用'SRE_Match'对象
