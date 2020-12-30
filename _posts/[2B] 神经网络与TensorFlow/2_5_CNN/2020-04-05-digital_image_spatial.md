@@ -1,4 +1,12 @@
-
+---
+layout: post
+title: 【CV】数字图像处理
+categories:
+tags: 2-5-CV
+keywords:
+description:
+order: 1012
+---
 
 
 我们讨论的空域方法是 $g(x,y)=T[f(x,y)]$

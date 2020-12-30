@@ -2,7 +2,7 @@
 layout: post
 title: 【CNN】face recognition
 categories:
-tags: 2-5-CNN
+tags: 2-5-CV
 keywords:
 description:
 order: 280
