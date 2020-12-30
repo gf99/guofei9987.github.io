@@ -129,6 +129,46 @@ after_success:
 `coverage combine` 可以合并多条（经测试，不需要合并多条，就可以codecov上传）
 
 
+## 加密python代码
+### 方法1:用 pyc 文件加密
+
+```bash
+find <src> -name '*.py' -type f -print -exec rm {} \;
+python -m compileall <src>
+```
+
+
+### 方法2:使用 cython
+
+你的源码，放到文件 `hello.py`
+```python
+def say_hello():
+    print("hello world")
+```
+
+同一个目录中建立一个 `setup.py` 文件
+```python
+from distutils.core import setup
+from Cython.Build import cythonize
+
+setup(ext_modules = cythonize("hello.py"))
+```
+
+shell 中运行：
+```
+>>> python setup.py build_ext  --inplace
+```
+- build_ext是指明python生成C/C++的扩展模块
+- inplace指示 将编译后的扩展模块直接放在与test.py同级的目录中
+
+后台流程是这样的：
+`.py`->`.pyc`-(使用Cython)-> `.c`-(使用C编译器)- >`.pyd`(win)或`.so`(linux)
+
+
+python -c "from hello import say_hello;say_hello()"
+
+
+
 ## 参考资料
 
 
@@ -136,3 +176,7 @@ after_success:
 [官方网站](https://packaging.python.org/tutorials/packaging-projects/#uploading-your-project-to-pypi)
 
 [setup.py 指南](http://blog.konghy.cn/2018/04/29/setup-dot-py/#part-2bb23566e92e12ab)
+
+[Cython介绍](https://blog.csdn.net/feijiges/article/details/77932382)
+
+[知乎：如何保护你的 Python 代码](https://zhuanlan.zhihu.com/p/54296517)
