@@ -195,16 +195,94 @@ msg = ('未成年', '成年')[age > 18]
 msg = {True: "成年", False: "未成年"}[age > 18]
 ```
 
+## Python缓存机制
+
+如果某一个函数多次执行某一类输入，例如，用递归计算斐波那契数列f(5)时，会频繁计算 f(2)，那么我们需要一个机制，可以把之前的计算缓存下来，下次优先去找缓存里面的结果，性能就得到优化。
+
+实现方法很多:
+- 最简单的可以做一个 `dict`
+- 使用 decorator
+- 使用 functools.lru_cache，这个最优雅
 
 
+```python
+import functools
 
 
+@functools.lru_cache(maxsize=None, typed=None)
+def add(x, y):
+    print('计算 {x} + {y}'.format(x=x, y=y))
+    return x + y
 
 
+print(add(1, 2))
+print(add(1, 2))
+print(add(3, 5))
+```
+
+打印结果：
+```
+计算 1 + 2
+3
+3
+计算 3 + 5
+8
+```
+
+看到，第二次调用 `add(1,2)`，没有真正执行函数。
 
 
+## 清理函数
+
+可以注册一个函数，当代码运行结束/代码崩溃时，执行这个函数
+
+```python
+import atexit
 
 
+@atexit.register
+def clean():
+    print('代码结束，运行清理任务')
+
+
+def main():
+    1 / 0
+
+
+main()
+```
+
+试试从命令行执行这段代码，发现尽管程序崩溃，崩溃后还是执行了 `clean` 函数
+
+还有另一种写法，个人感觉更好，因为能传入参数
+
+```python
+import atexit
+
+
+def clean(input1, input2):
+    print(f'代码结束，运行清理任务: {input1}, {input2}')
+
+
+atexit.register(clean, 'input1', 'input2')
+```
+
+另外注意：
+- 如果程序是被你没有处理过的系统信号杀死的，那么注册的函数无法正常执行。
+- 如果发生了严重的 Python 内部错误，你注册的函数无法正常执行。
+- 如果你手动调用了 `os._exit()`，你注册的函数无法正常执行。
+
+
+## 打印代码
+
+你想打印某个函数的源代码，用这个：
+
+```python
+import pandas as pd
+import inspect
+
+inspect.getsource(pd.read_csv)  # 打印 pd.read_csv 的源代码
+```
 
 
 

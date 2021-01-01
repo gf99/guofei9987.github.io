@@ -4,6 +4,14 @@
 assert 1>0, '如果左边的条件不满足，会报错并显示这段文字'
 ```
 
+## warnings
+
+```python
+import warnings
+
+warnings.warn('It is deprecated')
+```
+
 ## error
 
 | 异常名称                      | 描述                                  |
