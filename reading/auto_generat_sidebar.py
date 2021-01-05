@@ -40,6 +40,7 @@ path_all = [(top, dirs, sorted(nondirs)) for top, dirs, nondirs in path_all]
 
 sidebar = ''
 detail = ''
+data = []
 for top, dirs, nondirs in path_all:
     block_name = top.replace('docs' + os.sep, '')
     sidebar += '* ' + block_name + '\n'
@@ -61,11 +62,14 @@ for top, dirs, nondirs in path_all:
                    title_level_2='，'.join(['[{l2}](docs/{block_name}/{article}.md?id={l2})'.
                                           format(l2=l2, block_name=block_name, article=article)
                                            for l2 in title_level_2]))
+        data.append([article, block_name, word_num])
 
+print('_' * 10, 'sidebar:', '_' * 10)
 print(sidebar)
-
-print('-' * 20)
+print('_' * 10, 'detail:', '_' * 10)
 print(detail)
+print('_' * 10, 'total words:', '_' * 10)
+print(sum(i[2] for i in data))
 # %%
 head = '''
 <a href="http://www.guofei.site" target='blog'>
