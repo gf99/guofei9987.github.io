@@ -39,8 +39,35 @@ function myfun(i,A)
     end
 end
 ```
-例子：
 
+下面这个是大佬的总结:
+```python
+def meet_conditions(已选解集合):
+    return True or False
+
+
+res = list()  # 结果集
+
+
+def myfunc(已选解集合, 每个阶段的可选解):
+    if meet_conditions(已选解集合):
+        res.append(已选解集合)
+        return
+
+    # 遍历每个阶段的可选解集合
+    for 可选解 in 每个阶段的可选解:
+        # 选择此阶段其中一个解, 将其加入到已选解集合中
+        res.append(可选解)
+
+        # 进入下一个阶段
+        myfunc(已选解集合, 下个阶段可选的空间解)
+
+        # 「回溯」换个解再遍历？？？
+        已选解集合.remove(可选解)
+```
+
+
+## 应用案例
 ## 四皇后问题
 问题描述：  
 如何在N×N的棋盘上放N个皇后，使得：  

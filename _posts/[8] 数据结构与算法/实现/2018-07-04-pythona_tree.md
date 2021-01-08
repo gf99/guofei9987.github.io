@@ -1,11 +1,11 @@
 ---
 layout: post
-title: 【Python数据结构4】Tree
+title: 【Python数据结构2】Tree实现
 categories:
 tags: 8-数据结构与算法
 keywords:
 description:
-order: 554
+order: 505
 ---
 ## 定义二叉树
 
@@ -211,6 +211,23 @@ print(draw2)
 # %%
 draw3 = draw.drawtree(root)
 ```
+
+额外的，深度优先搜索（遍历版，使用 stack ）：
+```python
+
+def dlr(root):
+    stack, res = [root], list()
+    while stack:
+        pointer = stack.pop()  # 栈尾取一个
+        res.append(pointer.val)  # 做一定的处理，加入结果
+        if pointer.right:
+            stack.append(pointer.right)  # 压入右子节点
+        if pointer.left:
+            stack.append(pointer.left)  # 压入左子节点
+    return res
+
+```
+（TODO: 但是LDR还没想好，LRD之后实现一下）
 
 ### 基础算法2
 
