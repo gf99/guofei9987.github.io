@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 【Python数据结构2】Tree实现
+title: 【数据结构5】Tree实现
 categories:
 tags: 8-数据结构与算法
 keywords:

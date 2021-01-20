@@ -8,6 +8,130 @@ description:
 order: 92301
 ---
 
+## 另外的
+
+## 常用三角函数公式
+
+积化和差公式
+
+$$\sin \alpha \cos \beta  =\frac{1}{2}[\sin (\alpha+\beta)+\sin(\alpha-\beta)] \\[7pt]
+\cos \alpha \sin \beta  =\frac{1}{2}[\sin (\alpha+\beta)-\sin(\alpha-\beta)]  \\[7pt]
+\cos \alpha \cos \beta  =\frac{1}{2}[\cos (\alpha+\beta)+\cos(\alpha-\beta)]  \\[7pt]
+\sin \alpha \sin \beta  =-\frac{1}{2}[\cos (\alpha+\beta)-\cos(\alpha-\beta)]$$
+
+和差化积公式
+$$
+\sin\alpha+\sin\beta  =2\sin\frac{\alpha+\beta}{2}\cos\frac{\alpha-\beta}{2}  \\[7pt]
+\sin\alpha-\sin\beta  =2\cos\frac{\alpha+\beta}{2}\sin\frac{\alpha-\beta}{2}  \\[7pt]
+\cos\alpha+\cos\beta  =2\cos\frac{\alpha+\beta}{2}\cos\frac{\alpha-\beta}{2}  \\[7pt]
+\cos\alpha-\cos\beta  =-2\sin\frac{\alpha+\beta}{2}\sin\frac{\alpha-\beta}{2} \\[7pt]
+\tan\alpha+\tan\beta  =\frac{\sin (\alpha+\beta)}{\cos\alpha\cdot\cos \beta}
+$$
+
+归一化公式
+$$
+\sin^2 x+\cos^2x   =1 \\[7pt]
+\sec^2 x-\tan^2x   =1 \\[7pt]
+\cosh^2x-\sinh^2x  =1
+$$
+
+
+倍(半)角公式，降(升)幂公式
+$$
+\sin^2x  =\frac{1}{2}(1-\cos 2x) \\[7pt]
+\cos^2x  =\frac{1}{2}(1+\cos 2x)  \\[7pt]
+\tan^2x  =\frac{1-\cos 2x}{1+\cos 2x} \\[7pt]
+\sin x   =2\sin\frac{x}{2}\cos\frac{x}{2}  \\[7pt]
+\cos x   =2\cos^2\frac{x}{2}-1=1-2\sin^2\frac{x}{2}=\cos^2\frac{x}{2}-\sin^2\frac{x}{2} \\[7pt]
+\tan x   =\frac{2\tan(x/2)}{1-\tan^2(x/2)}$$
+
+
+万能公式  
+令$ u=\tan\dfrac{x}{2} $则
+$$\sin x=\frac{2u}{1+u^2} \\[7pt]
+\cos x=\frac{1-u^2}{1+u^2}$$
+
+## 常用的佩亚诺型余项泰勒公式
+$$
+f(x)=  f(x_0)+f'(x_0)(x-x_0)+\frac{f''(x_0)}{2!}(x-x_0)^2+\cdots+\frac{f^{(n)}(x_0)}{n!}(x-x_0)^n+o[(x-x_0)^n]  \\[7pt]
+f(x)=  f(x_0)+f'(x_0)(x-x_0)+\frac{f''(x_0)}{2!}(x-x_0)^2+\cdots+\frac{f^{(n)}(x_0)}{n!}(x-x_0)^n+\frac{f^{(n+1)}(\xi)}{(n+1)!}(x-x_0)^{n+1}
+$$
+
+常用泰勒公式
+
+$$
+\mathrm{e}^{x}  =1+x+\frac{1}{2}x^{2}+\frac{1}{6}x^{3}+\cdots+\frac{1}{n!}x^{n}+o(x^{n})    \\[7pt]
+\ln(x+1)        =x-\frac{1}{2}x^2+\frac{1}{3}x^3-\cdots+(-1)^{n-1}\frac{1}{n}x^{n}+o(x^{n})
+$$
+
+
+令 $n=2m$ 有,  
+$$
+\sin x  =x-\frac{1}{6}x^{3}+\frac{1}{120}x^{5}+\cdots+(-1)^{m-1}\frac{1}{(2m-1)!}x^{2m-1}+o(x^{2m}) \\[7pt]
+\cos x  =1-\frac{1}{2}x^2+\frac{1}{24}x^4-\cdots+(-1)^m \frac{1}{(2m)!}x^{2m}+o(x^{2m+1})           \\[7pt]
+\tan x  =x+\frac{1}{3}x^3+\frac{2}{15}x^5+\frac{17}{315}x^7+\cdots+o(x^{2m-1}) \\[7pt]
+\arcsin x  =x+\frac{1}{6}x^3+\frac{3}{40}x^{5}+\cdots+o(x^{2m}) \\[7pt]
+\frac{1}{1-x}   =1+x+x^2+x^3+\cdots+x^n+o(x^n) \\[7pt]
+(1+x)^{\alpha}  =\sum_{i=0}^{n}\frac{\prod_{j=0}^{i-1}{(\alpha-j})}{i!}x^n+o(x^n)           \\[7pt]
+\alpha^x        =\sum_{i=0}^{n}\frac{\ln^n \alpha}{n!}x^n+o(x^n)
+$$
+
+
+## 基本求导公式
+
+$$
+(C)'=0 \\
+( x^{\mu})'=\mu x^{\mu-1} \\
+( \sin x)'=\cos x \\
+( \cos x)'=-\sin x \\
+( \tan x)'=\sec^2 x \\
+( \cot x)'=-\csc^2 x \\
+( \sec x)'=\sec x\cdot\tan x \\
+( \csc x)'=-\csc x\cdot\tan x \\
+( a^x)'=a^x\ln a\ (a>0,a\neq1) \\
+( \log_{a}x)'=\frac{1}{x\cdot\ln a}\ (a>0,a\neq1) \\
+( \arcsin x)'=\frac{1}{\sqrt{1-x^2}} \\
+( \arccos x)'=-\frac{1}{\sqrt{1-x^2}} \\
+( \arctan x)'=\frac{1}{1+x^2} \\
+( \mathrm{arccot}\, x)'=-\frac{1}{1+x^2} \\
+$$
+
+### 曲率
+
+曲率的定义式  
+$K=\mid \dfrac{\mathrm{d}\alpha}{\mathrm{d}s}\mid $
+
+由定义式我们可以推得：
+- **直角坐标** $y=y(x)$ 的曲率是 $K=\frac{\mid y'' \mid}{( 1+y^{'2} )^{3/2}}$
+- **参数方程** $x=\varphi(t),y=\psi(t)$ 的曲率是 $K=\frac{\mid \varphi'(t)\psi''(t)-\varphi''(t)\psi'(t)\mid}{[ \varphi^{'2}(t) +\psi^{'2}(t) ]^{3/2}}$
+- **极坐标** 有曲率表达式 $K=\frac{\left|r^2+2r^{'2}-r\cdot r''\right|}{\left(r^2+r^{'2}\right)^{3/2}}$
+
+
+曲线在对应点 $M(x,y)$  的曲率中心 $D(\alpha,\beta)$ 的坐标为：  
+
+$$
+\left \{ \begin{array}{l}
+\alpha=x-\displaystyle\frac{y'(1+y^{'2})^3}{y^{''2}} \\
+\beta=y+\displaystyle\frac{1+y^{'2}}{y''}
+\end{array}\right.
+$$
+
+
+### 曲线的渐近线
+
+
+1. 若 $\lim\limits_{ x\rightarrow \infty }f(x)=b$ ,则称 $y=b$ 为曲线 $f(x)$ 的 **水平渐近线**
+2. 若 $\lim\limits_{ x\rightarrow x_0 }f(x)=\infty$ ,则称 $x=x_0$ 为曲线 $f(x)$ 的 **垂直渐近线**
+3. 若 $\lim\limits_{ x\rightarrow \infty }[f(x)-(ax+b)]=0$ ,其中 $$
+\begin{cases}
+a=\displaystyle \lim\limits_{x\to \infty}\frac{f(x)}{x} \\[7pt]
+b=\displaystyle \lim\limits_{x\to \infty}[f(x)-ax]
+\end{cases}$$ ，则称 $y=ax+b$ 为曲线 $f(x)$ 的 **斜渐近线**
+
+
+### 基本积分公式
+
+
 ## 定积分求导
 $F(x)=\int_{g(x)}^{h(x)}f(t)dt$，  
 那么$F'(x)=h'(x)f[h(x)]-g'(x)f[g(x)]$  

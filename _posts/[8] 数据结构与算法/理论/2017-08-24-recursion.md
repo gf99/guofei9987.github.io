@@ -25,49 +25,256 @@ function myfun(i,A)
 end
 ```
 
-改进：
 
-```matlab
-function myfun(i,A)
-    if iscorrect(i,A)
-        for i=ii
-            myfun(i,A)
-    elseif 到了树终点
-        statement
-    else
-        donothing
-    end
-end
-```
-
-下面这个是大佬的总结:
+伪代码
 ```python
-def meet_conditions(已选解集合):
-    return True or False
+def 判断是否到达叶节点(已选解集合):
+  # 已选解集合符合最终要的结果，例如符合某种查找
+    return 是否符合最终要的结果
 
 
-res = list()  # 结果集
+结果集 = list()
 
 
-def myfunc(已选解集合, 每个阶段的可选解):
-    if meet_conditions(已选解集合):
-        res.append(已选解集合)
+def myfunc(已选解集合selected, 每个阶段的可选解selectable):
+    if 判断是否到达叶节点(已选解集合):
+        结果集.append(已选解集合)
         return
 
     # 遍历每个阶段的可选解集合
     for 可选解 in 每个阶段的可选解:
-        # 选择此阶段其中一个解, 将其加入到已选解集合中
-        res.append(可选解)
-
         # 进入下一个阶段
-        myfunc(已选解集合, 下个阶段可选的空间解)
+        myfunc(已选解集合+[可选解], 下个阶段可选的空间解)
+```
 
-        # 「回溯」换个解再遍历？？？
-        已选解集合.remove(可选解)
+recursion 本质上是树型结构上的一个 DFS，以树的视角来看，思路往往更清晰。
+
+
+
+公式
+```python
+def meet_conditions(selected):
+    # 自定义代码块1，用来判断是否递归到了叶节点
+    return True or False
+
+
+res = list()
+
+
+def myfunc(selected, selectable):
+    if meet_conditions(selected):
+        res.append(selected)
+        return
+
+    for next_item in selectable:
+        # 这个是下一阶段的迭代逻辑，中高难度题这2行需要仔细设计
+        next_selected = selected + [next_item]  # 自定义代码块2，这一步迭代得到的结果，传递给下一步
+        next_selectable = selectable  # 自定义代码块3，用来给定下一步的候选选项
+        myfunc(next_selected, next_selectable)
+```
+在套用
+
+
+套公式的示例1：放回抽样，从6个数里面抽取3个。改动自定义代码块1。
+```python
+nums, total = [1, 2, 3, 4, 5, 6], 3
+
+
+def meet_conditions(selected):
+    if len(selected) >= 3:
+        return True
+
+
+res = list()
+
+
+def myfunc(selected, selectable):
+    if meet_conditions(selected):
+        res.append(selected)
+        return
+
+    for next_item in selectable:
+        next_selected = selected + [next_item]
+        next_selectable = selectable
+        myfunc(next_selected, next_selectable)
+
+
+myfunc(list(), nums)
+
+res
+```
+
+套公式的示例2：无放回抽样，从6个数里面抽取3个。  
+有两种方案，两种方案在其它题目中各有优劣，都写一份。  
+改动自定义代码块2:  
+```python
+nums, total = [1, 2, 3, 4, 5, 6], 3
+
+
+def meet_conditions(selected):
+    if len(selected) >= 3:
+        return True
+
+
+res = list()
+
+
+def myfunc(selected, selectable):
+    if meet_conditions(selected):
+        res.append(selected)
+        return
+
+    for next_item in selectable:
+        if next_item not in selected:
+            next_selected = selected + [next_item]
+            next_selectable = selectable
+            myfunc(next_selected, next_selectable)
+
+
+myfunc(list(), nums)
+
+res
+```
+
+或者改动自定义代码块3:  
+```python
+nums, total = [1, 2, 3, 4, 5, 6], 3
+
+
+def meet_conditions(selected):
+    if len(selected) >= 3:
+        return True
+
+
+res = list()
+
+
+def myfunc(selected, selectable):
+    if meet_conditions(selected):
+        res.append(selected)
+        return
+
+    for next_idx, next_item in enumerate(selectable):
+        next_selected = selected + [next_item]
+        next_selectable = selectable.copy()
+        next_selectable.pop(next_idx)
+        myfunc(next_selected, next_selectable)
+
+
+myfunc(list(), nums)
+
+res
 ```
 
 
+
+
 ## 应用案例
+
+
+
+
+### 求阶乘
+```python
+def myfunc(n):
+    if n == 0:
+        return 1
+    return n * myfunc(n - 1)
+```
+
+### 蛙跳问题
+一只青蛙可以一次跳 1 级台阶或一次跳 2 级台阶，问要跳上第 n 级台阶有多少种跳法？
+```python
+@functools.lru_cache()
+def myfun(n):
+    if n <= 2:
+        return n
+    return myfun(n - 1) + myfun(n - 2)
+```
+还有其它解法
+- 动态规划
+- 直接遍历
+
+
+### 镜像二叉树
+经典问题：https://leetcode.com/problems/invert-binary-tree/
+
+递归法很简单
+```python
+def invertTree(self, root):
+    if not root:return None
+    root.left,root.right=self.invertTree(root.right),self.invertTree(root.left)
+    return root
+```
+
+但我们不想仅仅用递归法，想到树上的 level order 算法，稍微改一改：
+
+```py
+def invertTree(self, root):
+    q=[root]
+    while q:
+        for node in q:
+            if node:
+                node.left,node.right=node.right,node.left
+        q=[child for node in q if node for child in [node.left,node.right]]
+    return root
+```
+
+TODO: 上面是 level order，可以试试按照对应的套路，改成 DFS
+
+### 求一个数列的全部组合
+
+```py
+res = list()
+
+nums = [1, 2, 3]
+
+
+def myfunc(selected, selectable):
+    if len(selected) == len(nums):
+        res.append(selected)
+        return res
+    for i in selectable:
+        if i not in selected:
+            myfunc(selected + [i], selectable)
+
+
+myfunc([], nums)
+```
+
+用 level order 改编套路，改成非递归形式
+```python
+ret, q = [[]], [[i] for i in nums]
+for i in range(len(nums)):
+    ret = [ret_ + [i] for i in nums for ret_ in ret if i not in ret_]
+```
+
+### 背包问题
+
+套公式
+
+```python
+selectable = [3, 4, 6, 8]
+max_weight = 10
+
+res = list()
+
+
+def myfunc(selected, selectable):
+    if sum(selected) > max_weight:
+        res.append([selected[:-1]])
+        return
+
+    for i in selectable:
+        if i not in selected:
+            myfunc(selected + [i], selectable)
+
+myfunc([],selectable)
+```
+
+
+
+
 ## 四皇后问题
 问题描述：  
 如何在N×N的棋盘上放N个皇后，使得：  

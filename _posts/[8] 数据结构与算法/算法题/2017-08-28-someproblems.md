@@ -11,7 +11,7 @@ order: 590
 
 - 入门级题目：[【Python】【算法题集1】](http://www.guofei.site/2017/05/03/TrickPython.html)
 - 《编程之美》中的题目：[【Python】【算法题集2】](http://www.guofei.site/2017/08/28/someproblems.html)
-- LeetCode上的题目：[【Python】【算法题集3】](http://www.guofei.site/2018/07/05/pythonalgorithma.html) 
+- LeetCode上的题目：[【Python】【算法题集3】](http://www.guofei.site/2018/07/05/pythonalgorithma.html)
 
 
 ## 连续整数和问题
@@ -260,3 +260,46 @@ for i in range(32):
         count += 1
 count
 ```
+
+## 有效括号问题
+
+原题是LeetCode上的经典题目了，用 stack 解决。时间复杂度O(n),空间复杂度 O(1)
+这里修改一下题目。  
+
+
+### 有效括号问题变形1
+已知只有小括号，用 stack 方法的空间复杂度是 O(n)，可以优化吗？
+
+可以在定一个变量，初始为0，遇到左括号就+1，遇到右括号就-1，迭代过程中为负，或者迭代结果不是0，就都不满足。
+
+时间复杂度O(n), 空间复杂度 O(1)
+
+```python
+def myfunc(input_string):
+    stack = 0
+    for i in input_string:
+        if i == '(':
+            stack += 1
+        elif i == ')':
+            stack -= 1
+        else:
+            return False
+
+        if stack < 0:
+            return False
+    if stack != 0:
+        return False
+    return True
+
+
+input_string = '(())()'
+myfunc(input_string)
+```
+
+### 有效括号问题变形1
+
+已知只有小括号，求最大有效子串的长度。
+
+（LeetCode 32题）
+
+还是回到 stack 的思路上，压入stack的元素不是括号，而是序号。
