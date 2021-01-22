@@ -8,7 +8,6 @@ description:
 order: 92301
 ---
 
-## 另外的
 
 ## 常用三角函数公式
 
@@ -50,29 +49,7 @@ $$
 $$\sin x=\frac{2u}{1+u^2} \\[7pt]
 \cos x=\frac{1-u^2}{1+u^2}$$
 
-## 常用的佩亚诺型余项泰勒公式
-$$
-f(x)=  f(x_0)+f'(x_0)(x-x_0)+\frac{f''(x_0)}{2!}(x-x_0)^2+\cdots+\frac{f^{(n)}(x_0)}{n!}(x-x_0)^n+o[(x-x_0)^n]  \\[7pt]
-f(x)=  f(x_0)+f'(x_0)(x-x_0)+\frac{f''(x_0)}{2!}(x-x_0)^2+\cdots+\frac{f^{(n)}(x_0)}{n!}(x-x_0)^n+\frac{f^{(n+1)}(\xi)}{(n+1)!}(x-x_0)^{n+1}
-$$
 
-常用泰勒公式
-$$
-\mathrm{e}^{x}  =1+x+\frac{1}{2}x^{2}+\frac{1}{6}x^{3}+\cdots+\frac{1}{n!}x^{n}+o(x^{n})    \\[7pt]
-\ln(x+1)        =x-\frac{1}{2}x^2+\frac{1}{3}x^3-\cdots+(-1)^{n-1}\frac{1}{n}x^{n}+o(x^{n})
-$$
-
-
-令 $n=2m$ 有,
-$$
-\sin x  =x-\frac{1}{6}x^{3}+\frac{1}{120}x^{5}+\cdots+(-1)^{m-1}\frac{1}{(2m-1)!}x^{2m-1}+o(x^{2m}) \\[7pt]
-\cos x  =1-\frac{1}{2}x^2+\frac{1}{24}x^4-\cdots+(-1)^m \frac{1}{(2m)!}x^{2m}+o(x^{2m+1})           \\[7pt]
-\tan x  =x+\frac{1}{3}x^3+\frac{2}{15}x^5+\frac{17}{315}x^7+\cdots+o(x^{2m-1}) \\[7pt]
-\arcsin x  =x+\frac{1}{6}x^3+\frac{3}{40}x^{5}+\cdots+o(x^{2m}) \\[7pt]
-\frac{1}{1-x}   =1+x+x^2+x^3+\cdots+x^n+o(x^n) \\[7pt]
-(1+x)^{\alpha}  =\sum_{i=0}^{n}\frac{\prod_{j=0}^{i-1}{(\alpha-j})}{i!}x^n+o(x^n)           \\[7pt]
-\alpha^x        =\sum_{i=0}^{n}\frac{\ln^n \alpha}{n!}x^n+o(x^n)
-$$
 
 
 ## 基本求导公式
@@ -94,41 +71,9 @@ $$
 ( \mathrm{arccot}\, x)'=-\frac{1}{1+x^2} \\
 $$
 
-### 曲率
-
-曲率的定义式  
-$K=\mid \dfrac{\mathrm{d}\alpha}{\mathrm{d}s}\mid $
-
-由定义式我们可以推得：
-- **直角坐标** $y=y(x)$ 的曲率是 $K=\frac{\mid y'' \mid}{( 1+y^{'2} )^{3/2}}$
-- **参数方程** $x=\varphi(t),y=\psi(t)$ 的曲率是 $K=\frac{\mid \varphi'(t)\psi''(t)-\varphi''(t)\psi'(t)\mid}{[ \varphi^{'2}(t) +\psi^{'2}(t) ]^{3/2}}$
-- **极坐标** 有曲率表达式 $K=\frac{\mid r^2+2r^{'2}-r\cdot r''\mid}{(r^2+r^{'2})^{3/2}}$
-
-
-曲线在对应点 $M(x,y)$  的曲率中心 $D(\alpha,\beta)$ 的坐标为：
-$$
-\left \{ \begin{array}{l}
-\alpha=x-\displaystyle\frac{y'(1+y^{'2})^3}{y^{''2}} \\
-\beta=y+\displaystyle\frac{1+y^{'2}}{y''}
-\end{array}\right.
-$$
-
-
-### 曲线的渐近线
-
-
-1. 若 $\lim\limits_{ x\rightarrow \infty }f(x)=b$ ,则称 $y=b$ 为曲线 $f(x)$ 的 **水平渐近线**
-2. 若 $\lim\limits_{ x\rightarrow x_0 }f(x)=\infty$ ,则称 $x=x_0$ 为曲线 $f(x)$ 的 **垂直渐近线**
-3. 若 $\lim\limits_{ x\rightarrow \infty }[f(x)-(ax+b)]=0$ ,其中 $$
-\begin{cases}
-a=\displaystyle \lim\limits_{x\to \infty}\frac{f(x)}{x} \\[7pt]
-b=\displaystyle \lim\limits_{x\to \infty}[f(x)-ax]
-\end{cases}$$ ，则称 $y=ax+b$ 为曲线 $f(x)$ 的 **斜渐近线**
-
 
 ## 不定积分求解
 
-### 基本积分公式
 
 $$
 \int k \,\mathrm{d}x=kx+C  \\[7pt]
@@ -169,18 +114,18 @@ $$
 常见的凑微分类型  
 $$
 \int {f( ax + b){\rm{d}}x = }\frac{1}{a}\int {f(ax+b){\mathrm{d}}(ax + b)\;(a \neq 0)}                                                              \\[7pt]
-\int {f(a{x^{m + 1}} + b){x^m}{\rm{d}}x} = \frac{1}{{a(m + 1)}}\int {f(a{x^{m + 1}} + b){\rm{d}}(a{x^{m + 1}} + b)}                                 \\[7pt]
-\int {f\left( \frac{1}{x}\right) \frac{{{\rm{d}}x}}{{{x^2}}}\;}  =  - \int {f\left( \frac{1}{x}\right) {\rm{d}}\left( \frac{{\rm{1}}}{x}\right) \;} \\[7pt]
+\int {f(a{x^{m + 1}} + b){x^m}{\rm{d}}x} = \frac{1}{a(m + 1)}\int {f(a{x^{m + 1}} + b){\rm{d}}(a{x^{m + 1}} + b)}                                 \\[7pt]
+\int {f\left( \frac{1}{x}\right) \frac{\rm{d}x}{x^2}}  =  - \int {f\left( \frac{1}{x}\right) {\rm{d}}\left( \frac{\rm{1}}{x}\right) } \\[7pt]
 \int {f(\ln x)\frac{1}{x}} {\rm{d}}x = \int {f(\ln x){\rm{d(}}\ln x)}                                                                               \\[7pt]
 \int {f({\mathrm{e}^x})} {\mathrm{e}^x}{\rm{d}}x = \int {f({\mathrm{e}^x}} ){\rm{d(}}{\mathrm{e}^x})                                                \\[7pt]
-\int {f(\sqrt x } )\frac{{{\rm{d}}x}}{{\sqrt x }} = 2\int {f(\sqrt x } ){\rm{d}}(\sqrt x )                                                          \\[7pt]
+\int {f(\sqrt x } )\frac{\rm{d}x}{\sqrt x } = 2\int {f(\sqrt x } ){\rm{d}}(\sqrt x )                                                          \\[7pt]
 \int {f(\sin x)\cos x{\rm{d}}x = } \int {f(\sin x){\rm{d}}\sin x}                                                                                   \\[7pt]
 \int {f(\cos x)\sin x{\rm{d}}x = }  - \int {f(\cos x){\rm{d}}\cos x}                                                                                \\[7pt]
-\int {f(\tan x){{\sec }^2}} x{\rm{d}}x = \int {f(\tan x){\rm{d}}\tan x}                                                                             \\[7pt]
-\int {f(\cot x){{\csc }^2}} x{\rm{d}}x =  - \int {f(\cot x){\rm{d}}\cot x}                                                                          \\[7pt]
-\int {f(\arcsin x)\frac{1}{{\sqrt {1 - {x^2}} }}} {\rm{d}}x = \int {f(\arcsin x){\rm{d}}\arcsin x}                                                  \\[7pt]
-\int {f(\arctan x)\frac{1}{{1 + {x^2}}}} {\rm{d}}x = \int {f(\arctan x){\rm{d}}\arctan x}                                                           \\[7pt]
-\int {\frac{{f'(x)}}{{f(x)}}} {\rm{d}}x = \int {\frac{{{\rm{d}}f(x)}}{{f(x)}}}  = \ln \mid f(x)\mid + C
+\int {f(\tan x){\sec^2}} x{\rm{d}}x = \int {f(\tan x){\rm{d}}\tan x}                                                                             \\[7pt]
+\int {f(\cot x){\csc^2}} x{\rm{d}}x =  - \int {f(\cot x){\rm{d}}\cot x}                                                                          \\[7pt]
+\int {f(\arcsin x)\frac{1}{\sqrt {1 - x^2} }} {\rm{d}}x = \int {f(\arcsin x){\rm{d}}\arcsin x}                                                  \\[7pt]
+\int {f(\arctan x)\frac{1}{1 + x^2}} {\rm{d}}x = \int {f(\arctan x){\rm{d}}\arctan x}                                                           \\[7pt]
+\int {\frac{f'(x)}{f(x)}} {\rm{d}}x = \int {\frac{\rm{d}f(x)}{f(x)}}  = \ln \mid f(x)\mid + C
 $$
 
 ### 换元法
@@ -196,25 +141,17 @@ $$
 
 ### 有理函数的积分
 
-$$
-\frac{{P(x)}}{{Q(x)}} =  \frac{{{A_1}}}{{{{(x - a)}^\alpha }}} + \frac{{{A_2}}}{{{{(x - a)}^{\alpha  - 1}}}} +  \cdots  + \frac{{{A_\alpha }}}{{x - a}} +  \\[7pt]
-\frac{{{B_1}}}{{{{(x - b)}^\beta }}} + \frac{{{B_2}}}{{{{(x - b)}^{\beta  - 1}}}} +  \cdots  + \frac{{{B_\beta }}}{{x - b}} +  \\[7pt]
-\frac{{{M_1}x + {N_1}}}{{{{({x^2} + px + q)}^\lambda }}} + \frac{{{M_2}x + {N_2}}}{{{{({x^2} + px + q)}^{\lambda  - 1}}}} +  \cdots  + \frac{{{M_\lambda }x + {N_\lambda }}}{{{x^2} + px + q}} +  \\
-\cdots
-$$
+$\frac{P(x)}{Q(x)}$ 其中P和Q都是实多项式。
+- Q一定可以因式分解为最高二次的实多项式的
+- 然后可以化为数个简单的分式，分母最多2次，分子最多1次。
+- 然后各部分套公式
 
 
-三角函数的特殊定积分
 
-$I_n  =\int_0^{\frac{\pi}{2}}\sin^nx\,\mathrm{d}x=\int_0^{\frac{\pi}{2}}\cos^nx\,\mathrm{d}x$  
-
-$$I_n  =\frac{n-1}{n}I_{n-2}    \\
-=\begin{cases}
-\dfrac{{n - 1}}{n} \cdot \dfrac{{n - 3}}{{n - 2}} \cdots \dfrac{4}{5} \cdot \dfrac{2}{3}\quad (n is odds),I_1=1 \\[13pt]
-\dfrac{{n - 1}}{n} \cdot \dfrac{{n - 3}}{{n - 2}} \cdots \dfrac{3}{4} \cdot \dfrac{1}{2} \cdot \dfrac{\pi }{2}\quad (n is even),I_0=\dfrac{\pi}{2}
-\end{cases}
-$$
-
+三角函数 $I_n  =\int_0^{\frac{\pi}{2}}\sin^nx\,\mathrm{d}x=\int_0^{\frac{\pi}{2}}\cos^nx\,\mathrm{d}x$  
+得到迭代式 $I_n  =\frac{n-1}{n}I_{n-2}$
+- 当n是偶数 $\dfrac{n - 1}{n} \cdot \dfrac{n - 3}{n - 2} \cdots \dfrac{4}{5} \cdot \dfrac{2}{3},I_1=1$
+- 当n是奇数 $\dfrac{n - 1}{n} \cdot \dfrac{n - 3}{n - 2} \cdots \dfrac{3}{4} \cdot \dfrac{1}{2} \cdot \dfrac{\pi }{2},I_0=\dfrac{\pi}{2}$
 
 ### 分部积分
 
@@ -318,6 +255,30 @@ $\Delta =\dfrac{\partial^2 }{\partial x^2}+\dfrac{\partial^2 }{\partial y^2}+\df
 
 ## 泰勒公式
 
+$$
+f(x)=  f(x_0)+f'(x_0)(x-x_0)+\frac{f''(x_0)}{2!}(x-x_0)^2+\cdots+\frac{f^{(n)}(x_0)}{n!}(x-x_0)^n+o[(x-x_0)^n]  \\[7pt]
+f(x)=  f(x_0)+f'(x_0)(x-x_0)+\frac{f''(x_0)}{2!}(x-x_0)^2+\cdots+\frac{f^{(n)}(x_0)}{n!}(x-x_0)^n+\frac{f^{(n+1)}(\xi)}{(n+1)!}(x-x_0)^{n+1}
+$$
+
+常用泰勒公式
+$$
+\mathrm{e}^{x}  =1+x+\frac{1}{2}x^{2}+\frac{1}{6}x^{3}+\cdots+\frac{1}{n!}x^{n}+o(x^{n})    \\[7pt]
+\ln(x+1)        =x-\frac{1}{2}x^2+\frac{1}{3}x^3-\cdots+(-1)^{n-1}\frac{1}{n}x^{n}+o(x^{n})
+$$
+
+
+令 $n=2m$ 有,
+$$
+\sin x  =x-\frac{1}{6}x^{3}+\frac{1}{120}x^{5}+\cdots+(-1)^{m-1}\frac{1}{(2m-1)!}x^{2m-1}+o(x^{2m}) \\[7pt]
+\cos x  =1-\frac{1}{2}x^2+\frac{1}{24}x^4-\cdots+(-1)^m \frac{1}{(2m)!}x^{2m}+o(x^{2m+1})           \\[7pt]
+\tan x  =x+\frac{1}{3}x^3+\frac{2}{15}x^5+\frac{17}{315}x^7+\cdots+o(x^{2m-1}) \\[7pt]
+\arcsin x  =x+\frac{1}{6}x^3+\frac{3}{40}x^{5}+\cdots+o(x^{2m}) \\[7pt]
+\frac{1}{1-x}   =1+x+x^2+x^3+\cdots+x^n+o(x^n) \\[7pt]
+(1+x)^{\alpha}  =\sum_{i=0}^{n}\frac{\prod_{j=0}^{i-1}{(\alpha-j})}{i!}x^n+o(x^n)           \\[7pt]
+\alpha^x        =\sum_{i=0}^{n}\frac{\ln^n \alpha}{n!}x^n+o(x^n)
+$$
+
+### 多元泰勒公式
 $\phi(t) = f(x+th,y+tk)$  
 那么：$\phi^{(n)}(t)=(h \dfrac{\partial}{\partial x}+k\dfrac{\partial}{\partial x})^n f(x+th,y+tk)$  
 
@@ -392,6 +353,35 @@ $\vec r(t) // \nabla F_{P_0} \times \nabla G_{P_0}$
 - 曲率描述曲线弯曲的程度
 - 挠率描述曲线偏离平面的程度
 
+
+曲率的定义式  
+$K=\mid \dfrac{\mathrm{d}\alpha}{\mathrm{d}s}\mid $
+
+由定义式我们可以推得：
+- **直角坐标** $y=y(x)$ 的曲率是 $K=\frac{\mid y'' \mid}{( 1+y^{'2} )^{3/2}}$
+- **参数方程** $x=\varphi(t),y=\psi(t)$ 的曲率是 $K=\frac{\mid \varphi'(t)\psi''(t)-\varphi''(t)\psi'(t)\mid}{[ \varphi^{'2}(t) +\psi^{'2}(t) ]^{3/2}}$
+- **极坐标** 有曲率表达式 $K=\frac{\mid r^2+2r^{'2}-r\cdot r''\mid}{(r^2+r^{'2})^{3/2}}$
+
+
+曲线在对应点 $M(x,y)$  的曲率中心 $D(\alpha,\beta)$ 的坐标为：
+$$
+\left \{ \begin{array}{l}
+\alpha=x-\displaystyle\frac{y'(1+y^{'2})^3}{y^{''2}} \\
+\beta=y+\displaystyle\frac{1+y^{'2}}{y''}
+\end{array}\right.
+$$
+
+
+### 曲线的渐近线
+
+
+1. 若 $\lim\limits_{ x\rightarrow \infty }f(x)=b$ ,则称 $y=b$ 为曲线 $f(x)$ 的 **水平渐近线**
+2. 若 $\lim\limits_{ x\rightarrow x_0 }f(x)=\infty$ ,则称 $x=x_0$ 为曲线 $f(x)$ 的 **垂直渐近线**
+3. 若 $\lim\limits_{ x\rightarrow \infty }[f(x)-(ax+b)]=0$ ,其中 $$
+\begin{cases}
+a=\displaystyle \lim\limits_{x\to \infty}\frac{f(x)}{x} \\[7pt]
+b=\displaystyle \lim\limits_{x\to \infty}[f(x)-ax]
+\end{cases}$$ ，则称 $y=ax+b$ 为曲线 $f(x)$ 的 **斜渐近线**
 
 
 
