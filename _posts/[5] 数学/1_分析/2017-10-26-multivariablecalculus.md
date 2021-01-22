@@ -13,7 +13,6 @@ order: 92301
 ## 常用三角函数公式
 
 积化和差公式
-
 $$\sin \alpha \cos \beta  =\frac{1}{2}[\sin (\alpha+\beta)+\sin(\alpha-\beta)] \\[7pt]
 \cos \alpha \sin \beta  =\frac{1}{2}[\sin (\alpha+\beta)-\sin(\alpha-\beta)]  \\[7pt]
 \cos \alpha \cos \beta  =\frac{1}{2}[\cos (\alpha+\beta)+\cos(\alpha-\beta)]  \\[7pt]
@@ -46,7 +45,7 @@ $$
 \tan x   =\frac{2\tan(x/2)}{1-\tan^2(x/2)}$$
 
 
-万能公式  
+万能公式
 令$ u=\tan\dfrac{x}{2} $则
 $$\sin x=\frac{2u}{1+u^2} \\[7pt]
 \cos x=\frac{1-u^2}{1+u^2}$$
@@ -58,14 +57,13 @@ f(x)=  f(x_0)+f'(x_0)(x-x_0)+\frac{f''(x_0)}{2!}(x-x_0)^2+\cdots+\frac{f^{(n)}(x
 $$
 
 常用泰勒公式
-
 $$
 \mathrm{e}^{x}  =1+x+\frac{1}{2}x^{2}+\frac{1}{6}x^{3}+\cdots+\frac{1}{n!}x^{n}+o(x^{n})    \\[7pt]
 \ln(x+1)        =x-\frac{1}{2}x^2+\frac{1}{3}x^3-\cdots+(-1)^{n-1}\frac{1}{n}x^{n}+o(x^{n})
 $$
 
 
-令 $n=2m$ 有,  
+令 $n=2m$ 有,
 $$
 \sin x  =x-\frac{1}{6}x^{3}+\frac{1}{120}x^{5}+\cdots+(-1)^{m-1}\frac{1}{(2m-1)!}x^{2m-1}+o(x^{2m}) \\[7pt]
 \cos x  =1-\frac{1}{2}x^2+\frac{1}{24}x^4-\cdots+(-1)^m \frac{1}{(2m)!}x^{2m}+o(x^{2m+1})           \\[7pt]
@@ -104,11 +102,10 @@ $K=\mid \dfrac{\mathrm{d}\alpha}{\mathrm{d}s}\mid $
 由定义式我们可以推得：
 - **直角坐标** $y=y(x)$ 的曲率是 $K=\frac{\mid y'' \mid}{( 1+y^{'2} )^{3/2}}$
 - **参数方程** $x=\varphi(t),y=\psi(t)$ 的曲率是 $K=\frac{\mid \varphi'(t)\psi''(t)-\varphi''(t)\psi'(t)\mid}{[ \varphi^{'2}(t) +\psi^{'2}(t) ]^{3/2}}$
-- **极坐标** 有曲率表达式 $K=\frac{\left|r^2+2r^{'2}-r\cdot r''\right|}{\left(r^2+r^{'2}\right)^{3/2}}$
+- **极坐标** 有曲率表达式 $K=\frac{\mid r^2+2r^{'2}-r\cdot r''\mid}{(r^2+r^{'2})^{3/2}}$
 
 
-曲线在对应点 $M(x,y)$  的曲率中心 $D(\alpha,\beta)$ 的坐标为：  
-
+曲线在对应点 $M(x,y)$  的曲率中心 $D(\alpha,\beta)$ 的坐标为：
 $$
 \left \{ \begin{array}{l}
 \alpha=x-\displaystyle\frac{y'(1+y^{'2})^3}{y^{''2}} \\
@@ -129,8 +126,101 @@ b=\displaystyle \lim\limits_{x\to \infty}[f(x)-ax]
 \end{cases}$$ ，则称 $y=ax+b$ 为曲线 $f(x)$ 的 **斜渐近线**
 
 
+## 不定积分求解
+
 ### 基本积分公式
 
+$$
+\int k \,\mathrm{d}x=kx+C  \\[7pt]
+\int x^\mu\,\mathrm{d}x=\frac{x^{\mu+1}}{\mu+1}+C\ (\mu\neq-1) \\[7pt]
+\int \frac{1}{x}\,\mathrm{d}x=\ln|x|+C  \\[7pt]
+\int\frac{\mathrm{d}x}{1+x^2}=\arctan x+C   \\[7pt]
+\int\frac{\mathrm{d}x}{\sqrt{1-x^2}}=\arcsin x+C_1=-\arccos x+C_2    \\[7pt]
+\int \sin x\,\mathrm{d}x=-\cos x+C                                   \\[7pt]
+\int\cos x \,\mathrm{d}x=\sin x +C                                   \\[7pt]
+\int\tan x\,\mathrm{d}x=-\ln |\cos x|+C                              \\[7pt]
+\int\cot x\,\mathrm{d}x=\ln |\sin x|+C                               \\[7pt]
+\int\csc x\,\mathrm{d}x=\int\frac{1}{\sin{x}}\,\mathrm{d}x=\frac{1}{2}
+\ln{\mid\frac{1-\cos{x}}{1+\cos{x}}\mid}+C=\ln{\mid\tan{\frac{x}{2}}\mid}+C=\ln{\mid\csc{x}-\cot{x}\mid}+C \\[7pt]
+\int\sec x\,\mathrm{d}x=\int\frac{1}{\cos{x}}\,\mathrm{d}x=\frac{1}{2}
+\ln{\mid\frac{1+\sin{x}}{1-\sin{x}}\mid}+C=\ln{\mid\sec{x}+\tan{x}\mid}+C     \\[7pt]
+\int\sec^2 x\,\mathrm{d}x=\tan x +C                                  \\[7pt]
+\int \csc^2 x\,\mathrm{d}x=-\cot x +C                                \\[7pt]
+\int \sec x\cdot\tan x \,\mathrm{d}x=\sec x+C                        \\[7pt]
+\int\csc x \cdot\cot x \,\mathrm{d}x=-\csc x+C                       \\[7pt]
+\int \mathrm{e}^x \,\mathrm{d}x=\mathrm{e}^x+C                       \\[7pt]
+\int a^x\,\mathrm{d}x=\frac{a^x}{\ln a}+C                            \\[7pt]
+\int \sinh x\,\mathrm{d}x=\cosh x+C                                  \\[7pt]
+\int \cosh x\,\mathrm{d}x=\sinh x+C                                  \\[7pt]
+\int \frac{1}{a^2+x^2}\,\mathrm{d}x=\frac{1}{a}\arctan\frac{x}{a}+C  \\[7pt]
+\int \frac{1}{a^2-x^2}\,\mathrm{d}x=\frac{1}{2a}\ln \mid\frac{a+x}{a-x}\mid+C                                     \\[7pt]
+\int \frac{1}{\sqrt{a^2-x^2}}\,\mathrm{d}x=\arcsin\frac{x}{a}+C      \\[7pt]
+\int \frac{1}{\sqrt{x^2\pm a^2}}\,\mathrm{d}x=\ln \mid x+\sqrt{x^2\pm a^2}\mid+C
+$$
+
+### 第一类换元法
+
+
+三角函数之积的积分
+- 一般地,对于$ \sin^{2k+1}x\cos^n x $ 或 $ \sin^n x \cos^{2k+1}x $ (其中$ k\in\mathbb{N} $)型函数的积分,总可依次作变换 $ u=\cos x $ 或 $ u=\sin x $ ,从而求得结果
+- 一般地,对于$ \sin^{2k}x\cos^{2l}x $ 或 (其中$ k,l\in \mathbb{N} $)型函数的积分,总是利用降幂公式$ \sin^2=\dfrac{1}{2}(1-\cos 2x), \cos^2=\dfrac{1}{2}(1+\cos 2x) $化成$ \cos 2x $的多项式 ,从而求得结果
+- 一般地,对于$ \tan^{n}x\sec^{2k} x $ 或$ \tan^{2k-1} x \sec^{n}x $ (其中$ n,k\in\mathbb{N}_{+} $)型函数的积分,总可依次作变换 $ u=\tan x $或$ u=\sec x $ ,从而求得结果
+
+常见的凑微分类型  
+$$
+\int {f( ax + b){\rm{d}}x = }\frac{1}{a}\int {f(ax+b){\mathrm{d}}(ax + b)\;(a \neq 0)}                                                              \\[7pt]
+\int {f(a{x^{m + 1}} + b){x^m}{\rm{d}}x} = \frac{1}{{a(m + 1)}}\int {f(a{x^{m + 1}} + b){\rm{d}}(a{x^{m + 1}} + b)}                                 \\[7pt]
+\int {f\left( \frac{1}{x}\right) \frac{{{\rm{d}}x}}{{{x^2}}}\;}  =  - \int {f\left( \frac{1}{x}\right) {\rm{d}}\left( \frac{{\rm{1}}}{x}\right) \;} \\[7pt]
+\int {f(\ln x)\frac{1}{x}} {\rm{d}}x = \int {f(\ln x){\rm{d(}}\ln x)}                                                                               \\[7pt]
+\int {f({\mathrm{e}^x})} {\mathrm{e}^x}{\rm{d}}x = \int {f({\mathrm{e}^x}} ){\rm{d(}}{\mathrm{e}^x})                                                \\[7pt]
+\int {f(\sqrt x } )\frac{{{\rm{d}}x}}{{\sqrt x }} = 2\int {f(\sqrt x } ){\rm{d}}(\sqrt x )                                                          \\[7pt]
+\int {f(\sin x)\cos x{\rm{d}}x = } \int {f(\sin x){\rm{d}}\sin x}                                                                                   \\[7pt]
+\int {f(\cos x)\sin x{\rm{d}}x = }  - \int {f(\cos x){\rm{d}}\cos x}                                                                                \\[7pt]
+\int {f(\tan x){{\sec }^2}} x{\rm{d}}x = \int {f(\tan x){\rm{d}}\tan x}                                                                             \\[7pt]
+\int {f(\cot x){{\csc }^2}} x{\rm{d}}x =  - \int {f(\cot x){\rm{d}}\cot x}                                                                          \\[7pt]
+\int {f(\arcsin x)\frac{1}{{\sqrt {1 - {x^2}} }}} {\rm{d}}x = \int {f(\arcsin x){\rm{d}}\arcsin x}                                                  \\[7pt]
+\int {f(\arctan x)\frac{1}{{1 + {x^2}}}} {\rm{d}}x = \int {f(\arctan x){\rm{d}}\arctan x}                                                           \\[7pt]
+\int {\frac{{f'(x)}}{{f(x)}}} {\rm{d}}x = \int {\frac{{{\rm{d}}f(x)}}{{f(x)}}}  = \ln \mid f(x)\mid + C
+$$
+
+### 换元法
+
+三种
+- 三角换元
+  - 出现 $a^2-x^2$，令 $x=a\sin t$ 得到 $a^2-x^2=a^2\cos^2 t$
+  - 出现 $x^2+a^2$，令 $x=a\tan t$ 得到 $x^2+a^2=a^2\sec^2 t$
+  - 出现 $x^2-a^2$，令 $x=a\sec t$ 得到 $x^2-a^2=a^2\tan^2 t$
+- 倒数换元 $x=1/t$ 或者 $x=1/t^n$ 或者 $x=t^n$
+- 直接替换复杂项
+
+
+### 有理函数的积分
+
+$$
+\frac{{P(x)}}{{Q(x)}} =  \frac{{{A_1}}}{{{{(x - a)}^\alpha }}} + \frac{{{A_2}}}{{{{(x - a)}^{\alpha  - 1}}}} +  \cdots  + \frac{{{A_\alpha }}}{{x - a}} +  \\[7pt]
+\frac{{{B_1}}}{{{{(x - b)}^\beta }}} + \frac{{{B_2}}}{{{{(x - b)}^{\beta  - 1}}}} +  \cdots  + \frac{{{B_\beta }}}{{x - b}} +  \\[7pt]
+\frac{{{M_1}x + {N_1}}}{{{{({x^2} + px + q)}^\lambda }}} + \frac{{{M_2}x + {N_2}}}{{{{({x^2} + px + q)}^{\lambda  - 1}}}} +  \cdots  + \frac{{{M_\lambda }x + {N_\lambda }}}{{{x^2} + px + q}} +  \\
+\cdots
+$$
+
+
+三角函数的特殊定积分
+
+$I_n  =\int_0^{\frac{\pi}{2}}\sin^nx\,\mathrm{d}x=\int_0^{\frac{\pi}{2}}\cos^nx\,\mathrm{d}x$  
+
+$$I_n  =\frac{n-1}{n}I_{n-2}    \\
+=\begin{cases}
+\dfrac{{n - 1}}{n} \cdot \dfrac{{n - 3}}{{n - 2}} \cdots \dfrac{4}{5} \cdot \dfrac{2}{3}\quad (n is odds),I_1=1 \\[13pt]
+\dfrac{{n - 1}}{n} \cdot \dfrac{{n - 3}}{{n - 2}} \cdots \dfrac{3}{4} \cdot \dfrac{1}{2} \cdot \dfrac{\pi }{2}\quad (n is even),I_0=\dfrac{\pi}{2}
+\end{cases}
+$$
+
+
+### 分部积分
+
+口诀：反对幂指三
+
+https://www.zhihu.com/question/29319155/answer/1433338416
 
 ## 定积分求导
 $F(x)=\int_{g(x)}^{h(x)}f(t)dt$，  
@@ -433,3 +523,5 @@ $\iint_D f(x,y)d(x,y)=\int_0^{2\pi} \int_a^b f(rcos\theta,rsin\theta)rdr$
 ## 参考文献
 [^nabla]: https://baike.baidu.com/item/Nabla%20%E7%AE%97%E5%AD%90/20177377
 [^hi]: http://www.doc88.com/p-8179991133177.html
+
+[微积分整理](https://github.com/ShevonKuan/Calculus-Summarize/releases/tag/1.0.0)

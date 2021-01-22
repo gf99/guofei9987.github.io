@@ -27,7 +27,10 @@ $\dfrac{dy}{dx}=g(\dfrac{y}{x})$
 
 
 解法：  
-令$u=\dfrac{y}{x}$,于是$\dfrac{dy}{dx}=\dfrac{dux}{dx}$,转化为变量分离方程。  
+令$u=\dfrac{y}{x}$,于是$\dfrac{dy}{dx}=\dfrac{dux}{dx}=u+\dfrac{du}{dx}x$,转化为变量分离方程。  
+
+按变量分离方程的一般解法  $u+\frac{\mathrm{d}u}{\mathrm{d}x}x=g(u)$. 分离变量,得到 $\frac{1}{g(u)-u}du=\frac{1}{x} dx$. 两边同时积分,得到 $\int \frac{1}{g(u)-u}du=\ln|x|$  
+即 $x=\mathrm{e}^{\int \frac{1}{g(u)-u}du}$
 
 #### 一次分式
 $\dfrac{dy}{dx}=\dfrac{a_1x+b_1y+c_1}{a_2x+b_2y+c_2}$  
