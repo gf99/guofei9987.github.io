@@ -48,6 +48,7 @@ $\dfrac{\partial C}{\partial z_i}\approx \dfrac{1}{NT^2}(z_i-v_i)$
 
 ### 关于 T（temperature）
 写了个代码去模拟
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -69,3 +70,5 @@ plt.show()
 可以看成是一种 data augmentation，举例来说，你某次训练的标签是 [BMW, 卡车, 猫]，对应的label是[1,0,0]，用大模型生成的是[0.9,0.099,0.001]，得到了类与类之间的相似性，或者说更多的信息（使用小网络时，减少了信息丢失）。
 
 然后 temperature 这个 trick可以让这个信息更明显。
+
+
