@@ -14,7 +14,7 @@ order: 350
 - 图分类（广告或产品的目标人群定位）
 - 发现时间序列模式
 
-## 1. 聚类算法
+## 1. 层次化聚类算法
 
 step1. 由网络结构计算距离矩阵；  
 step2. 用距离确定节点相似度；  
@@ -24,14 +24,20 @@ step4. 根据实际需求横切树状图 ；
 树状图类似这个：
 ![](/pictures_for_blog/postimg/hierachicalcluster.png)
 
-## 图划分
+
+## 2. 谱聚类
+
+复杂度是 $O(n^3)$
+
+ 
+## 3. 图划分
 从一个整体切分成两个，算法目标：
 1. 切分后的两个子图规模相近
 2. 被切分的边数量最少（或者用权重和作为指标）
 
 *明尼苏达大学的METIS是最权威的图划分工具*
 
-## 分裂算法（GN算法）
+## 4. 分裂算法（GN算法）
 
 **思路** ：定义边介数（betweenness）指标（衡量的是网络里一个边占据其它节点间捷径的程度），具有高边介数的边代表了社区的边界；  
 
@@ -45,7 +51,7 @@ step3 重复 step1 和 step2，直到所有边被移除；
 ![](https://github.com/guofei9987/pictures_for_blog/blob/master/graph/gn_algorithm.png?raw=true)
 
 
-## 模块度优化算法
+## 5. 模块度优化算法
 
 **思路** ：
 1. 定义模块度（Modularity）指标，用来衡量一个社区的划分好坏
@@ -57,7 +63,7 @@ Q=社区内的边占比 – 社区的边占比平方
 
 具体[看这里](https://blog.csdn.net/marywbrown/article/details/62059231)
 
-## 标签传播算法（LPA）
+## 6. 标签传播算法（LPA）
 
 这是一种启发式算法，**思路** 是，一个节点应该与多数邻居在同一社区内。  
 
@@ -88,7 +94,7 @@ nx.algorithms.community.label_propagation.label_propagation_communities(G)
 # 1可以用于有向图，2不能
 ```
 
-## 随机游走
+## 7. 随机游走
 
 **思路** 启发式规则：  
 1） 从节点出发随机游走，停留在社区内的概率高于到达社区外的；  
